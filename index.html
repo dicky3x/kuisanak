@@ -12,15 +12,15 @@
     <div id="quiz-screen">
       <div class="header-info">
         <div id="subject-tag" class="subject-tag">Mata Pelajaran</div>
-        <div id="progress-tag" class="progress-tag">1 / 48</div>
+        <div id="progress-tag" class="progress-tag">1 / 80</div>
       </div>
 
       <h2 id="question-text">Teks Soal...</h2>
       
-      <!-- AREA 1: PILIHAN GANDA (MELINGKARI) -->
+      <!-- AREA 1: PILIHAN GANDA (MELINGKARI A, B, ATAU C) -->
       <div class="canvas-container" id="canvas-container">
         <div id="options-container" class="options-container">
-          <!-- Opsi jawaban diisi via JS -->
+          <!-- Opsi jawaban dengan bubble huruf diisi via JS -->
         </div>
         <canvas id="draw-canvas"></canvas>
       </div>
@@ -32,7 +32,7 @@
         <canvas id="match-canvas"></canvas>
       </div>
 
-      <p class="instruction" id="instruction-text">💡 Lingkari jawaban dengan jarimu!</p>
+      <p class="instruction" id="instruction-text">💡 Lingkari huruf A, B, atau C dengan jarimu!</p>
 
       <div class="nav-buttons">
         <button id="prev-btn" onclick="prevQuestion()">⬅️ Sebelumnya</button>
@@ -41,7 +41,7 @@
       </div>
     </div>
 
-    <!-- LAYAR HASIL / SKOR (Awalnya Sembunyi) -->
+    <!-- LAYAR HASIL / SKOR -->
     <div id="result-screen" class="hidden">
       <div class="result-badge">🎉 SELESAI!</div>
       <h2>Hasil Kuis Kamu</h2>

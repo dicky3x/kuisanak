@@ -297,9 +297,12 @@ const rawQuestions = [
   }
 ];
 
-// Fungsi Acak Array (Fisher-Yates Shuffle)
+// Label Abjad Opsi
+const optionLetters = ["A", "B", "C", "D"];
+
+// Fungsi Acak Array
 function shuffleArray(array) {
-  const arr = JSON.parse(JSON.stringify(array)); // Deep clone
+  const arr = JSON.parse(JSON.stringify(array));
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
@@ -307,17 +310,14 @@ function shuffleArray(array) {
   return arr;
 }
 
-// Inisialisasi Soal yang Diacak
 let questions = [];
 let currentIdx = 0;
 let isAnswered = false;
 let userAnswers = [];
 
 function initQuizData() {
-  // 1. Acak urutan seluruh soal
   questions = shuffleArray(rawQuestions);
 
-  // 2. Acak urutan opsi untuk soal pilihan ganda / matching
   questions.forEach(q => {
     if (q.type === "multiple-choice") {
       const correctOption = q.options[q.correct];
@@ -369,16 +369,26 @@ function loadQuestion() {
   if (q.type === "multiple-choice") {
     canvasContainer.classList.remove("hidden");
     matchingContainer.classList.add("hidden");
-    instructionText.innerText = "💡 Lingkari jawaban dengan jarimu!";
+    instructionText.innerText = "💡 Lingkari huruf A, B, atau C dengan jarimu!";
 
     const container = document.getElementById("options-container");
     container.innerHTML = "";
     q.options.forEach((opt, idx) => {
-      const div = document.createElement("div");
-      div.className = "option-box";
-      div.dataset.index = idx;
-      div.innerText = opt;
-      container.appendChild(div);
+      const row = document.createElement("div");
+      row.className = "option-row";
+
+      const letterBadge = document.createElement("div");
+      letterBadge.className = "option-letter";
+      letterBadge.dataset.index = idx;
+      letterBadge.innerText = optionLetters[idx];
+
+      const textSpan = document.createElement("span");
+      textSpan.className = "option-text";
+      textSpan.innerText = opt;
+
+      row.appendChild(letterBadge);
+      row.appendChild(textSpan);
+      container.appendChild(row);
     });
 
     setTimeout(resizeDrawCanvas, 50);
@@ -394,7 +404,7 @@ function loadQuestion() {
   document.getElementById("prev-btn").disabled = (currentIdx === 0);
 }
 
-// ================= PILIHAN GANDA (MELINGKARI) =================
+// ================= PILIHAN GANDA (DETEKSI LINGKARAN DI HURUF A, B, C) =================
 function resizeDrawCanvas() {
   const container = document.getElementById("canvas-container");
   drawCanvas.width = container.offsetWidth;
@@ -439,31 +449,44 @@ drawCanvas.addEventListener("pointerup", () => {
 function evaluateMultipleChoice() {
   if (drawnPoints.length < 5) return;
 
-  const boxes = document.querySelectorAll(".option-box");
+  // Hanya memeriksa area kotak/lingkaran huruf A, B, atau C
+  const letterBadges = document.querySelectorAll(".option-letter");
   const canvasRect = drawCanvas.getBoundingClientRect();
 
-  boxes.forEach((box) => {
-    const boxRect = box.getBoundingClientRect();
-    const boxLeft = boxRect.left - canvasRect.left;
-    const boxRight = boxRect.right - canvasRect.left;
-    const boxTop = boxRect.top - canvasRect.top;
-    const boxBottom = boxRect.bottom - canvasRect.top;
+  letterBadges.forEach((badge) => {
+    const badgeRect = badge.getBoundingClientRect();
+    const badgeLeft = badgeRect.left - canvasRect.left;
+    const badgeRight = badgeRect.right - canvasRect.left;
+    const badgeTop = badgeRect.top - canvasRect.top;
+    const badgeBottom = badgeRect.bottom - canvasRect.top;
 
-    const hit = drawnPoints.some(p => p.x >= boxLeft && p.x <= boxRight && p.y >= boxTop && p.y <= boxBottom);
+    const hit = drawnPoints.some(p => p.x >= badgeLeft && p.x <= badgeRight && p.y >= badgeTop && p.y <= badgeBottom);
 
     if (hit && !isAnswered) {
       isAnswered = true;
-      const selectedIdx = parseInt(box.dataset.index);
+      const selectedIdx = parseInt(badge.dataset.index);
       const isCorrect = (selectedIdx === questions[currentIdx].correct);
 
       userAnswers[currentIdx] = isCorrect;
 
+      const parentRow = badge.closest(".option-row");
+
       if (isCorrect) {
-        box.style.borderColor = "#4caf50";
-        box.style.background = "#c8e6c9";
+        badge.style.borderColor = "#4caf50";
+        badge.style.background = "#4caf50";
+        badge.style.color = "#ffffff";
+        if (parentRow) {
+          parentRow.style.borderColor = "#4caf50";
+          parentRow.style.background = "#c8e6c9";
+        }
       } else {
-        box.style.borderColor = "#f44336";
-        box.style.background = "#ffcdd2";
+        badge.style.borderColor = "#f44336";
+        badge.style.background = "#f44336";
+        badge.style.color = "#ffffff";
+        if (parentRow) {
+          parentRow.style.borderColor = "#f44336";
+          parentRow.style.background = "#ffcdd2";
+        }
       }
 
       setTimeout(() => { nextQuestion(); }, 1000);
@@ -678,12 +701,12 @@ function showResultScreen() {
 
 function restartQuiz() {
   currentIdx = 0;
-  initQuizData(); // Acak ulang soal saat kuis diulang
+  initQuizData();
   loadQuestion();
 }
 
 window.onload = () => {
-  initQuizData(); // Acak soal saat website pertama kali dibuka
+  initQuizData();
   loadQuestion();
 };
 
