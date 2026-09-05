@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kuis Anak SD - Melingkari Jawaban</title>
+  <title>Kuis Anak SD - Melingkari & Mencocokkan Gambar</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,11 +12,12 @@
     <div id="quiz-screen">
       <div class="header-info">
         <div id="subject-tag" class="subject-tag">Mata Pelajaran</div>
-        <div id="progress-tag" class="progress-tag">1 / 40</div>
+        <div id="progress-tag" class="progress-tag">1 / 48</div>
       </div>
 
       <h2 id="question-text">Teks Soal...</h2>
       
+      <!-- AREA 1: PILIHAN GANDA (MELINGKARI) -->
       <div class="canvas-container" id="canvas-container">
         <div id="options-container" class="options-container">
           <!-- Opsi jawaban diisi via JS -->
@@ -24,7 +25,14 @@
         <canvas id="draw-canvas"></canvas>
       </div>
 
-      <p class="instruction">💡 Lingkari jawaban dengan jarimu!</p>
+      <!-- AREA 2: MENCOCOKKAN GAMBAR (MENARIK GARIS) -->
+      <div class="matching-container hidden" id="matching-container">
+        <div class="matching-column" id="left-column"></div>
+        <div class="matching-column" id="right-column"></div>
+        <canvas id="match-canvas"></canvas>
+      </div>
+
+      <p class="instruction" id="instruction-text">💡 Lingkari jawaban dengan jarimu!</p>
 
       <div class="nav-buttons">
         <button id="prev-btn" onclick="prevQuestion()">⬅️ Sebelumnya</button>
