@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuis Anak SD - Melingkari Jawaban</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-card">
+    <div id="subject-tag" class="subject-tag">Mata Pelajaran</div>
+    <h2 id="question-text">Teks Soal...</h2>
+    
+    <div class="canvas-container">
+      <div id="options-container" class="options-container">
+        <!-- Pilihan jawaban diisi via JS -->
+      </div>
+      <!-- Canvas untuk menggambar lingkaran di atas jawaban -->
+      <canvas id="draw-canvas"></canvas>
+    </div>
+
+    <p class="instruction">💡 Lingkari jawaban yang benar menggunakan jarimu/mouse!</p>
+    <button id="reset-btn" onclick="clearCanvas()">Hapus Coretan</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
