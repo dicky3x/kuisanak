@@ -15,41 +15,66 @@ body {
 
 .quiz-card {
   background: white;
-  padding: 24px;
+  padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
   width: 90%;
-  max-width: 400px;
+  max-width: 420px;
   text-align: center;
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
 }
 
 .subject-tag {
   background: #ff4081;
   color: white;
-  padding: 6px 16px;
-  border-radius: 20px;
-  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 16px;
   font-weight: bold;
+  font-size: 14px;
+}
+
+.progress-tag {
+  background: #00bcd4;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#question-text {
+  font-size: 18px;
+  color: #333;
+  min-height: 50px;
 }
 
 .canvas-container {
   position: relative;
-  margin: 20px 0;
+  margin: 15px 0;
+  width: 100%;
 }
 
 .options-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .option-box {
-  background: #f0f0f0;
+  background: #f9f9f9;
   border: 3px solid #ccc;
-  border-radius: 16px;
-  padding: 16px;
-  font-size: 20px;
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 18px;
   font-weight: bold;
+  color: #333;
+  transition: all 0.2s ease;
 }
 
 #draw-canvas {
@@ -59,19 +84,35 @@ body {
   width: 100%;
   height: 100%;
   touch-action: none;
+  z-index: 10;
 }
 
 .instruction {
-  font-size: 14px;
+  font-size: 13px;
   color: #666;
+  margin-bottom: 15px;
 }
 
-#reset-btn {
-  background: #ff9800;
-  color: white;
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.nav-buttons button {
   border: none;
-  padding: 10px 20px;
+  padding: 10px 12px;
   border-radius: 10px;
   font-weight: bold;
+  font-size: 13px;
   cursor: pointer;
+}
+
+#prev-btn { background: #78909c; color: white; }
+#reset-btn { background: #ff9800; color: white; }
+#next-btn { background: #4caf50; color: white; }
+
+.nav-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

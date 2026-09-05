@@ -8,19 +8,28 @@
 </head>
 <body>
   <div class="quiz-card">
-    <div id="subject-tag" class="subject-tag">Mata Pelajaran</div>
+    <div class="header-info">
+      <div id="subject-tag" class="subject-tag">Mata Pelajaran</div>
+      <div id="progress-tag" class="progress-tag">1 / 8</div>
+    </div>
+
     <h2 id="question-text">Teks Soal...</h2>
     
-    <div class="canvas-container">
+    <div class="canvas-container" id="canvas-container">
       <div id="options-container" class="options-container">
-        <!-- Pilihan jawaban diisi via JS -->
+        <!-- Opsi jawaban diisi via JS -->
       </div>
-      <!-- Canvas untuk menggambar lingkaran di atas jawaban -->
       <canvas id="draw-canvas"></canvas>
     </div>
 
-    <p class="instruction">💡 Lingkari jawaban yang benar menggunakan jarimu/mouse!</p>
-    <button id="reset-btn" onclick="clearCanvas()">Hapus Coretan</button>
+    <p class="instruction">💡 Lingkari jawaban dengan jarimu!</p>
+
+    <!-- Tombol Navigasi Bawah -->
+    <div class="nav-buttons">
+      <button id="prev-btn" onclick="prevQuestion()">⬅️ Sebelumnya</button>
+      <button id="reset-btn" onclick="resetCurrentQuestion()">🔄 Hapus Coretan</button>
+      <button id="next-btn" onclick="nextQuestion()">Lanjut ➡️</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
