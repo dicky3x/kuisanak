@@ -12,16 +12,18 @@
     <div id="quiz-screen">
       <div class="header-info">
         <div id="subject-tag" class="subject-tag">Mata Pelajaran</div>
-        <div id="progress-tag" class="progress-tag">1 / 80</div>
+        <div id="progress-tag" class="progress-tag">1 / 30</div>
       </div>
 
-      <h2 id="question-text">Teks Soal...</h2>
+      <!-- Wadah Teks Soal & Tombol Suara -->
+      <div class="question-container">
+        <h2 id="question-text">Teks Soal...</h2>
+        <button id="audio-btn" class="audio-btn" onclick="speakCurrentQuestion()" title="Dengarkan Soal">🔊</button>
+      </div>
       
       <!-- AREA 1: PILIHAN GANDA (MELINGKARI A, B, ATAU C) -->
       <div class="canvas-container" id="canvas-container">
-        <div id="options-container" class="options-container">
-          <!-- Opsi jawaban dengan bubble huruf diisi via JS -->
-        </div>
+        <div id="options-container" class="options-container"></div>
         <canvas id="draw-canvas"></canvas>
       </div>
 
