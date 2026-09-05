@@ -8,27 +8,55 @@
 </head>
 <body>
   <div class="quiz-card">
-    <div class="header-info">
-      <div id="subject-tag" class="subject-tag">Mata Pelajaran</div>
-      <div id="progress-tag" class="progress-tag">1 / 8</div>
-    </div>
-
-    <h2 id="question-text">Teks Soal...</h2>
-    
-    <div class="canvas-container" id="canvas-container">
-      <div id="options-container" class="options-container">
-        <!-- Opsi jawaban diisi via JS -->
+    <!-- LAYAR SOAL -->
+    <div id="quiz-screen">
+      <div class="header-info">
+        <div id="subject-tag" class="subject-tag">Mata Pelajaran</div>
+        <div id="progress-tag" class="progress-tag">1 / 40</div>
       </div>
-      <canvas id="draw-canvas"></canvas>
+
+      <h2 id="question-text">Teks Soal...</h2>
+      
+      <div class="canvas-container" id="canvas-container">
+        <div id="options-container" class="options-container">
+          <!-- Opsi jawaban diisi via JS -->
+        </div>
+        <canvas id="draw-canvas"></canvas>
+      </div>
+
+      <p class="instruction">💡 Lingkari jawaban dengan jarimu!</p>
+
+      <div class="nav-buttons">
+        <button id="prev-btn" onclick="prevQuestion()">⬅️ Sebelumnya</button>
+        <button id="reset-btn" onclick="resetCurrentQuestion()">🔄 Hapus Coretan</button>
+        <button id="next-btn" onclick="nextQuestion()">Lanjut ➡️</button>
+      </div>
     </div>
 
-    <p class="instruction">💡 Lingkari jawaban dengan jarimu!</p>
+    <!-- LAYAR HASIL / SKOR (Awalnya Sembunyi) -->
+    <div id="result-screen" class="hidden">
+      <div class="result-badge">🎉 SELESAI!</div>
+      <h2>Hasil Kuis Kamu</h2>
+      
+      <div class="score-box">
+        <div class="score-title">Nilai Akhir</div>
+        <div id="final-score" class="score-number">100</div>
+      </div>
 
-    <!-- Tombol Navigasi Bawah -->
-    <div class="nav-buttons">
-      <button id="prev-btn" onclick="prevQuestion()">⬅️ Sebelumnya</button>
-      <button id="reset-btn" onclick="resetCurrentQuestion()">🔄 Hapus Coretan</button>
-      <button id="next-btn" onclick="nextQuestion()">Lanjut ➡️</button>
+      <div class="stats-container">
+        <div class="stat-item correct">
+          <span class="stat-label">Benar</span>
+          <span id="correct-count" class="stat-value">0</span>
+        </div>
+        <div class="stat-item wrong">
+          <span class="stat-label">Salah</span>
+          <span id="wrong-count" class="stat-value">0</span>
+        </div>
+      </div>
+
+      <p id="feedback-text" class="feedback-text">Bagus sekali!</p>
+
+      <button id="restart-btn" onclick="restartQuiz()">🔄 Ulangi Kuis</button>
     </div>
   </div>
 
