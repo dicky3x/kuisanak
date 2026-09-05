@@ -144,23 +144,22 @@ let userLines = {};
 let startPoint = null;
 let currentDragPoint = null;
 
-// ================= FUNGSI AUDIO (TEXT-TO-SPEECH) =================
+// ================= AUDIO (TEXT-TO-SPEECH) =================
 function speakCurrentQuestion() {
   if (!('speechSynthesis' in window)) return;
 
-  window.speechSynthesis.cancel(); // Hentikan suara sebelumnya jika ada
+  window.speechSynthesis.cancel();
 
   const q = questions[currentIdx];
   const utterance = new SpeechSynthesisUtterance(q.text);
 
-  // Atur Bahasa berdasarkan mata pelajaran
   if (["Math", "Science", "English"].includes(q.subject)) {
     utterance.lang = "en-US";
   } else {
     utterance.lang = "id-ID";
   }
 
-  utterance.rate = 0.9; // Kecepatan bicara sedikit diperlambat untuk anak SD
+  utterance.rate = 0.9;
   window.speechSynthesis.speak(utterance);
 }
 
@@ -214,7 +213,8 @@ function loadQuestion() {
       container.appendChild(row);
     });
 
-    setTimeout(resizeDrawCanvas, 50);
+    // Menghitung ulang ukuran Canvas persis setelah elemen opsi selesai dimuat
+    setTimeout(resizeDrawCanvas, 100);
   } else if (q.type === "matching") {
     canvasContainer.classList.add("hidden");
     matchingContainer.classList.remove("hidden");
@@ -226,16 +226,15 @@ function loadQuestion() {
     }
 
     setupMatchingBoard(q);
-    setTimeout(resizeMatchCanvas, 50);
+    setTimeout(resizeMatchCanvas, 100);
   }
 
   document.getElementById("prev-btn").disabled = (currentIdx === 0);
 
-  // Otomatis bacakan soal setelah 300ms saat berpindah halaman
   setTimeout(speakCurrentQuestion, 300);
 }
 
-// ================= PILIHAN GANDA (MELINGKARI HURUF A, B, C) =================
+// ================= PILIHAN GANDA (PENGUKURAN KOORDINAT CANVAS PRESISI) =================
 function resizeDrawCanvas() {
   const container = document.getElementById("canvas-container");
   drawCanvas.width = container.offsetWidth;
@@ -285,6 +284,8 @@ function evaluateMultipleChoice() {
 
   letterBadges.forEach((badge) => {
     const badgeRect = badge.getBoundingClientRect();
+    
+    // Konversi posisi lingkaran A, B, C ke koordinat canvas
     const badgeLeft = badgeRect.left - canvasRect.left;
     const badgeRight = badgeRect.right - canvasRect.left;
     const badgeTop = badgeRect.top - canvasRect.top;
@@ -507,7 +508,7 @@ function resetCurrentQuestion() {
 
 function showResultScreen() {
   if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-  
+
   document.getElementById("quiz-screen").classList.add("hidden");
   document.getElementById("result-screen").classList.remove("hidden");
 
