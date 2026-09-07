@@ -163,19 +163,15 @@ function goToClassMenu() {
 function initQuizData() {
   const currentBank = classBank[selectedClassLevel] || classBank[1];
   
-  // Acak bank soal terlebih dahulu
   let shuffledAll = shuffleArray(currentBank);
   
-  // Jika bank soal kurang dari 30 (misal kelas 2-6), lakukan penggandaan acak hingga genap 30 soal
   while (shuffledAll.length < 30) {
     const extraShuffled = shuffleArray(currentBank);
     shuffledAll = shuffledAll.concat(extraShuffled);
   }
   
-  // Ambil tepat 30 soal acak
   questions = shuffledAll.slice(0, 30);
 
-  // Acak pilihan jawaban A, B, C / pasangan tarik garis
   questions.forEach(q => {
     if (q.type === "multiple-choice") {
       const correctOption = q.options[q.correct];
@@ -356,6 +352,7 @@ function evaluateMultipleChoice() {
 
   const letterBadges = document.querySelectorAll(".option-letter");
   const canvasRect = drawCanvas.getBoundingClientRect();
+  const correctIdx = questions[currentIdx].correct;
 
   letterBadges.forEach((badge) => {
     const badgeRect = badge.getBoundingClientRect();
@@ -370,12 +367,13 @@ function evaluateMultipleChoice() {
     if (hit && !isAnswered) {
       isAnswered = true;
       const selectedIdx = parseInt(badge.dataset.index);
-      const isCorrect = (selectedIdx === questions[currentIdx].correct);
+      const isCorrect = (selectedIdx === correctIdx);
 
       userAnswers[currentIdx] = isCorrect;
       const parentRow = badge.closest(".option-row");
 
       if (isCorrect) {
+        // Jika jawaban benar
         badge.style.borderColor = "#4caf50";
         badge.style.background = "#4caf50";
         badge.style.color = "#ffffff";
@@ -384,6 +382,7 @@ function evaluateMultipleChoice() {
           parentRow.style.background = "#c8e6c9";
         }
       } else {
+        // Jika jawaban salah: Highlight pilihan user dengan MERAH
         badge.style.borderColor = "#f44336";
         badge.style.background = "#f44336";
         badge.style.color = "#ffffff";
@@ -391,9 +390,23 @@ function evaluateMultipleChoice() {
           parentRow.style.borderColor = "#f44336";
           parentRow.style.background = "#ffcdd2";
         }
+
+        // Dan highlight jawaban BENAR dengan HIJAU
+        const correctBadge = document.querySelector(`.option-letter[data-index="${correctIdx}"]`);
+        if (correctBadge) {
+          correctBadge.style.borderColor = "#4caf50";
+          correctBadge.style.background = "#4caf50";
+          correctBadge.style.color = "#ffffff";
+          const correctRow = correctBadge.closest(".option-row");
+          if (correctRow) {
+            correctRow.style.borderColor = "#4caf50";
+            correctRow.style.background = "#c8e6c9";
+          }
+        }
       }
 
-      setTimeout(() => { nextQuestion(); }, 1000);
+      // Beri jeda 1,5 detik agar anak sempat melihat kunci jawaban yang benar sebelum pindah soal
+      setTimeout(() => { nextQuestion(); }, 1500);
     }
   });
 }
@@ -561,7 +574,7 @@ function checkMatchingComplete() {
 
     userAnswers[currentIdx] = allCorrect;
 
-    setTimeout(() => { nextQuestion(); }, 1200);
+    setTimeout(() => { nextQuestion(); }, 1500);
   }
 }
 
