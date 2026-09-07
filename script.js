@@ -78,7 +78,6 @@ const classBank = {
     { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Tarian adat Melayu Riau untuk penyambutan tamu adalah...", options: ["Tari Makan Sirih", "Tari Pendet", "Tari Saman"], correct: 0 }
   ],
 
-<<<<<<< HEAD
   // ==================== KELAS 6 SD ====================
   6: [
     { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Kalimat yang efektif memenuhi unsur...", options: ["SPOK", "SOP", "5W+1H"], correct: 0 },
@@ -89,55 +88,6 @@ const classBank = {
     { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Rumah adat khas Melayu Riau dinamakan...", options: ["Rumah Selaso Jatuh Kembar", "Rumah Tongkonan", "Rumah Lamin"], correct: 0 }
   ]
 };
-=======
-  // ==================== 6. MANDARIN ====================
-  { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Kakek dari pihak Ayah' (爸爸的爸爸) adalah...", options: ["Yéye (爷爷)", "Wàigōng (外公)", "Bóbo (伯伯)"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Nenek dari pihak Ibu' (妈妈的妈妈) adalah...", options: ["Nǎinai (奶奶)", "Wàipó (外婆)", "Āyí (阿姨)"], correct: 1 },
-  { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Paman / Kakak Laki-Laki Ayah' (爸爸的哥哥) adalah...", options: ["Shūshu (叔叔)", "Jiūjiu (舅舅)", "Bóbo (伯伯)"], correct: 2 },
-  { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Tante / Saudara Perempuan Ibu' (妈妈的姐妹) adalah...", options: ["Āyí (阿姨)", "Gūgu (姑姑)", "Nǎinai (奶奶)"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Paman / Saudara Laki-Laki Ibu' (妈妈的兄弟) adalah...", options: ["Bóbo (伯伯)", "Jiūjiu (舅舅)", "Shūshu (叔叔)"], correct: 1 },
-  { type: "multiple-choice", subject: "Mandarin", text: "Perintah sikap 'Berdiri / Stand up' dalam kelas adalah...", options: ["Qǐlì (起立)", "Xínglǐ (行礼)", "Zàijiàn (再见)"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "Sikap 'Hormat / Memberi Salam' dalam kelas adalah...", options: ["Nǐ hǎo (你好)", "Xínglǐ (行礼)", "Qǐlì (起立)"], correct: 1 },
-  { 
-    type: "matching", subject: "Mandarin", text: "Tarik garis mencocokkan panggilan keluarga Ayah!",
-    left: [{ id: "zh1", content: "爸爸的爸爸" }, { id: "zh2", content: "爸爸的妈妈" }, { id: "zh3", content: "爸爸的姐妹" }],
-    right: [{ id: "r1", content: "Nǎinai (奶奶)" }, { id: "r2", content: "Gūgu (姑姑)" }, { id: "r3", content: "Yéye (爷爷)" }],
-    pairs: { zh1: "r3", zh2: "r1", zh3: "r2" }
-  },
-  { 
-    type: "matching", subject: "Mandarin", text: "Tarik garis mencocokkan panggilan keluarga Ibu!",
-    left: [{ id: "zh1", content: "妈妈的爸爸" }, { id: "zh2", content: "妈妈的妈妈" }, { id: "zh3", content: "妈妈的兄弟" }],
-    right: [{ id: "r1", content: "Wàipó (外婆)" }, { id: "r2", content: "Wàigōng (外公)" }, { id: "r3", content: "Jiūjiu (舅舅)" }],
-    pairs: { zh1: "r2", zh2: "r1", zh3: "r3" }
-  },
-  { 
-    type: "matching", subject: "Mandarin", text: "Tarik garis mencocokkan instruksi kelas & salam!",
-    left: [{ id: "zh1", content: "🙋 Hello / Halo" }, { id: "zh2", content: "🧍 Berdiri" }, { id: "zh3", content: "👋 Sampai Jumpa" }],
-    right: [{ id: "r1", content: "Qǐlì (起立)" }, { id: "r2", content: "Zàijiàn (再见)" }, { id: "r3", content: "Nǐ hǎo (你好)" }],
-    pairs: { zh1: "r3", zh2: "r1", zh3: "r2" }
-  },
-
-  // ==================== 7. MORAL ====================
-  { type: "multiple-choice", subject: "Moral", text: "Sebelum makan kita sebaiknya...", options: ["Tidur", "Berdoa", "Bermain"], correct: 1 },
-  { type: "multiple-choice", subject: "Moral", text: "Jika diberi hadiah oleh orang lain kita mengucapkan...", options: ["Maaf", "Terima Kasih", "Sama-sama"], correct: 1 },
-  { 
-    type: "matching", subject: "Moral", text: "Tarik garis dari gambar ke tindakan terpuji!",
-    left: [{ id: "mo1", content: "🗑️" }, { id: "mo2", content: "🙏" }, { id: "mo3", content: "🤝" }],
-    right: [{ id: "r1", content: "Berdoa" }, { id: "r2", content: "Saling Membantu" }, { id: "r3", content: "Buang Sampah" }],
-    pairs: { mo1: "r3", mo2: "r1", mo3: "r2" }
-  },
-
-  // ==================== 8. BUDAYA MELAYU RIAU ====================
-  { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Pakaian adat Melayu Riau untuk laki-laki adalah...", options: ["Teluk Belanga", "Kebaya", "Batik"], correct: 0 },
-  { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Buah manis yang terkenal dari Kota Pekanbaru adalah...", options: ["Nanas", "Durian", "Rambutan"], correct: 0 },
-  { 
-    type: "matching", subject: "Budaya Melayu Riau", text: "Cocokkan gambar simbolis budaya Melayu Riau!",
-    left: [{ id: "bm1", content: "🍍" }, { id: "bm2", content: "🏠" }, { id: "bm3", content: "💃" }],
-    right: [{ id: "r1", content: "Selaso Jatuh Kembar" }, { id: "r2", content: "Tari Makan Sirih" }, { id: "r3", content: "Nanas Pekanbaru" }],
-    pairs: { bm1: "r3", bm2: "r1", bm3: "r2" }
-  }
-];
->>>>>>> de7818bfd0ba67ed0faeb0f0667938c5c8e507b0
 
 const optionLetters = ["A", "B", "C", "D"];
 
@@ -162,9 +112,13 @@ function selectClass(level) {
   initQuizData();
   
   document.getElementById("class-menu-screen").classList.add("hidden");
+  document.getElementById("result-screen").classList.add("hidden");
   document.getElementById("quiz-screen").classList.remove("hidden");
   
-  loadQuestion();
+  // Tunda sejenak agar DOM selesai render sebelum loadQuestion & resize Canvas
+  setTimeout(() => {
+    loadQuestion();
+  }, 50);
 }
 
 function goToClassMenu() {
@@ -179,7 +133,6 @@ function initQuizData() {
   const currentBank = classBank[selectedClassLevel] || classBank[1];
   const shuffledAll = shuffleArray(currentBank);
   
-  // Mengambil maksimal 30 soal
   questions = shuffledAll.slice(0, 30);
 
   questions.forEach(q => {
@@ -199,17 +152,28 @@ function initQuizData() {
 
 // Variables Canvas Pilihan Ganda
 let drawnPoints = [];
-const drawCanvas = document.getElementById("draw-canvas");
-const ctxDraw = drawCanvas.getContext("2d");
-let isDrawing = false;
+let drawCanvas, ctxDraw;
 
 // Variables Canvas Mencocokkan Garis
-const matchCanvas = document.getElementById("match-canvas");
-const ctxMatch = matchCanvas.getContext("2d");
+let matchCanvas, ctxMatch;
 let activeLeftId = null;
 let userLines = {};
 let startPoint = null;
 let currentDragPoint = null;
+
+function setupCanvasElements() {
+  drawCanvas = document.getElementById("draw-canvas");
+  if (drawCanvas) {
+    ctxDraw = drawCanvas.getContext("2d");
+    attachDrawCanvasListeners();
+  }
+
+  matchCanvas = document.getElementById("match-canvas");
+  if (matchCanvas) {
+    ctxMatch = matchCanvas.getContext("2d");
+    attachMatchCanvasListeners();
+  }
+}
 
 // ================= AUDIO (TEXT-TO-SPEECH) =================
 function speakCurrentQuestion() {
@@ -217,6 +181,7 @@ function speakCurrentQuestion() {
 
   window.speechSynthesis.cancel();
 
+  if (!questions[currentIdx]) return;
   const q = questions[currentIdx];
   const utterance = new SpeechSynthesisUtterance(q.text);
 
@@ -231,6 +196,8 @@ function speakCurrentQuestion() {
 }
 
 function loadQuestion() {
+  if (!questions || questions.length === 0) return;
+
   isAnswered = false;
   drawnPoints = [];
   userLines = {};
@@ -293,51 +260,55 @@ function loadQuestion() {
   }
 
   document.getElementById("prev-btn").disabled = (currentIdx === 0);
-
   setTimeout(speakCurrentQuestion, 300);
 }
 
-// ================= PILIHAN GANDA (PENGUKURAN KOORDINAT CANVAS) =================
+// ================= PILIHAN GANDA =================
 function resizeDrawCanvas() {
+  if (!drawCanvas) setupCanvasElements();
   const container = document.getElementById("canvas-container");
-  drawCanvas.width = container.offsetWidth;
-  drawCanvas.height = container.offsetHeight;
-  ctxDraw.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
+  if (container && drawCanvas) {
+    drawCanvas.width = container.offsetWidth;
+    drawCanvas.height = container.offsetHeight;
+    ctxDraw.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
+  }
 }
 
-drawCanvas.addEventListener("pointerdown", (e) => {
-  if (isAnswered) return;
-  isDrawing = true;
-  drawnPoints = [];
-  
-  const rect = drawCanvas.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-  
-  drawnPoints.push({ x, y });
-  ctxDraw.beginPath();
-  ctxDraw.lineWidth = 5;
-  ctxDraw.strokeStyle = "#e91e63";
-  ctxDraw.lineCap = "round";
-  ctxDraw.moveTo(x, y);
-});
+function attachDrawCanvasListeners() {
+  drawCanvas.onpointerdown = (e) => {
+    if (isAnswered) return;
+    isDrawing = true;
+    drawnPoints = [];
+    
+    const rect = drawCanvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    drawnPoints.push({ x, y });
+    ctxDraw.beginPath();
+    ctxDraw.lineWidth = 5;
+    ctxDraw.strokeStyle = "#e91e63";
+    ctxDraw.lineCap = "round";
+    ctxDraw.moveTo(x, y);
+  };
 
-drawCanvas.addEventListener("pointermove", (e) => {
-  if (!isDrawing || isAnswered) return;
-  const rect = drawCanvas.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-  
-  drawnPoints.push({ x, y });
-  ctxDraw.lineTo(x, y);
-  ctxDraw.stroke();
-});
+  drawCanvas.onpointermove = (e) => {
+    if (!isDrawing || isAnswered) return;
+    const rect = drawCanvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    drawnPoints.push({ x, y });
+    ctxDraw.lineTo(x, y);
+    ctxDraw.stroke();
+  };
 
-drawCanvas.addEventListener("pointerup", () => {
-  if (!isDrawing || isAnswered) return;
-  isDrawing = false;
-  evaluateMultipleChoice();
-});
+  drawCanvas.onpointerup = () => {
+    if (!isDrawing || isAnswered) return;
+    isDrawing = false;
+    evaluateMultipleChoice();
+  };
+}
 
 function evaluateMultipleChoice() {
   if (drawnPoints.length < 5) return;
@@ -411,77 +382,83 @@ function setupMatchingBoard(q) {
 }
 
 function resizeMatchCanvas() {
+  if (!matchCanvas) setupCanvasElements();
   const container = document.getElementById("matching-container");
-  matchCanvas.width = container.offsetWidth;
-  matchCanvas.height = container.offsetHeight;
-  redrawMatchLines();
+  if (container && matchCanvas) {
+    matchCanvas.width = container.offsetWidth;
+    matchCanvas.height = container.offsetHeight;
+    redrawMatchLines();
+  }
 }
 
-matchCanvas.addEventListener("pointerdown", (e) => {
-  if (isAnswered) return;
-  const rect = matchCanvas.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
+function attachMatchCanvasListeners() {
+  matchCanvas.onpointerdown = (e) => {
+    if (isAnswered) return;
+    const rect = matchCanvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-  const leftItems = document.querySelectorAll("#left-column .match-item");
-  leftItems.forEach(item => {
-    const itemRect = item.getBoundingClientRect();
-    const cRect = matchCanvas.getBoundingClientRect();
-    const l = itemRect.left - cRect.left;
-    const r = itemRect.right - cRect.left;
-    const t = itemRect.top - cRect.top;
-    const b = itemRect.bottom - cRect.top;
+    const leftItems = document.querySelectorAll("#left-column .match-item");
+    leftItems.forEach(item => {
+      const itemRect = item.getBoundingClientRect();
+      const cRect = matchCanvas.getBoundingClientRect();
+      const l = itemRect.left - cRect.left;
+      const r = itemRect.right - cRect.left;
+      const t = itemRect.top - cRect.top;
+      const b = itemRect.bottom - cRect.top;
 
-    if (x >= l && x <= r && y >= t && y <= b) {
-      activeLeftId = item.dataset.id;
-      startPoint = { x: r, y: (t + b) / 2 };
-      currentDragPoint = { x, y };
+      if (x >= l && x <= r && y >= t && y <= b) {
+        activeLeftId = item.dataset.id;
+        startPoint = { x: r, y: (t + b) / 2 };
+        currentDragPoint = { x, y };
+      }
+    });
+  };
+
+  matchCanvas.onpointermove = (e) => {
+    if (!activeLeftId || isAnswered) return;
+    const rect = matchCanvas.getBoundingClientRect();
+    currentDragPoint = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+    redrawMatchLines();
+  };
+
+  matchCanvas.onpointerup = (e) => {
+    if (!activeLeftId || isAnswered) return;
+    const rect = matchCanvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const rightItems = document.querySelectorAll("#right-column .match-item");
+    let matchedRightId = null;
+
+    rightItems.forEach(item => {
+      const itemRect = item.getBoundingClientRect();
+      const cRect = matchCanvas.getBoundingClientRect();
+      const l = itemRect.left - cRect.left;
+      const r = itemRect.right - cRect.left;
+      const t = itemRect.top - cRect.top;
+      const b = itemRect.bottom - cRect.top;
+
+      if (x >= l && x <= r && y >= t && y <= b) {
+        matchedRightId = item.dataset.id;
+      }
+    });
+
+    if (matchedRightId) {
+      userLines[activeLeftId] = matchedRightId;
     }
-  });
-});
 
-matchCanvas.addEventListener("pointermove", (e) => {
-  if (!activeLeftId || isAnswered) return;
-  const rect = matchCanvas.getBoundingClientRect();
-  currentDragPoint = { x: e.clientX - rect.left, y: e.clientY - rect.top };
-  redrawMatchLines();
-});
+    activeLeftId = null;
+    startPoint = null;
+    currentDragPoint = null;
+    redrawMatchLines();
 
-matchCanvas.addEventListener("pointerup", (e) => {
-  if (!activeLeftId || isAnswered) return;
-  const rect = matchCanvas.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-
-  const rightItems = document.querySelectorAll("#right-column .match-item");
-  let matchedRightId = null;
-
-  rightItems.forEach(item => {
-    const itemRect = item.getBoundingClientRect();
-    const cRect = matchCanvas.getBoundingClientRect();
-    const l = itemRect.left - cRect.left;
-    const r = itemRect.right - cRect.left;
-    const t = itemRect.top - cRect.top;
-    const b = itemRect.bottom - cRect.top;
-
-    if (x >= l && x <= r && y >= t && y <= b) {
-      matchedRightId = item.dataset.id;
-    }
-  });
-
-  if (matchedRightId) {
-    userLines[activeLeftId] = matchedRightId;
-  }
-
-  activeLeftId = null;
-  startPoint = null;
-  currentDragPoint = null;
-  redrawMatchLines();
-
-  checkMatchingComplete();
-});
+    checkMatchingComplete();
+  };
+}
 
 function redrawMatchLines() {
+  if (!ctxMatch) return;
   ctxMatch.clearRect(0, 0, matchCanvas.width, matchCanvas.height);
   const cRect = matchCanvas.getBoundingClientRect();
 
@@ -600,13 +577,11 @@ function restartQuiz() {
   document.getElementById("quiz-screen").classList.remove("hidden");
 }
 
+window.onload = () => {
+  setupCanvasElements();
+};
+
 window.onresize = () => {
-<<<<<<< HEAD
   if (questions[currentIdx] && questions[currentIdx].type === "multiple-choice") resizeDrawCanvas();
   else if (questions[currentIdx] && questions[currentIdx].type === "matching") resizeMatchCanvas();
 };
-=======
-  if (questions[currentIdx].type === "multiple-choice") resizeDrawCanvas();
-  else if (questions[currentIdx].type === "matching") resizeMatchCanvas();
-};
->>>>>>> de7818bfd0ba67ed0faeb0f0667938c5c8e507b0
