@@ -5,16 +5,33 @@ const classBank = {
     { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Huruf kapital dari huruf 'b' adalah...", options: ["B", "D", "P"], correct: 0 },
     { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Suara hewan kucing adalah...", options: ["Guk guk", "MEOONG", "Mbekk"], correct: 1 },
     { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Ibu memasak makanan di...", options: ["Kamar", "Dapur", "Halaman"], correct: 1 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "L-A-R-I dibaca menjadi...", options: ["Lari", "Lupa", "Lama"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Lawan kata dari 'Besar' adalah...", options: ["Tinggi", "Kecil", "Panjang"], correct: 1 },
     { type: "multiple-choice", subject: "Math", text: "What is 4 + 3?", options: ["6", "7", "8"], correct: 1 },
     { type: "multiple-choice", subject: "Math", text: "What is 10 - 4?", options: ["5", "6", "7"], correct: 1 },
+    { type: "multiple-choice", subject: "Math", text: "What number comes after 19?", options: ["18", "20", "21"], correct: 1 },
+    { type: "multiple-choice", subject: "Math", text: "Which number is the biggest?", options: ["12", "15", "8"], correct: 1 },
+    { type: "multiple-choice", subject: "Math", text: "What shape is a wall clock?", options: ["Circle", "Triangle", "Cube"], correct: 0 },
     { type: "multiple-choice", subject: "Science", text: "Which body part do we use to hear sounds?", options: ["Eyes", "Ears", "Nose"], correct: 1 },
     { type: "multiple-choice", subject: "Science", text: "Which object is hard and solid?", options: ["Stone", "Water", "Oil"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "Which animal breathes underwater?", options: ["Chicken", "Fish", "Bird"], correct: 1 },
+    { type: "multiple-choice", subject: "Science", text: "When does the sun rise?", options: ["Night", "Morning", "Evening"], correct: 1 },
+    { type: "multiple-choice", subject: "Science", text: "How do chickens reproduce?", options: ["Laying eggs", "Giving birth", "Splitting"], correct: 0 },
     { type: "multiple-choice", subject: "Kewarganegaraan", text: "Simbol sila pertama Pancasila adalah...", options: ["Bintang", "Rantai", "Pohon Beringin"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Warna bendera negara Indonesia adalah...", options: ["Merah Putih", "Merah Biru", "Kuning Hijau"], correct: 0 },
     { type: "multiple-choice", subject: "English", text: "Bahasa Inggris dari kata 'Kucing' adalah...", options: ["Dog", "Cat", "Bird"], correct: 1 },
+    { type: "multiple-choice", subject: "English", text: "Warna 'Red' dalam bahasa Indonesia adalah...", options: ["Biru", "Merah", "Kuning"], correct: 1 },
     { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Kakek dari pihak Ayah' (爸爸的爸爸) adalah...", options: ["Yéye (爷爷)", "Wàigōng (外公)", "Bóbo (伯伯)"], correct: 0 },
     { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Nenek dari pihak Ibu' (妈妈的妈妈) adalah...", options: ["Nǎinai (奶奶)", "Wàipó (外婆)", "Āyí (阿姨)"], correct: 1 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Paman / Kakak Laki-Laki Ayah' (爸爸的哥哥) adalah...", options: ["Shūshu (叔叔)", "Jiūjiu (舅舅)", "Bóbo (伯伯)"], correct: 2 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Tante / Saudara Perempuan Ibu' (妈妈的姐妹) adalah...", options: ["Āyí (阿姨)", "Gūgu (姑姑)", "Nǎinai (奶奶)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Paman / Saudara Laki-Laki Ibu' (妈妈的兄弟) adalah...", options: ["Bóbo (伯伯)", "Jiūjiu (舅舅)", "Shūshu (叔叔)"], correct: 1 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Perintah sikap 'Berdiri / Stand up' dalam kelas adalah...", options: ["Qǐlì (起立)", "Xínglǐ (行礼)", "Zàijiàn (再见)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Sikap 'Hormat / Memberi Salam' dalam kelas adalah...", options: ["Nǐ hǎo (你好)", "Xínglǐ (行礼)", "Qǐlì (起立)"], correct: 1 },
     { type: "multiple-choice", subject: "Moral", text: "Sebelum makan kita sebaiknya...", options: ["Tidur", "Berdoa", "Bermain"], correct: 1 },
+    { type: "multiple-choice", subject: "Moral", text: "Jika diberi hadiah oleh orang lain kita mengucapkan...", options: ["Maaf", "Terima Kasih", "Sama-sama"], correct: 1 },
     { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Pakaian adat Melayu Riau untuk laki-laki adalah...", options: ["Teluk Belanga", "Kebaya", "Batik"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Buah manis yang terkenal dari Kota Pekanbaru adalah...", options: ["Nanas", "Durian", "Rambutan"], correct: 0 },
     { 
       type: "matching", subject: "Bahasa Indonesia", text: "Tarik garis mencocokkan benda dengan namanya!",
       left: [{ id: "b1", content: "🐱" }, { id: "b2", content: "📖" }, { id: "b3", content: "🍌" }],
@@ -26,15 +43,30 @@ const classBank = {
       left: [{ id: "zh1", content: "爸爸的爸爸" }, { id: "zh2", content: "爸爸的妈妈" }, { id: "zh3", content: "爸爸的姐妹" }],
       right: [{ id: "r1", content: "Nǎinai (奶奶)" }, { id: "r2", content: "Gūgu (姑姑)" }, { id: "r3", content: "Yéye (爷爷)" }],
       pairs: { zh1: "r3", zh2: "r1", zh3: "r2" }
+    },
+    { 
+      type: "matching", subject: "Mandarin", text: "Tarik garis mencocokkan panggilan keluarga Ibu!",
+      left: [{ id: "zh1", content: "妈妈的爸爸" }, { id: "zh2", content: "妈妈的妈妈" }, { id: "zh3", content: "妈妈的兄弟" }],
+      right: [{ id: "r1", content: "Wàipó (外婆)" }, { id: "r2", content: "Wàigōng (外公)" }, { id: "r3", content: "Jiūjiu (舅舅)" }],
+      pairs: { zh1: "r2", zh2: "r1", zh3: "r3" }
+    },
+    { 
+      type: "matching", subject: "Mandarin", text: "Tarik garis mencocokkan instruksi kelas & salam!",
+      left: [{ id: "zh1", content: "🙋 Hello / Halo" }, { id: "zh2", content: "🧍 Berdiri" }, { id: "zh3", content: "👋 Sampai Jumpa" }],
+      right: [{ id: "r1", content: "Qǐlì (起立)" }, { id: "r2", content: "Zàijiàn (再见)" }, { id: "r3", content: "Nǐ hǎo (你好)" }],
+      pairs: { zh1: "r3", zh2: "r1", zh3: "r2" }
     }
   ],
 
   // ==================== KELAS 2 SD ====================
   2: [
     { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Tanda baca di akhir kalimat berita adalah...", options: ["Tanda Titik (.)", "Tanda Tanya (?)", "Tanda Seru (!)"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Lawan kata dari 'Terang' adalah...", options: ["Gelap", "Redup", "Siang"], correct: 0 },
     { type: "multiple-choice", subject: "Math", text: "What is 5 x 3?", options: ["12", "15", "18"], correct: 1 },
     { type: "multiple-choice", subject: "Math", text: "How many sides does a rectangle have?", options: ["3", "4", "5"], correct: 1 },
+    { type: "multiple-choice", subject: "Math", text: "What is 20 + 35?", options: ["55", "50", "60"], correct: 0 },
     { type: "multiple-choice", subject: "Science", text: "Which animal lays eggs?", options: ["Duck", "Cat", "Cow"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "Which part of a plant absorbs water from the soil?", options: ["Roots", "Leaves", "Stem"], correct: 0 },
     { type: "multiple-choice", subject: "Kewarganegaraan", text: "Sila kedua Pancasila dilambangkan oleh...", options: ["Rantai", "Bintang", "Pohon Beringin"], correct: 0 },
     { type: "multiple-choice", subject: "English", text: "What is the English word for 'Gajah'?", options: ["Elephant", "Giraffe", "Tiger"], correct: 0 },
     { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin dari 'Ibu' (Mother) adalah...", options: ["Māma (妈妈)", "Bàba (爸爸)", "Mèimei (妹妹)"], correct: 0 },
@@ -115,7 +147,6 @@ function selectClass(level) {
   document.getElementById("result-screen").classList.add("hidden");
   document.getElementById("quiz-screen").classList.remove("hidden");
   
-  // Tunda sejenak agar DOM selesai render sebelum loadQuestion & resize Canvas
   setTimeout(() => {
     loadQuestion();
   }, 50);
@@ -131,10 +162,20 @@ function goToClassMenu() {
 
 function initQuizData() {
   const currentBank = classBank[selectedClassLevel] || classBank[1];
-  const shuffledAll = shuffleArray(currentBank);
   
+  // Acak bank soal terlebih dahulu
+  let shuffledAll = shuffleArray(currentBank);
+  
+  // Jika bank soal kurang dari 30 (misal kelas 2-6), lakukan penggandaan acak hingga genap 30 soal
+  while (shuffledAll.length < 30) {
+    const extraShuffled = shuffleArray(currentBank);
+    shuffledAll = shuffledAll.concat(extraShuffled);
+  }
+  
+  // Ambil tepat 30 soal acak
   questions = shuffledAll.slice(0, 30);
 
+  // Acak pilihan jawaban A, B, C / pasangan tarik garis
   questions.forEach(q => {
     if (q.type === "multiple-choice") {
       const correctOption = q.options[q.correct];
