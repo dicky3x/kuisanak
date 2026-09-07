@@ -66,12 +66,29 @@ const rawQuestions = [
   },
 
   // ==================== 6. MANDARIN ====================
-  { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin dari angka '1' (Satu) adalah...", options: ["Sān (三)", "Èr (二)", "Yī (一)"], correct: 2 },
-  { type: "multiple-choice", subject: "Mandarin", text: "Ucapan 'Salam / Halo' dalam Mandarin adalah...", options: ["Nǐ hǎo", "Xièxie", "Zàijiàn"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Kakek dari pihak Ayah' (爸爸的爸爸) adalah...", options: ["Yéye (爷爷)", "Wàigōng (外公)", "Bóbo (伯伯)"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Nenek dari pihak Ibu' (妈妈的妈妈) adalah...", options: ["Nǎinai (奶奶)", "Wàipó (外婆)", "Āyí (阿姨)"], correct: 1 },
+  { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Paman / Kakak Laki-Laki Ayah' (爸爸的哥哥) adalah...", options: ["Shūshu (叔叔)", "Jiūjiu (舅舅)", "Bóbo (伯伯)"], correct: 2 },
+  { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Tante / Saudara Perempuan Ibu' (妈妈的姐妹) adalah...", options: ["Āyí (阿姨)", "Gūgu (姑姑)", "Nǎinai (奶奶)"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Paman / Saudara Laki-Laki Ibu' (妈妈的兄弟) adalah...", options: ["Bóbo (伯伯)", "Jiūjiu (舅舅)", "Shūshu (叔叔)"], correct: 1 },
+  { type: "multiple-choice", subject: "Mandarin", text: "Perintah sikap 'Berdiri / Stand up' dalam kelas adalah...", options: ["Qǐlì (起立)", "Xínglǐ (行礼)", "Zàijiàn (再见)"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "Sikap 'Hormat / Memberi Salam' dalam kelas adalah...", options: ["Nǐ hǎo (你好)", "Xínglǐ (行礼)", "Qǐlì (起立)"], correct: 1 },
   { 
-    type: "matching", subject: "Mandarin", text: "Cocokkan simbol angka dengan Hanzi Mandarinnya!",
-    left: [{ id: "zh1", content: "1️⃣" }, { id: "zh2", content: "2️⃣" }, { id: "zh3", content: "3️⃣" }],
-    right: [{ id: "r1", content: "Èr (二)" }, { id: "r2", content: "Sān (三)" }, { id: "r3", content: "Yī (一)" }],
+    type: "matching", subject: "Mandarin", text: "Tarik garis mencocokkan panggilan keluarga Ayah!",
+    left: [{ id: "zh1", content: "爸爸的爸爸" }, { id: "zh2", content: "爸爸的妈妈" }, { id: "zh3", content: "爸爸的姐妹" }],
+    right: [{ id: "r1", content: "Nǎinai (奶奶)" }, { id: "r2", content: "Gūgu (姑姑)" }, { id: "r3", content: "Yéye (爷爷)" }],
+    pairs: { zh1: "r3", zh2: "r1", zh3: "r2" }
+  },
+  { 
+    type: "matching", subject: "Mandarin", text: "Tarik garis mencocokkan panggilan keluarga Ibu!",
+    left: [{ id: "zh1", content: "妈妈的爸爸" }, { id: "zh2", content: "妈妈的妈妈" }, { id: "zh3", content: "妈妈的兄弟" }],
+    right: [{ id: "r1", content: "Wàipó (外婆)" }, { id: "r2", content: "Wàigōng (外公)" }, { id: "r3", content: "Jiūjiu (舅舅)" }],
+    pairs: { zh1: "r2", zh2: "r1", zh3: "r3" }
+  },
+  { 
+    type: "matching", subject: "Mandarin", text: "Tarik garis mencocokkan instruksi kelas & salam!",
+    left: [{ id: "zh1", content: "🙋 Hello / Halo" }, { id: "zh2", content: "🧍 Berdiri" }, { id: "zh3", content: "👋 Sampai Jumpa" }],
+    right: [{ id: "r1", content: "Qǐlì (起立)" }, { id: "r2", content: "Zàijiàn (再见)" }, { id: "r3", content: "Nǐ hǎo (你好)" }],
     pairs: { zh1: "r3", zh2: "r1", zh3: "r2" }
   },
 
