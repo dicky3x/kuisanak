@@ -70,6 +70,14 @@ body {
 .class-btn.c5 { background: #42a5f5; }
 .class-btn.c6 { background: #66bb6a; }
 
+.creator-tag {
+  font-size: 11px;
+  color: #888;
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
 /* HEADER SOAL */
 .header-info {
   display: flex;
