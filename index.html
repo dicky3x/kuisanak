@@ -3,14 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kuis Anak SD - Melingkari & Mencocokkan Gambar</title>
+  <title>Kuis Interaktif Anak SD</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="quiz-card">
-    <!-- LAYAR SOAL -->
-    <div id="quiz-screen">
+    
+    <!-- LAYAR 1: MENU PILIH KELAS -->
+    <div id="class-menu-screen">
+      <h1 class="app-title">🎮 Kuis Pintar SD</h1>
+      <p class="app-subtitle">Pilih Tingkat Kelas Kamu:</p>
+      
+      <div class="class-grid">
+        <button class="class-btn c1" onclick="selectClass(1)">Kelas 1 SD</button>
+        <button class="class-btn c2" onclick="selectClass(2)">Kelas 2 SD</button>
+        <button class="class-btn c3" onclick="selectClass(3)">Kelas 3 SD</button>
+        <button class="class-btn c4" onclick="selectClass(4)">Kelas 4 SD</button>
+        <button class="class-btn c5" onclick="selectClass(5)">Kelas 5 SD</button>
+        <button class="class-btn c6" onclick="selectClass(6)">Kelas 6 SD</button>
+      </div>
+    </div>
+
+    <!-- LAYAR 2: LAYAR SOAL KUIS -->
+    <div id="quiz-screen" class="hidden">
       <div class="header-info">
+        <button id="back-home-btn" onclick="goToClassMenu()" title="Kembali ke Menu Kelas">🏠</button>
         <div id="subject-tag" class="subject-tag">Mata Pelajaran</div>
         <div id="progress-tag" class="progress-tag">1 / 30</div>
       </div>
@@ -43,7 +60,7 @@
       </div>
     </div>
 
-    <!-- LAYAR HASIL / SKOR -->
+    <!-- LAYAR 3: HASIL / SKOR -->
     <div id="result-screen" class="hidden">
       <div class="result-badge">🎉 SELESAI!</div>
       <h2>Hasil Kuis Kamu</h2>
@@ -66,8 +83,12 @@
 
       <p id="feedback-text" class="feedback-text">Bagus sekali!</p>
 
-      <button id="restart-btn" onclick="restartQuiz()">🔄 Ulangi Kuis</button>
+      <div class="result-nav-buttons">
+        <button id="restart-btn" onclick="restartQuiz()">🔄 Ulangi Kelas Ini</button>
+        <button id="home-btn" onclick="goToClassMenu()">🏠 Pilih Kelas Lain</button>
+      </div>
     </div>
+
   </div>
 
   <script src="script.js"></script>

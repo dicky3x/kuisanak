@@ -1,100 +1,93 @@
-// Bank Soal Lengkap
-const rawQuestions = [
-  // ==================== 1. BAHASA INDONESIA ====================
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Huruf kapital dari huruf 'b' adalah...", options: ["B", "D", "P"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Suara hewan kucing adalah...", options: ["Guk guk", "MEOONG", "Mbekk"], correct: 1 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Ibu memasak makanan di...", options: ["Kamar", "Dapur", "Halaman"], correct: 1 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "L-A-R-I dibaca menjadi...", options: ["Lari", "Lupa", "Lama"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Lawan kata dari 'Besar' adalah...", options: ["Tinggi", "Kecil", "Panjang"], correct: 1 },
-  { 
-    type: "matching", subject: "Bahasa Indonesia", text: "Tarik garis mencocokkan benda dengan namanya!",
-    left: [{ id: "b1", content: "🐱" }, { id: "b2", content: "📖" }, { id: "b3", content: "🍌" }],
-    right: [{ id: "r1", content: "Buku" }, { id: "r2", content: "Kucing" }, { id: "r3", content: "Pisang" }],
-    pairs: { b1: "r2", b2: "r1", b3: "r3" }
-  },
+// DATABASE BANK SOAL BERDASARKAN TINGKAT KELAS (1 - 6 SD)
+const classBank = {
+  // ==================== KELAS 1 SD ====================
+  1: [
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Huruf kapital dari huruf 'b' adalah...", options: ["B", "D", "P"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Suara hewan kucing adalah...", options: ["Guk guk", "MEOONG", "Mbekk"], correct: 1 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Ibu memasak makanan di...", options: ["Kamar", "Dapur", "Halaman"], correct: 1 },
+    { type: "multiple-choice", subject: "Math", text: "What is 4 + 3?", options: ["6", "7", "8"], correct: 1 },
+    { type: "multiple-choice", subject: "Math", text: "What is 10 - 4?", options: ["5", "6", "7"], correct: 1 },
+    { type: "multiple-choice", subject: "Science", text: "Which body part do we use to hear sounds?", options: ["Eyes", "Ears", "Nose"], correct: 1 },
+    { type: "multiple-choice", subject: "Science", text: "Which object is hard and solid?", options: ["Stone", "Water", "Oil"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Simbol sila pertama Pancasila adalah...", options: ["Bintang", "Rantai", "Pohon Beringin"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "Bahasa Inggris dari kata 'Kucing' adalah...", options: ["Dog", "Cat", "Bird"], correct: 1 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Kakek dari pihak Ayah' (爸爸的爸爸) adalah...", options: ["Yéye (爷爷)", "Wàigōng (外公)", "Bóbo (伯伯)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Nenek dari pihak Ibu' (妈妈的妈妈) adalah...", options: ["Nǎinai (奶奶)", "Wàipó (外婆)", "Āyí (阿姨)"], correct: 1 },
+    { type: "multiple-choice", subject: "Moral", text: "Sebelum makan kita sebaiknya...", options: ["Tidur", "Berdoa", "Bermain"], correct: 1 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Pakaian adat Melayu Riau untuk laki-laki adalah...", options: ["Teluk Belanga", "Kebaya", "Batik"], correct: 0 },
+    { 
+      type: "matching", subject: "Bahasa Indonesia", text: "Tarik garis mencocokkan benda dengan namanya!",
+      left: [{ id: "b1", content: "🐱" }, { id: "b2", content: "📖" }, { id: "b3", content: "🍌" }],
+      right: [{ id: "r1", content: "Buku" }, { id: "r2", content: "Kucing" }, { id: "r3", content: "Pisang" }],
+      pairs: { b1: "r2", b2: "r1", b3: "r3" }
+    },
+    { 
+      type: "matching", subject: "Mandarin", text: "Tarik garis mencocokkan panggilan keluarga Ayah!",
+      left: [{ id: "zh1", content: "爸爸的爸爸" }, { id: "zh2", content: "爸爸的妈妈" }, { id: "zh3", content: "爸爸的姐妹" }],
+      right: [{ id: "r1", content: "Nǎinai (奶奶)" }, { id: "r2", content: "Gūgu (姑姑)" }, { id: "r3", content: "Yéye (爷爷)" }],
+      pairs: { zh1: "r3", zh2: "r1", zh3: "r2" }
+    }
+  ],
 
-  // ==================== 2. MATH (ENGLISH VERSION) ====================
-  { type: "multiple-choice", subject: "Math", text: "What is 4 + 3?", options: ["6", "7", "8"], correct: 1 },
-  { type: "multiple-choice", subject: "Math", text: "What is 10 - 4?", options: ["5", "6", "7"], correct: 1 },
-  { type: "multiple-choice", subject: "Math", text: "What number comes after 19?", options: ["18", "20", "21"], correct: 1 },
-  { type: "multiple-choice", subject: "Math", text: "Which number is the biggest?", options: ["12", "15", "8"], correct: 1 },
-  { type: "multiple-choice", subject: "Math", text: "What shape is a wall clock?", options: ["Circle", "Triangle", "Cube"], correct: 0 },
-  { 
-    type: "matching", subject: "Math", text: "Match the objects with their 2D shapes!",
-    left: [{ id: "m1", content: "⚽" }, { id: "m2", content: "📐" }, { id: "m3", content: "📦" }],
-    right: [{ id: "r1", content: "Triangle" }, { id: "r2", content: "Square" }, { id: "r3", content: "Circle" }],
-    pairs: { m1: "r3", m2: "r1", m3: "r2" }
-  },
-  { 
-    type: "matching", subject: "Math", text: "Match the simple addition sums!",
-    left: [{ id: "m1", content: "2 + 2" }, { id: "m2", content: "5 + 1" }, { id: "m3", content: "3 + 0" }],
-    right: [{ id: "r1", content: "3" }, { id: "r2", content: "4" }, { id: "r3", content: "6" }],
-    pairs: { m1: "r2", m2: "r3", m3: "r1" }
-  },
+  // ==================== KELAS 2 SD ====================
+  2: [
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Tanda baca di akhir kalimat berita adalah...", options: ["Tanda Titik (.)", "Tanda Tanya (?)", "Tanda Seru (!)"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is 5 x 3?", options: ["12", "15", "18"], correct: 1 },
+    { type: "multiple-choice", subject: "Math", text: "How many sides does a rectangle have?", options: ["3", "4", "5"], correct: 1 },
+    { type: "multiple-choice", subject: "Science", text: "Which animal lays eggs?", options: ["Duck", "Cat", "Cow"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Sila kedua Pancasila dilambangkan oleh...", options: ["Rantai", "Bintang", "Pohon Beringin"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "What is the English word for 'Gajah'?", options: ["Elephant", "Giraffe", "Tiger"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin dari 'Ibu' (Mother) adalah...", options: ["Māma (妈妈)", "Bàba (爸爸)", "Mèimei (妹妹)"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Makanan khas Melayu Riau berkuah pedas gurih adalah...", options: ["Gulai Patin", "Rendang", "Soto"], correct: 0 },
+    { 
+      type: "matching", subject: "Math", text: "Match simple multiplication sums!",
+      left: [{ id: "m1", content: "2 x 3" }, { id: "m2", content: "4 x 2" }, { id: "m3", content: "5 x 1" }],
+      right: [{ id: "r1", content: "8" }, { id: "r2", content: "5" }, { id: "r3", content: "6" }],
+      pairs: { m1: "r3", m2: "r1", m3: "r2" }
+    }
+  ],
 
-  // ==================== 3. SCIENCE (ENGLISH VERSION) ====================
-  { type: "multiple-choice", subject: "Science", text: "Which body part do we use to hear sounds?", options: ["Eyes", "Ears", "Nose"], correct: 1 },
-  { type: "multiple-choice", subject: "Science", text: "Which object is hard and solid?", options: ["Stone", "Water", "Oil"], correct: 0 },
-  { type: "multiple-choice", subject: "Science", text: "Which animal breathes underwater?", options: ["Chicken", "Fish", "Bird"], correct: 1 },
-  { type: "multiple-choice", subject: "Science", text: "When does the sun rise?", options: ["Night", "Morning", "Evening"], correct: 1 },
-  { type: "multiple-choice", subject: "Science", text: "How do chickens reproduce?", options: ["Laying eggs", "Giving birth", "Splitting"], correct: 0 },
-  { 
-    type: "matching", subject: "Science", text: "Match the senses with their functions!",
-    left: [{ id: "s1", content: "👂" }, { id: "s2", content: "👁️" }, { id: "s3", content: "👃" }],
-    right: [{ id: "r1", content: "See" }, { id: "r2", content: "Smell" }, { id: "r3", content: "Hear" }],
-    pairs: { s1: "r3", s2: "r1", s3: "r2" }
-  },
+  // ==================== KELAS 3 SD ====================
+  3: [
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Gagasan utama dalam sebuah paragraf disebut...", options: ["Ide Pokok", "Kalimat Penjelas", "Judul"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is 100 / 4?", options: ["20", "25", "30"], correct: 1 },
+    { type: "multiple-choice", subject: "Science", text: "Plants need sunlight for...", options: ["Photosynthesis", "Respiration", "Digestion"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Semboyan negara Indonesia adalah...", options: ["Bhinneka Tunggal Ika", "Tut Wuri Handayani", "Pancasila"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "What is the opposite of 'Cold'?", options: ["Hot", "Warm", "Ice"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin dari angka '10' (Ten) adalah...", options: ["Shí (十)", "Wǔ (五)", "Sì (四)"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Alat musik petik khas Melayu Riau dinamakan...", options: ["Gambus", "Gendang", "Siter"], correct: 0 }
+  ],
 
-  // ==================== 4. KEWARGANEGARAAN ====================
-  { type: "multiple-choice", subject: "Kewarganegaraan", text: "Simbol sila pertama Pancasila adalah...", options: ["Bintang", "Rantai", "Pohon Beringin"], correct: 0 },
-  { type: "multiple-choice", subject: "Kewarganegaraan", text: "Warna bendera negara Indonesia adalah...", options: ["Merah Putih", "Merah Biru", "Kuning Hijau"], correct: 0 },
-  { 
-    type: "matching", subject: "Kewarganegaraan", text: "Tarik garis dari simbol ke nomor sila Pancasila!",
-    left: [{ id: "k1", content: "⭐" }, { id: "k2", content: "⛓️" }, { id: "k3", content: "🌳" }],
-    right: [{ id: "r1", content: "Sila Ke-2" }, { id: "r2", content: "Sila Ke-3" }, { id: "r3", content: "Sila Ke-1" }],
-    pairs: { k1: "r3", k2: "r1", k3: "r2" }
-  },
+  // ==================== KELAS 4 SD ====================
+  4: [
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Kata kerja yang memerlukan objek disebut kata kerja...", options: ["Transitif", "Intransitif", "Pasif"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "Find the area of a square with side 6 cm!", options: ["24 cm²", "36 cm²", "12 cm²"], correct: 1 },
+    { type: "multiple-choice", subject: "Science", text: "Light travels in a...", options: ["Straight line", "Curved line", "Zigzag line"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Lembaga negara yang membuat undang-undang bersama Presiden adalah...", options: ["DPR", "MA", "MK"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "She _____ to school every day.", options: ["goes", "go", "went"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Kerajaan Melayu terbesar di Riau pada zaman dahulu adalah...", options: ["Kerajaan Siak", "Kerajaan Majapahit", "Kerajaan Sriwijaya"], correct: 0 }
+  ],
 
-  // ==================== 5. ENGLISH ====================
-  { type: "multiple-choice", subject: "English", text: "Bahasa Inggris dari kata 'Kucing' adalah...", options: ["Dog", "Cat", "Bird"], correct: 1 },
-  { type: "multiple-choice", subject: "English", text: "Warna 'Red' dalam bahasa Indonesia adalah...", options: ["Biru", "Merah", "Kuning"], correct: 1 },
-  { 
-    type: "matching", subject: "English", text: "Match the image on the left with its English word!",
-    left: [{ id: "e1", content: "🐶" }, { id: "e2", content: "🍎" }, { id: "e3", content: "🚗" }],
-    right: [{ id: "r1", content: "Apple" }, { id: "r2", content: "Car" }, { id: "r3", content: "Dog" }],
-    pairs: { e1: "r3", e2: "r1", e3: "r2" }
-  },
+  // ==================== KELAS 5 SD ====================
+  5: [
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Karangan non-fiksi berdasarkan...", options: ["Fakta dan Data", "Khayalan", "Mitos"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "Calculate 15% of 200!", options: ["25", "30", "35"], correct: 1 },
+    { type: "multiple-choice", subject: "Science", text: "The organ responsible for pumping blood is the...", options: ["Heart", "Lungs", "Kidneys"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Hari Lahir Pancasila diperingati setiap tanggal...", options: ["1 Juni", "17 Agustus", "28 Oktober"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "If I _____ rich, I would travel the world.", options: ["were", "was", "am"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Tarian adat Melayu Riau untuk penyambutan tamu adalah...", options: ["Tari Makan Sirih", "Tari Pendet", "Tari Saman"], correct: 0 }
+  ],
 
-  // ==================== 6. MANDARIN ====================
-  { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin dari angka '1' (Satu) adalah...", options: ["Sān (三)", "Èr (二)", "Yī (一)"], correct: 2 },
-  { type: "multiple-choice", subject: "Mandarin", text: "Ucapan 'Salam / Halo' dalam Mandarin adalah...", options: ["Nǐ hǎo", "Xièxie", "Zàijiàn"], correct: 0 },
-  { 
-    type: "matching", subject: "Mandarin", text: "Cocokkan simbol angka dengan Hanzi Mandarinnya!",
-    left: [{ id: "zh1", content: "1️⃣" }, { id: "zh2", content: "2️⃣" }, { id: "zh3", content: "3️⃣" }],
-    right: [{ id: "r1", content: "Èr (二)" }, { id: "r2", content: "Sān (三)" }, { id: "r3", content: "Yī (一)" }],
-    pairs: { zh1: "r3", zh2: "r1", zh3: "r2" }
-  },
-
-  // ==================== 7. MORAL ====================
-  { type: "multiple-choice", subject: "Moral", text: "Sebelum makan kita sebaiknya...", options: ["Tidur", "Berdoa", "Bermain"], correct: 1 },
-  { type: "multiple-choice", subject: "Moral", text: "Jika diberi hadiah oleh orang lain kita mengucapkan...", options: ["Maaf", "Terima Kasih", "Sama-sama"], correct: 1 },
-  { 
-    type: "matching", subject: "Moral", text: "Tarik garis dari gambar ke tindakan terpuji!",
-    left: [{ id: "mo1", content: "🗑️" }, { id: "mo2", content: "🙏" }, { id: "mo3", content: "🤝" }],
-    right: [{ id: "r1", content: "Berdoa" }, { id: "r2", content: "Saling Membantu" }, { id: "r3", content: "Buang Sampah" }],
-    pairs: { mo1: "r3", mo2: "r1", mo3: "r2" }
-  },
-
-  // ==================== 8. BUDAYA MELAYU RIAU ====================
-  { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Pakaian adat Melayu Riau untuk laki-laki adalah...", options: ["Teluk Belanga", "Kebaya", "Batik"], correct: 0 },
-  { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Buah manis yang terkenal dari Kota Pekanbaru adalah...", options: ["Nanas", "Durian", "Rambutan"], correct: 0 },
-  { 
-    type: "matching", subject: "Budaya Melayu Riau", text: "Cocokkan gambar simbolis budaya Melayu Riau!",
-    left: [{ id: "bm1", content: "🍍" }, { id: "bm2", content: "🏠" }, { id: "bm3", content: "💃" }],
-    right: [{ id: "r1", content: "Selaso Jatuh Kembar" }, { id: "r2", content: "Tari Makan Sirih" }, { id: "r3", content: "Nanas Pekanbaru" }],
-    pairs: { bm1: "r3", bm2: "r1", bm3: "r2" }
-  }
-];
+  // ==================== KELAS 6 SD ====================
+  6: [
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Kalimat yang efektif memenuhi unsur...", options: ["SPOK", "SOP", "5W+1H"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is the volume of a cube with edge 5 cm?", options: ["100 cm³", "125 cm³", "150 cm³"], correct: 1 },
+    { type: "multiple-choice", subject: "Science", text: "Which planet is known as the Red Planet?", options: ["Mars", "Venus", "Jupiter"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "UUD 1945 disahkan pada tanggal...", options: ["18 Agustus 1945", "17 Agustus 1945", "20 Agustus 1945"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "The book was _____ by a famous author.", options: ["written", "write", "wrote"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Rumah adat khas Melayu Riau dinamakan...", options: ["Rumah Selaso Jatuh Kembar", "Rumah Tongkonan", "Rumah Lamin"], correct: 0 }
+  ]
+};
 
 const optionLetters = ["A", "B", "C", "D"];
 
@@ -107,13 +100,36 @@ function shuffleArray(array) {
   return arr;
 }
 
+let selectedClassLevel = 1;
 let questions = [];
 let currentIdx = 0;
 let isAnswered = false;
 let userAnswers = [];
 
+// ================= AKSI PILIH KELAS =================
+function selectClass(level) {
+  selectedClassLevel = level;
+  initQuizData();
+  
+  document.getElementById("class-menu-screen").classList.add("hidden");
+  document.getElementById("quiz-screen").classList.remove("hidden");
+  
+  loadQuestion();
+}
+
+function goToClassMenu() {
+  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+  
+  document.getElementById("quiz-screen").classList.add("hidden");
+  document.getElementById("result-screen").classList.add("hidden");
+  document.getElementById("class-menu-screen").classList.remove("hidden");
+}
+
 function initQuizData() {
-  const shuffledAll = shuffleArray(rawQuestions);
+  const currentBank = classBank[selectedClassLevel] || classBank[1];
+  const shuffledAll = shuffleArray(currentBank);
+  
+  // Mengambil maksimal 30 soal
   questions = shuffledAll.slice(0, 30);
 
   questions.forEach(q => {
@@ -128,6 +144,7 @@ function initQuizData() {
   });
 
   userAnswers = new Array(questions.length).fill(null);
+  currentIdx = 0;
 }
 
 // Variables Canvas Pilihan Ganda
@@ -170,9 +187,6 @@ function loadQuestion() {
   activeLeftId = null;
   startPoint = null;
   currentDragPoint = null;
-  
-  document.getElementById("quiz-screen").classList.remove("hidden");
-  document.getElementById("result-screen").classList.add("hidden");
 
   const q = questions[currentIdx];
   document.getElementById("subject-tag").innerText = q.subject;
@@ -213,7 +227,6 @@ function loadQuestion() {
       container.appendChild(row);
     });
 
-    // Menghitung ulang ukuran Canvas persis setelah elemen opsi selesai dimuat
     setTimeout(resizeDrawCanvas, 100);
   } else if (q.type === "matching") {
     canvasContainer.classList.add("hidden");
@@ -234,7 +247,7 @@ function loadQuestion() {
   setTimeout(speakCurrentQuestion, 300);
 }
 
-// ================= PILIHAN GANDA (PENGUKURAN KOORDINAT CANVAS PRESISI) =================
+// ================= PILIHAN GANDA (PENGUKURAN KOORDINAT CANVAS) =================
 function resizeDrawCanvas() {
   const container = document.getElementById("canvas-container");
   drawCanvas.width = container.offsetWidth;
@@ -285,7 +298,6 @@ function evaluateMultipleChoice() {
   letterBadges.forEach((badge) => {
     const badgeRect = badge.getBoundingClientRect();
     
-    // Konversi posisi lingkaran A, B, C ke koordinat canvas
     const badgeLeft = badgeRect.left - canvasRect.left;
     const badgeRight = badgeRect.right - canvasRect.left;
     const badgeTop = badgeRect.top - canvasRect.top;
@@ -335,7 +347,7 @@ function setupMatchingBoard(q) {
     const div = document.createElement("div");
     div.className = "match-item";
     div.dataset.id = item.id;
-    div.innerHTML = `<span style="font-size:20px;">${item.content}</span>`;
+    div.innerHTML = `<span>${item.content}</span>`;
     leftCol.appendChild(div);
   });
 
@@ -532,17 +544,13 @@ function showResultScreen() {
 }
 
 function restartQuiz() {
-  currentIdx = 0;
   initQuizData();
   loadQuestion();
+  document.getElementById("result-screen").classList.add("hidden");
+  document.getElementById("quiz-screen").classList.remove("hidden");
 }
 
-window.onload = () => {
-  initQuizData();
-  loadQuestion();
-};
-
 window.onresize = () => {
-  if (questions[currentIdx].type === "multiple-choice") resizeDrawCanvas();
-  else if (questions[currentIdx].type === "matching") resizeMatchCanvas();
+  if (questions[currentIdx] && questions[currentIdx].type === "multiple-choice") resizeDrawCanvas();
+  else if (questions[currentIdx] && questions[currentIdx].type === "matching") resizeMatchCanvas();
 };
