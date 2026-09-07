@@ -133,20 +133,28 @@ function shuffleArray(array) {
 }
 
 let selectedClassLevel = 1;
+let selectedSubjectName = "Semua Mapel";
 let questions = [];
 let currentIdx = 0;
 let isAnswered = false;
 let userAnswers = [];
 
-// ================= AKSI PILIH KELAS =================
+// ================= AKSI PILIH KELAS & MAPEL =================
 function selectClass(level) {
   selectedClassLevel = level;
-  initQuizData();
+  document.getElementById("selected-class-title").innerText = `Kelas ${level} SD`;
   
   document.getElementById("class-menu-screen").classList.add("hidden");
-  document.getElementById("result-screen").classList.add("hidden");
+  document.getElementById("subject-menu-screen").classList.remove("hidden");
+}
+
+function selectSubject(subjectName) {
+  selectedSubjectName = subjectName;
+  initQuizData();
+
+  document.getElementById("subject-menu-screen").classList.add("hidden");
   document.getElementById("quiz-screen").classList.remove("hidden");
-  
+
   setTimeout(() => {
     loadQuestion();
   }, 50);
@@ -157,16 +165,34 @@ function goToClassMenu() {
   
   document.getElementById("quiz-screen").classList.add("hidden");
   document.getElementById("result-screen").classList.add("hidden");
+  document.getElementById("subject-menu-screen").classList.add("hidden");
   document.getElementById("class-menu-screen").classList.remove("hidden");
 }
 
+function goToSubjectMenu() {
+  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+
+  document.getElementById("quiz-screen").classList.add("hidden");
+  document.getElementById("result-screen").classList.add("hidden");
+  document.getElementById("subject-menu-screen").classList.remove("hidden");
+}
+
 function initQuizData() {
-  const currentBank = classBank[selectedClassLevel] || classBank[1];
+  const currentClassBank = classBank[selectedClassLevel] || classBank[1];
   
-  let shuffledAll = shuffleArray(currentBank);
+  // Filter soal berdasarkan Mapel (atau ambil semua jika "Semua Mapel")
+  let filteredBank = currentClassBank;
+  if (selectedSubjectName !== "Semua Mapel") {
+    filteredBank = currentClassBank.filter(q => q.subject === selectedSubjectName);
+    // Jika soal mapel tersebut belum cukup banyak di bank soal, pakai bank yang ada
+    if (filteredBank.length === 0) filteredBank = currentClassBank;
+  }
+
+  let shuffledAll = shuffleArray(filteredBank);
   
+  // Penggandaan acak jika ketersediaan soal < 30
   while (shuffledAll.length < 30) {
-    const extraShuffled = shuffleArray(currentBank);
+    const extraShuffled = shuffleArray(filteredBank);
     shuffledAll = shuffledAll.concat(extraShuffled);
   }
   
@@ -373,7 +399,6 @@ function evaluateMultipleChoice() {
       const parentRow = badge.closest(".option-row");
 
       if (isCorrect) {
-        // Jika jawaban benar
         badge.style.borderColor = "#4caf50";
         badge.style.background = "#4caf50";
         badge.style.color = "#ffffff";
@@ -382,7 +407,6 @@ function evaluateMultipleChoice() {
           parentRow.style.background = "#c8e6c9";
         }
       } else {
-        // Jika jawaban salah: Highlight pilihan user dengan MERAH
         badge.style.borderColor = "#f44336";
         badge.style.background = "#f44336";
         badge.style.color = "#ffffff";
@@ -391,7 +415,6 @@ function evaluateMultipleChoice() {
           parentRow.style.background = "#ffcdd2";
         }
 
-        // Dan highlight jawaban BENAR dengan HIJAU
         const correctBadge = document.querySelector(`.option-letter[data-index="${correctIdx}"]`);
         if (correctBadge) {
           correctBadge.style.borderColor = "#4caf50";
@@ -405,7 +428,6 @@ function evaluateMultipleChoice() {
         }
       }
 
-      // Beri jeda 1,5 detik agar anak sempat melihat kunci jawaban yang benar sebelum pindah soal
       setTimeout(() => { nextQuestion(); }, 1500);
     }
   });

@@ -23,14 +23,35 @@
         <button class="class-btn c6" onclick="selectClass(6)">Kelas 6 SD</button>
       </div>
 
-      <!-- Teks Kredit Tambahan -->
       <p class="creator-tag">dibuat oleh ayah kyna</p>
     </div>
 
-    <!-- LAYAR 2: LAYAR SOAL KUIS -->
+    <!-- LAYAR 2: MENU PILIH MATA PELAJARAN -->
+    <div id="subject-menu-screen" class="hidden">
+      <div class="menu-header">
+        <button class="back-icon-btn" onclick="goToClassMenu()" title="Kembali ke Menu Kelas">⬅️</button>
+        <h2 id="selected-class-title">Kelas 1 SD</h2>
+      </div>
+      <p class="app-subtitle">Pilih Mata Pelajaran:</p>
+      
+      <div class="subject-grid">
+        <button class="subject-btn s-all" onclick="selectSubject('Semua Mapel')">🎲 Semua Mapel (Campur)</button>
+        <button class="subject-btn s-indo" onclick="selectSubject('Bahasa Indonesia')">🇮🇩 Bahasa Indonesia</button>
+        <button class="subject-btn s-math" onclick="selectSubject('Math')">🔢 Math (Matematika)</button>
+
+        <button class="subject-btn s-sci" onclick="selectSubject('Science')">🔬 Science (IPA)</button>
+        <button class="subject-btn s-pkn" onclick="selectSubject('Kewarganegaraan')">🦅 PKn</button>
+        <button class="subject-btn s-eng" onclick="selectSubject('English')">🇬🇧 English</button>
+        <button class="subject-btn s-mand" onclick="selectSubject('Mandarin')">🇨🇳 Mandarin</button>
+        <button class="subject-btn s-moral" onclick="selectSubject('Moral')">🌟 Moral / Budi Pekerti</button>
+        <button class="subject-btn s-bmr" onclick="selectSubject('Budaya Melayu Riau')">🌴 Budaya Melayu Riau</button>
+      </div>
+    </div>
+
+    <!-- LAYAR 3: LAYAR SOAL KUIS -->
     <div id="quiz-screen" class="hidden">
       <div class="header-info">
-        <button id="back-home-btn" onclick="goToClassMenu()" title="Kembali ke Menu Kelas">🏠</button>
+        <button id="back-home-btn" onclick="goToSubjectMenu()" title="Kembali ke Pilih Mapel">⬅️</button>
         <div id="subject-tag" class="subject-tag">Mata Pelajaran</div>
         <div id="progress-tag" class="progress-tag">1 / 30</div>
       </div>
@@ -63,7 +84,7 @@
       </div>
     </div>
 
-    <!-- LAYAR 3: HASIL / SKOR -->
+    <!-- LAYAR 4: HASIL / SKOR -->
     <div id="result-screen" class="hidden">
       <div class="result-badge">🎉 SELESAI!</div>
       <h2>Hasil Kuis Kamu</h2>
@@ -87,7 +108,8 @@
       <p id="feedback-text" class="feedback-text">Bagus sekali!</p>
 
       <div class="result-nav-buttons">
-        <button id="restart-btn" onclick="restartQuiz()">🔄 Ulangi Kelas Ini</button>
+        <button id="restart-btn" onclick="restartQuiz()">🔄 Ulangi Mapel Ini</button>
+        <button id="subject-nav-btn" onclick="goToSubjectMenu()">📚 Pilih Mapel Lain</button>
         <button id="home-btn" onclick="goToClassMenu()">🏠 Pilih Kelas Lain</button>
       </div>
     </div>

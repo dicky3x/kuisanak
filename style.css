@@ -27,7 +27,7 @@ body {
   display: none !important;
 }
 
-/* MENU KELAS */
+/* MENU KELAS & MAPEL */
 .app-title {
   color: #0288d1;
   font-size: 26px;
@@ -37,7 +37,33 @@ body {
 .app-subtitle {
   color: #666;
   font-size: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.menu-header h2 {
+  font-size: 20px;
+  color: #0288d1;
+  margin: 0;
+}
+
+.back-icon-btn {
+  position: absolute;
+  left: 0;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .class-grid {
@@ -59,7 +85,7 @@ body {
   transition: transform 0.1s ease;
 }
 
-.class-btn:active {
+.class-btn:active, .subject-btn:active {
   transform: scale(0.95);
 }
 
@@ -69,6 +95,37 @@ body {
 .class-btn.c4 { background: #ffa726; }
 .class-btn.c5 { background: #42a5f5; }
 .class-btn.c6 { background: #66bb6a; }
+
+.subject-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.subject-btn {
+  border: none;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.s-all { background: #ff7043; }
+.s-indo { background: #e53935; }
+.s-math { background: #1e88e5; }
+.s-sci { background: #43a047; }
+.s-pkn { background: #8e24aa; }
+.s-eng { background: #3949ab; }
+.s-mand { background: #d81b60; }
+.s-moral { background: #fdd835; color: #333 !important; }
+.s-bmr { background: #00897b; }
 
 .creator-tag {
   font-size: 11px;
@@ -362,17 +419,18 @@ body {
 .result-nav-buttons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .result-nav-buttons button {
   border: none;
   padding: 12px;
   border-radius: 12px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
 }
 
 #restart-btn { background: #2196f3; color: white; }
+#subject-nav-btn { background: #00bcd4; color: white; }
 #home-btn { background: #78909c; color: white; }
