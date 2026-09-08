@@ -131,7 +131,7 @@ const classBank = {
     // --- KEWARGANEGARAAN / PKN KELAS 1 (100% EKSKLUSIF 20 SOAL LENGKAP DARI PDF) ---
     // Bagian A: Pilihan Ganda (No 1 - 10)
     { type: "multiple-choice", subject: "Kewarganegaraan", text: "1. Lambang negara Republik Indonesia adalah...", options: ["burung garuda", "bendera merah putih", "lagu Indonesia raya"], correct: 0 },
-    { type: "multiple-choice", subject: "Kewarganegaraan", text: "2. Gambar Rantai Emas melambangkan Pancasila sila ke-...", options: ["3", "2", "1"], correct: 1 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "2. Gambar Bintang ⭐ melambangkan Pancasila sila ke-...", options: ["3", "2", "1"], correct: 2 },
     { type: "multiple-choice", subject: "Kewarganegaraan", text: "3. Aturan adalah petunjuk yang dibuat agar hidup kita menjadi...", options: ["susah", "tertib", "sedih"], correct: 1 },
     { type: "multiple-choice", subject: "Kewarganegaraan", text: "4. Bunyi sila kedua Pancasila yang benar adalah...", options: ["kemanusiaan yang adil dan beradab", "kemanusiaan yang beradab dan adil", "adil dan beradab yang kemanusiaan"], correct: 0 },
     { type: "multiple-choice", subject: "Kewarganegaraan", text: "5. Hari sudah pagi. Sebelum melangkahkan kaki keluar rumah untuk pergi ke sekolah, tindakan santun yang harus kamu lakukan adalah...", options: ["langsung lari keluar rumah", "berpamitan dan mencium tangan orang tua", "berteriak pamit dari jauh"], correct: 1 },
@@ -149,7 +149,7 @@ const classBank = {
     { type: "multiple-choice", subject: "Kewarganegaraan", text: "15. (Isian B.5) Ketika kita bersama-sama bekerja sama melaksanakan piket kebersihan kelas, pekerjaan yang berat akan terasa lebih...", options: ["ringan", "makin berat", "susah"], correct: 0 },
 
     // Bagian C: AKM / HOTS (No 16 - 20 / C1 - C5)
-    { type: "multiple-choice", subject: "Kewarganegaraan", text: "16. (HOTS C.1) Tulislah bunyi sila Pancasila yang dilambangkan oleh Bintang Emas!", options: ["Ketuhanan Yang Maha Esa", "Kemanusiaan yang adil dan beradab", "Persatuan Indonesia"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "16. (HOTS C.1) Tulislah bunyi sila Pancasila yang dilambangkan oleh rantai ⛓️!", options: ["Ketuhanan Yang Maha Esa", "Kemanusiaan yang adil dan beradab", "Persatuan Indonesia"], correct: 1 },
     { type: "multiple-choice", subject: "Kewarganegaraan", text: "17. (HOTS C.2) Contoh aturan untuk menjaga kebersihan di lingkungan sekolah adalah...", options: ["Membuang sampah di tempatnya & piket kelas", "Mencoret-coret meja kelas", "Membiarkan plastik di lapangan"], correct: 0 },
     { type: "multiple-choice", subject: "Kewarganegaraan", text: "18. (HOTS C.3) Informasi yang mencakup Nama, Hobi/Kegemaran, dan Ciri Fisik dinamakan...", options: ["Identitas diri sendiri", "Aturan sekolah", "Simbol Pancasila"], correct: 0 },
     { type: "multiple-choice", subject: "Kewarganegaraan", text: "19. (HOTS C.4) Dito selesai bermain balok lalu langsung lari makan siang meninggalkan mainannya. Akibat & tindakan yang benar adalah...", options: ["Mainan bisa terinjak/rusak. Dito harus merapikannya dulu", "Mainan rapi sendiri", "Ibu senang melihat lantai berantakan"], correct: 0 },
