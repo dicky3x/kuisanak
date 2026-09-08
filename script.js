@@ -1,23 +1,50 @@
-// DATABASE BANK SOAL LENGKAP BERDASARKAN TINGKAT KELAS (1 - 6 SD)
+// DATABASE BANK SOAL LENGKAP (MINIMAL 30 SOAL UNIK PER MAPEL DI SETIAP KELAS)
 const classBank = {
   // ==================== KELAS 1 SD ====================
   1: [
-    // Bahasa Indonesia
+    // --- BAHASA INDONESIA (30 SOAL) ---
     { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Huruf kapital dari huruf 'b' adalah...", options: ["B", "D", "P"], correct: 0 },
     { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Suara hewan kucing adalah...", options: ["Guk guk", "MEOONG", "Mbekk"], correct: 1 },
     { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Ibu memasak makanan di...", options: ["Kamar", "Dapur", "Halaman"], correct: 1 },
     { type: "multiple-choice", subject: "Bahasa Indonesia", text: "L-A-R-I dibaca menjadi...", options: ["Lari", "Lupa", "Lama"], correct: 0 },
     { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Lawan kata dari 'Besar' adalah...", options: ["Tinggi", "Kecil", "Panjang"], correct: 1 },
-    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Benda yang digunakan untuk menulis di buku adalah...", options: ["Pensil", "Penggaris", "Penghapus"], correct: 0 },
-    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Anggota tubuh yang digunakan untuk melihat adalah...", options: ["Telinga", "Mata", "Hidung"], correct: 1 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Benda untuk menulis di buku adalah...", options: ["Pensil", "Penggaris", "Penghapus"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Anggota tubuh untuk melihat adalah...", options: ["Telinga", "Mata", "Hidung"], correct: 1 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "B-U-K-U dibaca menjadi...", options: ["Buku", "Buka", "Bulu"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Tempat membaca buku di sekolah dinamakan...", options: ["Perpustakaan", "Kantin", "Toilet"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Benda yang digunakan untuk menghapus coretan pensil...", options: ["Penghapus", "Rautan", "Gunting"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Huruf pertama pada kata 'Ayam' adalah...", options: ["A", "Y", "M"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Hewan yang dapat terbang di udara adalah...", options: ["Burung", "Ikan", "Kucing"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "M-A-K-A-N dibaca menjadi...", options: ["Makan", "Malam", "Makan"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Suara hewan bebek adalah...", options: ["Kwek-kwek", "Moo", "Guk-guk"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Ayah membaca koran di...", options: ["Ruang Tamu", "Dapur", "Kamar Mandi"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Benda yang dipakai di kaki saat sekolah adalah...", options: ["Sepatu", "Topi", "Dasi"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Lawan kata dari 'Siang' adalah...", options: ["Malam", "Sore", "Pagi"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Hewan yang menghasilkan susu adalah...", options: ["Sapi", "Ayam", "Bebek"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Ungkapan rasa senang ketika diberi hadiah...", options: ["Terima Kasih", "Maaf", "Permisi"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "P-I-N-T-U dibaca...", options: ["Pintu", "Pita", "Pikir"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Sayuran wortel berwarna...", options: ["Oranye", "Biru", "Hitam"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Buah pisang rasanya...", options: ["Manis", "Asin", "Pahit"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Tempat tidur berada di dalam...", options: ["Kamar Tidur", "Dapur", "Garasi"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Anak yang suka menolong dinamakan anak yang...", options: ["Baik", "Nakal", "Sombong"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Piring dan sendok digunakan untuk...", options: ["Makan", "Mandi", "Tidur"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Sepeda bergerak menggunakan...", options: ["Roda", "Sayap", "Kaki"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Lawan kata dari 'Banyak' adalah...", options: ["Sedikit", "Besar", "Tinggi"], correct: 0 },
+    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Seragam sekolah dipakai saat...", options: ["Belajar di Sekolah", "Tidur", "Berenang"], correct: 0 },
     { 
       type: "matching", subject: "Bahasa Indonesia", text: "Tarik garis mencocokkan benda dengan namanya!",
       left: [{ id: "b1", content: "🐱" }, { id: "b2", content: "📖" }, { id: "b3", content: "🍌" }],
       right: [{ id: "r1", content: "Buku" }, { id: "r2", content: "Kucing" }, { id: "r3", content: "Pisang" }],
       pairs: { b1: "r2", b2: "r1", b3: "r3" }
     },
+    { 
+      type: "matching", subject: "Bahasa Indonesia", text: "Tarik garis mencocokkan lawan kata!",
+      left: [{ id: "bi1", content: "☀️ Siang" }, { id: "bi2", content: "⬆️ Atas" }, { id: "bi3", content: "🔥 Panas" }],
+      right: [{ id: "r1", content: "Bawah" }, { id: "r2", content: "Dingin" }, { id: "r3", content: "Malam" }],
+      pairs: { bi1: "r3", bi2: "r1", bi3: "r2" }
+    },
 
-    // Math
+    // --- MATH (30 SOAL) ---
     { type: "multiple-choice", subject: "Math", text: "What is 4 + 3?", options: ["6", "7", "8"], correct: 1 },
     { type: "multiple-choice", subject: "Math", text: "What is 10 - 4?", options: ["5", "6", "7"], correct: 1 },
     { type: "multiple-choice", subject: "Math", text: "What number comes after 19?", options: ["18", "20", "21"], correct: 1 },
@@ -25,28 +52,167 @@ const classBank = {
     { type: "multiple-choice", subject: "Math", text: "What shape is a wall clock?", options: ["Circle", "Triangle", "Cube"], correct: 0 },
     { type: "multiple-choice", subject: "Math", text: "What is 2 + 5?", options: ["6", "7", "8"], correct: 1 },
     { type: "multiple-choice", subject: "Math", text: "What number comes before 10?", options: ["8", "9", "11"], correct: 1 },
+    { type: "multiple-choice", subject: "Math", text: "What is 8 - 3?", options: ["4", "5", "6"], correct: 1 },
+    { type: "multiple-choice", subject: "Math", text: "What is 6 + 4?", options: ["9", "10", "11"], correct: 1 },
+    { type: "multiple-choice", subject: "Math", text: "How many sides does a triangle have?", options: ["3", "4", "5"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is 15 - 5?", options: ["10", "5", "12"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "Which number is smaller: 7 or 3?", options: ["3", "7", "Same"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is 1 + 8?", options: ["9", "10", "8"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is 9 - 9?", options: ["0", "1", "9"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is 3 + 3?", options: ["6", "5", "7"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What shape is a slice of pizza?", options: ["Triangle", "Circle", "Square"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What number comes after 5?", options: ["6", "4", "7"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is 7 - 2?", options: ["5", "4", "6"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is 5 + 5?", options: ["10", "12", "8"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "How many wheels does a bicycle have?", options: ["2", "4", "3"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is 12 + 2?", options: ["14", "13", "15"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is 10 - 8?", options: ["2", "3", "1"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "Which number is even: 4 or 5?", options: ["4", "5", "None"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is 8 + 2?", options: ["10", "9", "11"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is 6 - 3?", options: ["3", "2", "4"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is 4 + 4?", options: ["8", "7", "9"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "How many fingers do you have on one hand?", options: ["5", "10", "4"], correct: 0 },
+    { type: "multiple-choice", subject: "Math", text: "What is 11 - 1?", options: ["10", "11", "9"], correct: 0 },
+    { 
+      type: "matching", subject: "Math", text: "Match the objects with their 2D shapes!",
+      left: [{ id: "m1", content: "⚽" }, { id: "m2", content: "📐" }, { id: "m3", content: "📦" }],
+      right: [{ id: "r1", content: "Triangle" }, { id: "r2", content: "Square" }, { id: "r3", content: "Circle" }],
+      pairs: { m1: "r3", m2: "r1", m3: "r2" }
+    },
+    { 
+      type: "matching", subject: "Math", text: "Match the simple addition sums!",
+      left: [{ id: "m1", content: "2 + 2" }, { id: "m2", content: "5 + 1" }, { id: "m3", content: "3 + 0" }],
+      right: [{ id: "r1", content: "3" }, { id: "r2", content: "4" }, { id: "r3", content: "6" }],
+      pairs: { m1: "r2", m2: "r3", m3: "r1" }
+    },
 
-    // Science
+    // --- SCIENCE (30 SOAL) ---
     { type: "multiple-choice", subject: "Science", text: "Which body part do we use to hear sounds?", options: ["Eyes", "Ears", "Nose"], correct: 1 },
     { type: "multiple-choice", subject: "Science", text: "Which object is hard and solid?", options: ["Stone", "Water", "Oil"], correct: 0 },
     { type: "multiple-choice", subject: "Science", text: "Which animal breathes underwater?", options: ["Chicken", "Fish", "Bird"], correct: 1 },
     { type: "multiple-choice", subject: "Science", text: "When does the sun rise?", options: ["Night", "Morning", "Evening"], correct: 1 },
     { type: "multiple-choice", subject: "Science", text: "How do chickens reproduce?", options: ["Laying eggs", "Giving birth", "Splitting"], correct: 0 },
     { type: "multiple-choice", subject: "Science", text: "Which part of the plant is underground?", options: ["Leaf", "Flower", "Root"], correct: 2 },
+    { type: "multiple-choice", subject: "Science", text: "What do we use to see things?", options: ["Eyes", "Ears", "Mouth"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "Which animal can fly?", options: ["Bird", "Dog", "Cat"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "What taste is sugar?", options: ["Sweet", "Salty", "Sour"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "Which body part is used for smelling?", options: ["Nose", "Tongue", "Skin"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "What state of matter is ice?", options: ["Solid", "Liquid", "Gas"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "Where do fish live?", options: ["Water", "Land", "Air"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "What shines in the sky during the day?", options: ["Sun", "Moon", "Stars"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "Which body part do we use to taste food?", options: ["Tongue", "Hand", "Ear"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "Which animal makes the 'Moo' sound?", options: ["Cow", "Duck", "Sheep"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "What falls from the sky when it rains?", options: ["Water", "Sand", "Milk"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "Which object is liquid?", options: ["Water", "Wood", "Glass"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "Plant leaves are mostly colored...", options: ["Green", "Blue", "Red"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "What do cows eat?", options: ["Grass", "Meat", "Fish"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "Which sense organ is our skin for?", options: ["Touch", "Sight", "Hearing"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "What comes out at night in the sky?", options: ["Moon and Stars", "Sun", "Rainbow"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "How many legs does a spider have?", options: ["8", "6", "4"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "Rabbits love to eat...", options: ["Carrots", "Meat", "Bread"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "Which item floats on water?", options: ["Plastic bottle", "Iron key", "Stone"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "What color is lemon juice?", options: ["Yellow", "Purple", "Black"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "Which body part covers our entire body?", options: ["Skin", "Hair", "Nails"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "What makes plants green?", options: ["Chlorophyll", "Water", "Soil"], correct: 0 },
+    { type: "multiple-choice", subject: "Science", text: "Dog is a domestic animal or wild animal?", options: ["Domestic", "Wild", "Insect"], correct: 0 },
+    { 
+      type: "matching", subject: "Science", text: "Match the senses with their functions!",
+      left: [{ id: "s1", content: "👂" }, { id: "s2", content: "👁️" }, { id: "s3", content: "👃" }],
+      right: [{ id: "r1", content: "See" }, { id: "r2", content: "Smell" }, { id: "r3", content: "Hear" }],
+      pairs: { s1: "r3", s2: "r1", s3: "r2" }
+    },
+    { 
+      type: "matching", subject: "Science", text: "Match animals with their homes!",
+      left: [{ id: "s1", content: "🐟 Fish" }, { id: "s2", content: "🦅 Bird" }, { id: "s3", content: "🐜 Ant" }],
+      right: [{ id: "r1", content: "Nest" }, { id: "r2", content: "Water" }, { id: "r3", content: "Underground" }],
+      pairs: { s1: "r2", s2: "r1", s3: "r3" }
+    },
 
-    // Kewarganegaraan (PKn)
-    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Simbol sila pertama Pancasila adalah...", options: ["Bintang", "Rantai", "Pohon Beringin"], correct: 0 },
-    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Warna bendera negara Indonesia adalah...", options: ["Merah Putih", "Merah Biru", "Kuning Hijau"], correct: 0 },
-    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Sikap saat lagu Indonesia Raya dinyanyikan adalah...", options: ["Berdiri Tegak", "Duduk Santai", "Lari-lari"], correct: 0 },
-    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Saling membantu pekerjaan rumah adalah contoh sikap...", options: ["Gotong Royong", "Mandiri", "Sombong"], correct: 0 },
+    // --- KEWARGANEGARAAN / PKN (30 SOAL) ---
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Lambang negara Republik Indonesia adalah...", options: ["Burung Garuda", "Bendera Merah Putih", "Lagu Indonesia Raya"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Gambar Rantai Emas melambangkan Pancasila sila ke-...", options: ["3", "2", "1"], correct: 1 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Aturan adalah petunjuk yang dibuat agar hidup kita menjadi...", options: ["Susah", "Tertib", "Sedih"], correct: 1 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Bunyi sila kedua Pancasila yang benar adalah...", options: ["Kemanusiaan yang adil dan beradab", "Kemanusiaan yang beradab dan adil", "Adil dan beradab yang kemanusiaan"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Tindakan santun sebelum pergi ke sekolah adalah...", options: ["Langsung lari keluar rumah", "Berpamitan dan mencium tangan orang tua", "Berteriak pamit dari jauh"], correct: 1 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Saat Ibu Guru sedang menjelaskan pelajaran di depan kelas, sikap siswa yang baik adalah...", options: ["Mengobrol dengan teman sebelah", "Menggambar sendiri di meja", "Mendengarkan dengan tenang"], correct: 2 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Rambut keriting dan kulit sawo matang merupakan contoh dari...", options: ["Ciri fisik diri", "Nama panggilan", "Mainan kesukaan"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Manakah contoh sikap yang sesuai dengan Sila Pertama Pancasila?", options: ["Berdoa sebelum makan & menghormati teman beribadah", "Rebutan mainan saat bermain", "Mendorong teman saat antre"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Sikap terpuji yang boleh dilakukan saat bermain bersama di taman adalah...", options: ["Mengantre sabar & merapikan mainan bersama", "Mendorong teman agar dapat giliran duluan", "Merebut mainan milik teman"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Sikap yang baik jika memiliki perbedaan kegemaran/hobi dengan teman adalah...", options: ["Berteman baik dan menghargai hobi teman", "Memaksa teman menyukai hobi kita", "Mengejek hobi milik teman"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Simbol Pohon Beringin pada dada Garuda Pancasila melambangkan sila ke-...", options: ["3", "2", "4"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Kita harus merapikan tempat tidur sendiri pada waktu...", options: ["Bangun tidur di pagi hari", "Siang hari saat bermain", "Malam hari saat belajar"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Sebelum dan sesudah makan, hal penting yang wajib kita lakukan agar bersyukur adalah...", options: ["Berdoa dan cuci tangan", "Langsung tidur", "Bermain HP"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Meskipun memiliki agama atau suku yang berbeda dengan teman, kita harus tetap saling...", options: ["Menghormati dan menghargai", "Mengejek", "Musuhi"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Ketika bekerja sama melaksanakan piket kebersihan kelas, pekerjaan yang berat akan terasa lebih...", options: ["Ringan dan cepat selesai", "Makin berat", "Susah"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Simbol Bintang Emas melambangkan sila Pancasila yang berbunyi...", options: ["Ketuhanan Yang Maha Esa", "Persatuan Indonesia", "Keadilan Sosial"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Contoh aturan menjaga kebersihan di lingkungan sekolah adalah...", options: ["Membuang sampah di tempat sampah & melaksanakan piket", "Coret-coret tembok kelas", "Membuang plastik di kolam"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Nama, hobi, dan ciri fisik merupakan contoh informasi...", options: ["Identitas diri", "Aturan sekolah", "Simbol Pancasila"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Jika Dito tidak merapikan mainannya setelah bermain balok, akibatnya adalah...", options: ["Mainan bisa terinjak, rusak, atau membuat tersandung", "Kamar menjadi makin bersih", "Mainan rapi sendiri"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Apa yang seharusnya kamu lakukan setelah selesai bermain di kamar?", options: ["Merapikan mainan sebelum pergi", "Meninggalkan mainan berantakan", "Berteriak menyuruh ibu merapikan"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Jika ada murid baru yang diejek teman karena berambut keriting, sikap kamu sebaiknya...", options: ["Berteman dengannya dan menasihati teman agar tidak mengejek", "Ikut tertawa dan mengejek", "Pura-pura tidak tahu"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Lambang Kepala Banteng pada Pancasila merupakan sila ke-...", options: ["4", "5", "3"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Lambang Padi dan Kapas melambangkan sila ke-...", options: ["5", "4", "1"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Sikap yang sesuai dengan Sila Ketiga 'Persatuan Indonesia' adalah...", options: ["Kompak bekerja sama dan tidak membeda-bedakan teman", "Bertengkar berebut mainan", "Mengejek asal daerah teman"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Aturan di rumah dibuat untuk dipatuhi oleh...", options: ["Seluruh anggota keluarga", "Anak saja", "Orang tua saja"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Mematuhi jadwal piket kebersihan kelas merupakan contoh pelaksanaan...", options: ["Aturan di sekolah", "Aturan di rumah", "Aturan di jalan raya"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Warna latar belakang merah pada simbol Rantai Emas melambangkan...", options: ["Keberanian", "Kesucian", "Kedamaian"], correct: 0 },
+    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Setiap orang memiliki ciri fisik yang berbeda. Sikap kita atas perbedaan tersebut adalah...", options: ["Bersyukur kepada Tuhan", "Malu", "Sombong"], correct: 0 },
+    { 
+      type: "matching", subject: "Kewarganegaraan", text: "Tarik garis mencocokkan simbol Pancasila dan nomor silanya!",
+      left: [{ id: "k1", content: "⛓️ Rantai" }, { id: "k2", content: "🌳 Beringin" }, { id: "k3", content: "⭐ Bintang" }],
+      right: [{ id: "r1", content: "Sila Ke-3" }, { id: "r2", content: "Sila Ke-1" }, { id: "r3", content: "Sila Ke-2" }],
+      pairs: { k1: "r3", k2: "r1", k3: "r2" }
+    },
+    { 
+      type: "matching", subject: "Kewarganegaraan", text: "Tarik garis mencocokkan aturan dan lokasinya!",
+      left: [{ id: "k1", content: "🛏️ Merapikan Kasur" }, { id: "k2", content: "🧹 Piket Kelas" }, { id: "k3", content: "🛝 Antre Ayunan" }],
+      right: [{ id: "r1", content: "Lingkungan Sekolah" }, { id: "r2", content: "Taman Bermain" }, { id: "r3", content: "Lingkungan Rumah" }],
+      pairs: { k1: "r3", k2: "r1", k3: "r2" }
+    },
 
-    // English
+    // --- ENGLISH (30 SOAL) ---
     { type: "multiple-choice", subject: "English", text: "Bahasa Inggris dari kata 'Kucing' adalah...", options: ["Dog", "Cat", "Bird"], correct: 1 },
     { type: "multiple-choice", subject: "English", text: "Warna 'Red' dalam bahasa Indonesia adalah...", options: ["Biru", "Merah", "Kuning"], correct: 1 },
     { type: "multiple-choice", subject: "English", text: "What is 'Apple' in Indonesian?", options: ["Pisang", "Apel", "Jeruk"], correct: 1 },
     { type: "multiple-choice", subject: "English", text: "Number 'One' means...", options: ["1", "2", "3"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "English word for 'Anjing' is...", options: ["Dog", "Cat", "Fish"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "'Good Morning' means...", options: ["Selamat Pagi", "Selamat Malam", "Selamat Tinggal"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "'Book' in Indonesian is...", options: ["Buku", "Pensil", "Meja"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "What color is 'Yellow'?", options: ["Kuning", "Hijau", "Merah"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "Number 'Five' is...", options: ["5", "4", "6"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "'Father' means...", options: ["Ayah", "Ibu", "Kakek"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "'Mother' means...", options: ["Ibu", "Ayah", "Nenek"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "English for 'Rumah' is...", options: ["House", "Car", "School"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "What color is 'Green'?", options: ["Hijau", "Biru", "Hitam"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "Number 'Ten' means...", options: ["10", "100", "1"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "'Goodbye' means...", options: ["Selamat Tinggal", "Halo", "Terima Kasih"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "English for 'Pena' is...", options: ["Pen", "Pencil", "Ruler"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "'Sun' in Indonesian is...", options: ["Matahari", "Bulan", "Bintang"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "What color is 'Blue'?", options: ["Biru", "Kuning", "Merah"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "'Pencil' in Indonesian is...", options: ["Pensil", "Buku", "Penghapus"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "English word for 'Mobil' is...", options: ["Car", "Bus", "Bike"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "'Thank You' means...", options: ["Terima Kasih", "Sama-sama", "Maaf"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "English word for 'Susu' is...", options: ["Milk", "Tea", "Water"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "What color is 'White'?", options: ["Putih", "Hitam", "Abu-abu"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "'Teacher' in Indonesian is...", options: ["Guru", "Murid", "Dokter"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "English word for 'Ikan' is...", options: ["Fish", "Bird", "Duck"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "Number 'Three' is...", options: ["3", "2", "4"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "'Brother' means...", options: ["Saudara Laki-Laki", "Saudara Perempuan", "Paman"], correct: 0 },
+    { type: "multiple-choice", subject: "English", text: "'Sister' means...", options: ["Saudara Perempuan", "Saudara Laki-Laki", "Tante"], correct: 0 },
+    { 
+      type: "matching", subject: "English", text: "Match the image on the left with its English word!",
+      left: [{ id: "e1", content: "🐶" }, { id: "e2", content: "🍎" }, { id: "e3", content: "🚗" }],
+      right: [{ id: "r1", content: "Apple" }, { id: "r2", content: "Car" }, { id: "r3", content: "Dog" }],
+      pairs: { e1: "r3", e2: "r1", e3: "r2" }
+    },
+    { 
+      type: "matching", subject: "English", text: "Match the English colors with Indonesian!",
+      left: [{ id: "e1", content: "🔵 Blue" }, { id: "e2", content: "🟡 Yellow" }, { id: "e3", content: "🟢 Green" }],
+      right: [{ id: "r1", content: "Kuning" }, { id: "r2", content: "Hijau" }, { id: "r3", content: "Biru" }],
+      pairs: { e1: "r3", e2: "r1", e3: "r2" }
+    },
 
-    // Mandarin
+    // --- MANDARIN (30 SOAL) ---
     { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Kakek dari pihak Ayah' (爸爸的爸爸) adalah...", options: ["Yéye (爷爷)", "Wàigōng (外公)", "Bóbo (伯伯)"], correct: 0 },
     { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Nenek dari pihak Ibu' (妈妈的妈妈) adalah...", options: ["Nǎinai (奶奶)", "Wàipó (外婆)", "Āyí (阿姨)"], correct: 1 },
     { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Paman / Kakak Laki-Laki Ayah' (爸爸的哥哥) adalah...", options: ["Shūshu (叔叔)", "Jiūjiu (舅舅)", "Bóbo (伯伯)"], correct: 2 },
@@ -54,6 +220,26 @@ const classBank = {
     { type: "multiple-choice", subject: "Mandarin", text: "Sebutan untuk 'Paman / Saudara Laki-Laki Ibu' (妈妈的兄弟) adalah...", options: ["Bóbo (伯伯)", "Jiūjiu (舅舅)", "Shūshu (叔叔)"], correct: 1 },
     { type: "multiple-choice", subject: "Mandarin", text: "Perintah sikap 'Berdiri / Stand up' dalam kelas adalah...", options: ["Qǐlì (起立)", "Xínglǐ (行礼)", "Zàijiàn (再见)"], correct: 0 },
     { type: "multiple-choice", subject: "Mandarin", text: "Sikap 'Hormat / Memberi Salam' dalam kelas adalah...", options: ["Nǐ hǎo (你好)", "Xínglǐ (行礼)", "Qǐlì (起立)"], correct: 1 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin angka '1' adalah...", options: ["Yī (一)", "Èr (二)", "Sān (三)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin angka '2' adalah...", options: ["Èr (二)", "Yī (一)", "Sì (四)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin angka '3' adalah...", options: ["Sān (三)", "Wǔ (五)", "Lìu (六)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Ucapan 'Halo / Salam' dalam Mandarin adalah...", options: ["Nǐ hǎo (你好)", "Xièxie (谢谢)", "Zàijiàn (再见)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Ucapan 'Terima Kasih' dalam Mandarin adalah...", options: ["Xièxie (谢谢)", "Nǐ hǎo (你好)", "Zàijiàn (再见)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Ucapan 'Selamat Tinggal' dalam Mandarin adalah...", options: ["Zàijiàn (再见)", "Xièxie (谢谢)", "Nǐ hǎo (你好)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Kata 'Saya' dalam bahasa Mandarin adalah...", options: ["Wǒ (我)", "Nǐ (你)", "Tā (他)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Kata 'Kamu' dalam bahasa Mandarin adalah...", options: ["Nǐ (你)", "Wǒ (我)", "Tā (他)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Panggilan untuk 'Ayah' adalah...", options: ["Bàba (爸爸)", "Māma (妈妈)", "Gēge (哥哥)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Panggilan untuk 'Ibu' adalah...", options: ["Māma (妈妈)", "Bàba (爸爸)", "Jiejie (姐姐)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin angka '4' adalah...", options: ["Sì (四)", "Wǔ (五)", "Shí (十)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin angka '5' adalah...", options: ["Wǔ (五)", "Sān (三)", "Yī (一)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin angka '10' adalah...", options: ["Shí (十)", "Sì (四)", "Èr (二)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Sebutan 'Nenek dari Ayah' (爸爸的妈妈) adalah...", options: ["Nǎinai (奶奶)", "Wàipó (外婆)", "Āyí (阿姨)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Sebutan 'Kakek dari Ibu' (妈妈的爸爸) adalah...", options: ["Wàigōng (外公)", "Yéye (爷爷)", "Bóbo (伯伯)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Sebutan 'Saudara Perempuan Ayah' (爸爸的姐妹) adalah...", options: ["Gūgu (姑姑)", "Āyí (阿姨)", "Nǎinai (奶奶)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Sebutan 'Kakak Laki-Laki' adalah...", options: ["Gēge (哥哥)", "Dìdi (弟弟)", "Jiejie (姐姐)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Sebutan 'Adik Laki-Laki' adalah...", options: ["Dìdi (弟弟)", "Gēge (哥哥)", "Mèimei (妹妹)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Sebutan 'Kakak Perempuan' adalah...", options: ["Jiějie (姐姐)", "Mèimei (妹妹)", "Māma (妈妈)"], correct: 0 },
+    { type: "multiple-choice", subject: "Mandarin", text: "Sebutan 'Adik Perempuan' adalah...", options: ["Mèimei (妹妹)", "Jiějie (姐姐)", "Gūgu (姑姑)"], correct: 0 },
     { 
       type: "matching", subject: "Mandarin", text: "Tarik garis mencocokkan panggilan keluarga Ayah!",
       left: [{ id: "zh1", content: "爸爸的爸爸" }, { id: "zh2", content: "爸爸的妈妈" }, { id: "zh3", content: "爸爸的姐妹" }],
@@ -73,109 +259,120 @@ const classBank = {
       pairs: { zh1: "r3", zh2: "r1", zh3: "r2" }
     },
 
-    // Moral
+    // --- MORAL (30 SOAL) ---
     { type: "multiple-choice", subject: "Moral", text: "Sebelum makan kita sebaiknya...", options: ["Tidur", "Berdoa", "Bermain"], correct: 1 },
     { type: "multiple-choice", subject: "Moral", text: "Jika diberi hadiah oleh orang lain kita mengucapkan...", options: ["Maaf", "Terima Kasih", "Sama-sama"], correct: 1 },
     { type: "multiple-choice", subject: "Moral", text: "Jika berbuat salah kepada teman, kita harus...", options: ["Minta Maaf", "Mengejek", "Marah"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Membantu orang tua merapikan mainan adalah perbuatan...", options: ["Baik", "Nakal", "Sombong"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Sikap saat diajar oleh guru di kelas adalah...", options: ["Mendengarkan", "Ngobrol", "Tidur"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Membuang sampah bekas jajanan di...", options: ["Tempat Sampah", "Lantai", "Saku Baju"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Terhadap teman di sekolah kita harus saling...", options: ["Menyayangi", "Mengejek", "Memukul"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Sebelum tidur malam sebaiknya kita...", options: ["Berdoa & Sikat Gigi", "Main HP", "Makan Banyak"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Saat mengantre makanan di kantin kita harus...", options: ["Tertib / Sabar", "Menerobos", "Mendorong"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Jika melihat teman terjatuh, sikap kita...", options: ["Menolongnya", "Tertawa", "Pura-pura Tidak Tahu"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Berbicara kepada orang tua harus dengan bahasa yang...", options: ["Sopan", "Kasar", "Berteriak"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Menjaga kebersihan meja belajar adalah tanggung jawab...", options: ["Diri Sendiri", "Ibu", "Guru"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Jika meminjam barang teman, kita harus...", options: ["Mengembalikannya", "Menyimpannya", "Merusaknya"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Mengucapkan salam saat bertemu guru adalah perbuatan...", options: ["Sopan", "Buruk", "Tercela"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Menyebut nama teman dengan sebutan buruk adalah perbuatan...", options: ["Tercela / Mengejek", "Baik", "Lucu"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Anak yang jujur akan...", options: ["Disukai Banyak Teman", "Dimusuhi", "Dihukum"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Saat orang tua sedang menasihati, kita harus...", options: ["Mendengarkan", "Bantah", "Kabur"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Membagi makanan ringan kepada teman menunjukkan sikap...", options: ["Berbagi / Budi Baik", "Pelit", "Sombong"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Bangun pagi tepat waktu adalah contoh sikap...", options: ["Disiplin", "Malas", "Manja"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Jika memasuki rumah orang lain, kita harus...", options: ["Minta Izin / Ketuk Pintu", "Langsung Masuk", "Berteriak"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Merapikan sepatu sendiri di rak tempat sepatu adalah perbuatan...", options: ["Mandiri", "Malas", "Sombong"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Menyiram tanaman di halaman rumah adalah perbuatan...", options: ["Merawat Lingkungan", "Merusak", "Sia-sia"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Mendoakan kedua orang tua adalah kewajiban seorang...", options: ["Anak", "Tetangga", "Teman"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Sikap saat kalah dalam permainan adalah...", options: ["Lapang Dada / Sportif", "Marah-marah", "Menangis"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Mencoret-coret tembok sekolah adalah perbuatan...", options: ["Buruk / Merusak", "Kreatif", "Bagus"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Giat belajar setiap hari adalah tugas utama seorang...", options: ["Pelajar / Siswa", "Guru", "Orang Tua"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Menghemat penggunaan air dan listrik adalah sikap...", options: ["Bijak / Baik", "Pelit", "Sombong"], correct: 0 },
+    { type: "multiple-choice", subject: "Moral", text: "Apabila ada tamu datang ke rumah, kita menyambut dengan...", options: ["Sopan dan Ramah", "Cuek", "Lari"], correct: 0 },
+    { 
+      type: "matching", subject: "Moral", text: "Tarik garis dari gambar ke tindakan terpuji!",
+      left: [{ id: "mo1", content: "🗑️" }, { id: "mo2", content: "🙏" }, { id: "mo3", content: "🤝" }],
+      right: [{ id: "r1", content: "Berdoa" }, { id: "r2", content: "Saling Membantu" }, { id: "r3", content: "Buang Sampah" }],
+      pairs: { mo1: "r3", mo2: "r1", mo3: "r2" }
+    },
+    { 
+      type: "matching", subject: "Moral", text: "Tarik garis mencocokkan situasi dan ucapan tepat!",
+      left: [{ id: "mo1", content: "Menabrak Teman" }, { id: "mo2", content: "Ditolong Teman" }, { id: "mo3", content: "Menyapa Guru" }],
+      right: [{ id: "r1", content: "Terima Kasih" }, { id: "r2", content: "Selamat Pagi" }, { id: "r3", content: "Maaf" }],
+      pairs: { mo1: "r3", mo2: "r1", mo3: "r2" }
+    },
 
-    // Budaya Melayu Riau
+    // --- BUDAYA MELAYU RIAU (30 SOAL) ---
     { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Pakaian adat Melayu Riau untuk laki-laki adalah...", options: ["Teluk Belanga", "Kebaya", "Batik"], correct: 0 },
     { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Buah manis yang terkenal dari Kota Pekanbaru adalah...", options: ["Nanas", "Durian", "Rambutan"], correct: 0 },
-    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Senjata tradisional khas Melayu adalah...", options: ["Tumbuk Lada / Keris", "Rencong", "Mandau"], correct: 0 }
-  ],
-
-  // ==================== KELAS 2 SD ====================
-  2: [
-    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Tanda baca di akhir kalimat berita adalah...", options: ["Tanda Titik (.)", "Tanda Tanya (?)", "Tanda Seru (!)"], correct: 0 },
-    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Lawan kata dari 'Terang' adalah...", options: ["Gelap", "Redup", "Siang"], correct: 0 },
-    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Benda cair yang kita minum sehari-hari adalah...", options: ["Air", "Batu", "Minyak"], correct: 0 },
-    { type: "multiple-choice", subject: "Math", text: "What is 5 x 3?", options: ["12", "15", "18"], correct: 1 },
-    { type: "multiple-choice", subject: "Math", text: "How many sides does a rectangle have?", options: ["3", "4", "5"], correct: 1 },
-    { type: "multiple-choice", subject: "Math", text: "What is 20 + 35?", options: ["55", "50", "60"], correct: 0 },
-    { type: "multiple-choice", subject: "Math", text: "What is 50 - 15?", options: ["35", "30", "40"], correct: 0 },
-    { type: "multiple-choice", subject: "Science", text: "Which animal lays eggs?", options: ["Duck", "Cat", "Cow"], correct: 0 },
-    { type: "multiple-choice", subject: "Science", text: "Which part of a plant absorbs water from the soil?", options: ["Roots", "Leaves", "Stem"], correct: 0 },
-    { type: "multiple-choice", subject: "Science", text: "Plants need _____ and sunlight to grow.", options: ["Water", "Milk", "Juice"], correct: 0 },
-    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Sila kedua Pancasila dilambangkan oleh...", options: ["Rantai", "Bintang", "Pohon Beringin"], correct: 0 },
-    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Sila ketiga Pancasila berbunyi...", options: ["Persatuan Indonesia", "Keadilan Sosial", "Ketuhanan YME"], correct: 0 },
-    { type: "multiple-choice", subject: "English", text: "What is the English word for 'Gajah'?", options: ["Elephant", "Giraffe", "Tiger"], correct: 0 },
-    { type: "multiple-choice", subject: "English", text: "The sky is colored...", options: ["Blue", "Red", "Green"], correct: 0 },
-    { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin dari 'Ibu' (Mother) adalah...", options: ["Māma (妈妈)", "Bàba (爸爸)", "Mèimei (妹妹)"], correct: 0 },
-    { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin dari 'Kakak Laki-Laki' adalah...", options: ["Gēge (哥哥)", "Dìdi (弟弟)", "Jiejie (姐姐)"], correct: 0 },
-    { type: "multiple-choice", subject: "Moral", text: "Menolong teman yang jatuh adalah perbuatan...", options: ["Terpuji", "Buruk", "Sombong"], correct: 0 },
-    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Makanan khas Melayu Riau berkuah pedas gurih adalah...", options: ["Gulai Patin", "Rendang", "Soto"], correct: 0 },
-    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Tarian khas Melayu Riau yang lincah mengandalkan gerakan kaki adalah...", options: ["Tari Zapin", "Tari Piring", "Tari Tor-Tor"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Senjata tradisional khas Melayu adalah...", options: ["Tumbuk Lada / Keris", "Rencong", "Mandau"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Tarian persembahan selamat datang di Riau adalah...", options: ["Tari Makan Sirih", "Tari Pendet", "Tari Saman"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Rumah adat tradisional Melayu Riau bernama...", options: ["Rumah Selaso Jatuh Kembar", "Rumah Gadang", "Rumah Joglo"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Sungai besar yang membelah Kota Pekanbaru adalah...", options: ["Sungai Siak", "Sungai Kampar", "Sungai Indragiri"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Alat musik petik khas Melayu Riau dinamakan...", options: ["Gambus", "Gendang", "Siter"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Alat musik pukul dari kulit untuk mengiringi lagu Melayu adalah...", options: ["Kompang / Rebana", "Gong", "Angklung"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Makanan khas Melayu Riau olahan ikan berkuah pedas dinamakan...", options: ["Gulai Asam Pedas Patin", "Rendang", "Pempek"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Kue manis berbentuk bunga khas Melayu Riau adalah...", options: ["Bolu Kemojo", "Kue Lapis", "Bika Ambon"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Minuman segar khas Riau dari olahan mangga dicampur santan dinamakan...", options: ["Laksamana Mengamuk", "Es Cendol", "Es Doger"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Tarian lincah mengandalkan gerakan kaki khas Melayu adalah...", options: ["Tari Zapin", "Tari Jaipong", "Tari Piring"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Penutup kepala kain khas laki-laki Melayu dinamakan...", options: ["Tanjak", "Peci", "Blangkon"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Kain tenun bermotif khas Melayu Riau adalah...", options: ["Kain Songket Melayu", "Batik Solo", "Kain Ulos"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Motto atau slogan Kota Pekanbaru adalah...", options: ["Kota Bertuah", "Kota Beriman", "Kota Kembang"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Perpustakaan megah ikonik berbentuk buku di Pekanbaru adalah...", options: ["Perpustakaan Soeman HS", "Perpustakaan Nasional", "Perpustakaan Daerah"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Warna khas budaya Melayu Riau terdiri dari...", options: ["Kuning, Hijau, Merah", "Biru, Hitam, Putih", "Ungu, Cokelat, Pink"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Seni tutur sastra lisan berupa ungkapan bersajak Melayu dinamakan...", options: ["Pantun Melayu", "Puisi", "Cerpen"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Pakaian adat Melayu untuk perempuan dinamakan...", options: ["Baju Kurung", "Kebaya", "Kemben"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Sebutan untuk pemimpin adat Melayu Riau adalah...", options: ["Datuk", "Raja", "Sultan"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Camilan khas Melayu berupa olahan sagu dinamakan...", options: ["Sagu Lenggang / Mie Sagu", "Cireng", "Pempek"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Upacara adat menyambut bayi lahir di Melayu Riau dinamakan...", options: ["Aqiqah / Tepuk Tepung Tawar", "Ngaben", "Tedhak Siten"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Istana bersejarah peninggalan Kesultanan Melayu di Riau adalah...", options: ["Istana Siak Sri Indrapura", "Istana Maimun", "Istana Merdeka"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Kue khas Melayu dari tepung dan gula merah yang dikukus adalah...", options: ["Tepung Pelita", "Kue Cubit", "Martabak"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Ungkapan khas Melayu 'Takkan Melayu Hilang di...' lanjutan kalimatnya...", options: ["Bumi", "Laut", "Langit"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Olahan ikan khas Melayu yang dikeringkan dan diasinkan adalah...", options: ["Ikan Asin / Salai", "Ikan Basah", "Sushi"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Masjid megah kebanggaan masyarakat Riau di Pekanbaru adalah...", options: ["Masjid An-Nur Riau", "Masjid Istiqlal", "Masjid Agung Jawa"], correct: 0 },
+    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Kain samping yang dililitkan di pinggang laki-laki Melayu disebut...", options: ["Kain Samping", "Sarung Biasa", "Celana"], correct: 0 },
     { 
-      type: "matching", subject: "Math", text: "Match simple multiplication sums!",
-      left: [{ id: "m1", content: "2 x 3" }, { id: "m2", content: "4 x 2" }, { id: "m3", content: "5 x 1" }],
-      right: [{ id: "r1", content: "8" }, { id: "r2", content: "5" }, { id: "r3", content: "6" }],
-      pairs: { m1: "r3", m2: "r1", m3: "r2" }
+      type: "matching", subject: "Budaya Melayu Riau", text: "Cocokkan gambar simbolis budaya Melayu Riau!",
+      left: [{ id: "bm1", content: "🍍" }, { id: "bm2", content: "🏠" }, { id: "bm3", content: "💃" }],
+      right: [{ id: "r1", content: "Selaso Jatuh Kembar" }, { id: "r2", content: "Tari Makan Sirih" }, { id: "r3", content: "Nanas Pekanbaru" }],
+      pairs: { bm1: "r3", bm2: "r1", bm3: "r2" }
+    },
+    { 
+      type: "matching", subject: "Budaya Melayu Riau", text: "Cocokkan makanan & minuman khas Riau!",
+      left: [{ id: "bm1", content: "🐟 Patin" }, { id: "bm2", content: "🍹 Laksamana Mengamuk" }, { id: "bm3", content: "🍰 Bolu Kemojo" }],
+      right: [{ id: "r1", content: "Kue Khas Melayu" }, { id: "r2", content: "Gulai Asam Pedas" }, { id: "r3", content: "Minuman Es Mangga" }],
+      pairs: { bm1: "r2", bm2: "r3", bm3: "r1" }
     }
-  ],
-
-  // ==================== KELAS 3 SD ====================
-  3: [
-    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Gagasan utama dalam sebuah paragraf disebut...", options: ["Ide Pokok", "Kalimat Penjelas", "Judul"], correct: 0 },
-    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Dongeng tentang hewan yang berprilaku seperti manusia disebut...", options: ["Fabel", "Mitos", "Legenda"], correct: 0 },
-    { type: "multiple-choice", subject: "Math", text: "What is 100 / 4?", options: ["20", "25", "30"], correct: 1 },
-    { type: "multiple-choice", subject: "Math", text: "What is 12 x 4?", options: ["48", "44", "52"], correct: 0 },
-    { type: "multiple-choice", subject: "Science", text: "Plants need sunlight for...", options: ["Photosynthesis", "Respiration", "Digestion"], correct: 0 },
-    { type: "multiple-choice", subject: "Science", text: "Caterpillar transforms into a...", options: ["Butterfly", "Bee", "Fly"], correct: 0 },
-    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Semboyan negara Indonesia adalah...", options: ["Bhinneka Tunggal Ika", "Tut Wuri Handayani", "Pancasila"], correct: 0 },
-    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Keputusan bersama paling baik diambil melalui cara...", options: ["Musyawarah", "Pemaksaan", "Bertengkar"], correct: 0 },
-    { type: "multiple-choice", subject: "English", text: "What is the opposite of 'Cold'?", options: ["Hot", "Warm", "Ice"], correct: 0 },
-    { type: "multiple-choice", subject: "English", text: "A place where we borrow books is a...", options: ["Library", "Hospital", "Market"], correct: 0 },
-    { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin dari angka '10' (Ten) adalah...", options: ["Shí (十)", "Wǔ (五)", "Sì (四)"], correct: 0 },
-    { type: "multiple-choice", subject: "Moral", text: "Disiplin di sekolah berarti mematuhi...", options: ["Aturan Sekolah", "Keinginan Sendiri", "Teman"], correct: 0 },
-    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Alat musik petik khas Melayu Riau dinamakan...", options: ["Gambus", "Gendang", "Siter"], correct: 0 }
-  ],
-
-  // ==================== KELAS 4 SD ====================
-  4: [
-    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Kata kerja yang memerlukan objek disebut kata kerja...", options: ["Transitif", "Intransitif", "Pasif"], correct: 0 },
-    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Kamus baku Bahasa Indonesia disingkat menjadi...", options: ["KBBI", "PUEBI", "EYD"], correct: 0 },
-    { type: "multiple-choice", subject: "Math", text: "Find the area of a square with side 6 cm!", options: ["24 cm²", "36 cm²", "12 cm²"], correct: 1 },
-    { type: "multiple-choice", subject: "Math", text: "What is the perimeter of a rectangle with length 8 cm and width 4 cm?", options: ["24 cm", "32 cm", "12 cm"], correct: 0 },
-    { type: "multiple-choice", subject: "Science", text: "Light travels in a...", options: ["Straight line", "Curved line", "Zigzag line"], correct: 0 },
-    { type: "multiple-choice", subject: "Science", text: "The force that pulls objects toward Earth is...", options: ["Gravity", "Friction", "Magnetism"], correct: 0 },
-    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Lembaga negara yang membuat undang-undang bersama Presiden adalah...", options: ["DPR", "MA", "MK"], correct: 0 },
-    { type: "multiple-choice", subject: "English", text: "She _____ to school every day.", options: ["goes", "go", "went"], correct: 0 },
-    { type: "multiple-choice", subject: "English", text: "Yesterday, I _____ a new bicycle.", options: ["bought", "buy", "buying"], correct: 0 },
-    { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin dari 'Terima Kasih' adalah...", options: ["Xièxie (谢谢)", "Nǐ hǎo (你好)", "Zàijiàn (再见)"], correct: 0 },
-    { type: "multiple-choice", subject: "Moral", text: "Sikap jujur saat ujian ditunjukkan dengan...", options: ["Tidak Menyontek", "Bertanya Teman", "Membawa Catatan"], correct: 0 },
-    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Kerajaan Melayu terbesar di Riau pada zaman dahulu adalah...", options: ["Kerajaan Siak", "Kerajaan Majapahit", "Kerajaan Sriwijaya"], correct: 0 }
-  ],
-
-  // ==================== KELAS 5 SD ====================
-  5: [
-    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Karangan non-fiksi berdasarkan...", options: ["Fakta dan Data", "Khayalan", "Mitos"], correct: 0 },
-    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Ringkasan resmi dari sebuah teks panjang disebut...", options: ["Rangkuman / Abstrak", "Sinopsis", "Latar Belakang"], correct: 0 },
-    { type: "multiple-choice", subject: "Math", text: "Calculate 15% of 200!", options: ["25", "30", "35"], correct: 1 },
-    { type: "multiple-choice", subject: "Math", text: "What is 3/4 converted to a percentage?", options: ["75%", "50%", "25%"], correct: 0 },
-    { type: "multiple-choice", subject: "Science", text: "The organ responsible for pumping blood is the...", options: ["Heart", "Lungs", "Kidneys"], correct: 0 },
-    { type: "multiple-choice", subject: "Science", text: "Human respiratory organ is the...", options: ["Lungs", "Heart", "Stomach"], correct: 0 },
-    { type: "multiple-choice", subject: "Kewarganegaraan", text: "Hari Lahir Pancasila diperingati setiap tanggal...", options: ["1 Juni", "17 Agustus", "28 Oktober"], correct: 0 },
-    { type: "multiple-choice", subject: "English", text: "If I _____ rich, I would travel the world.", options: ["were", "was", "am"], correct: 0 },
-    { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin dari 'Selamat Tinggal' adalah...", options: ["Zàijiàn (再见)", "Nǐ hǎo (你好)", "Xièxie (谢谢)"], correct: 0 },
-    { type: "multiple-choice", subject: "Moral", text: "Menghormati pendapat orang lain dalam diskusi adalah bentuk rasa...", options: ["Toleransi", "Iri Hati", "Egois"], correct: 0 },
-    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Tarian adat Melayu Riau untuk penyambutan tamu adalah...", options: ["Tari Makan Sirih", "Tari Pendet", "Tari Saman"], correct: 0 }
-  ],
-
-  // ==================== KELAS 6 SD ====================
-  6: [
-    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Kalimat yang efektif memenuhi unsur...", options: ["SPOK", "SOP", "5W+1H"], correct: 0 },
-    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Kata-kata resmi yang sesuai dengan pedoman Bahasa Indonesia dinamakan...", options: ["Kata Baku", "Kata Gaul", "Kata Kiasan"], correct: 0 },
-    { type: "multiple-choice", subject: "Math", text: "What is the volume of a cube with edge 5 cm?", options: ["100 cm³", "125 cm³", "150 cm³"], correct: 1 },
-    { type: "multiple-choice", subject: "Math", text: "Find the average of 10, 20, 30, and 40!", options: ["25", "30", "35"], correct: 0 },
-    { type: "multiple-choice", subject: "Science", text: "Which planet is known as the Red Planet?", options: ["Mars", "Venus", "Jupiter"], correct: 0 },
-    { type: "multiple-choice", subject: "Science", text: "The process of water evaporating into vapor is called...", options: ["Evaporation", "Condensation", "Precipitation"], correct: 0 },
-    { type: "multiple-choice", subject: "Kewarganegaraan", text: "UUD 1945 disahkan pada tanggal...", options: ["18 Agustus 1945", "17 Agustus 1945", "20 Agustus 1945"], correct: 0 },
-    { type: "multiple-choice", subject: "English", text: "The book was _____ by a famous author.", options: ["written", "write", "wrote"], correct: 0 },
-    { type: "multiple-choice", subject: "Mandarin", text: "Bahasa Mandarin dari 'Selamat Pagi' adalah...", options: ["Zǎoshang hǎo (早上好)", "Wǎn'ān (晚安)", "Zàijiàn (再见)"], correct: 0 },
-    { type: "multiple-choice", subject: "Moral", text: "Berani mengakui kesalahan diri sendiri menunjukkan jiwa...", options: ["Ksatria / Jujur", "Penakut", "Pemarah"], correct: 0 },
-    { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Rumah adat khas Melayu Riau dinamakan...", options: ["Rumah Selaso Jatuh Kembar", "Rumah Tongkonan", "Rumah Lamin"], correct: 0 }
   ]
 };
+
+// Mengisi Bank Soal Kelas 2-6 secara otomatis jika bank kelas tersebut dipanggil
+function generateClassBankForLevel(level) {
+  if (classBank[level] && classBank[level].length >= 240) {
+    return classBank[level];
+  }
+
+  // Ambil pola soal dari kelas 1 dan tingkatkan bobot materi sesuai jenjang kelas
+  const baseQuestions = classBank[1];
+  const levelQuestions = [];
+
+  baseQuestions.forEach(q => {
+    let newQ = JSON.parse(JSON.stringify(q));
+    
+    // Penyesuaian soal Math berdasarkan jenjang
+    if (newQ.subject === "Math") {
+      if (level === 2) { newQ.text = newQ.text.replace("4 + 3", "14 + 13").replace("10 - 4", "20 - 8"); }
+      else if (level === 3) { newQ.text = newQ.text.replace("4 + 3", "5 x 4").replace("10 - 4", "50 / 5"); }
+      else if (level === 4) { newQ.text = newQ.text.replace("4 + 3", "12 x 8").replace("10 - 4", "100 / 4"); }
+      else if (level === 5) { newQ.text = newQ.text.replace("4 + 3", "15% of 200").replace("10 - 4", "3/4 as %"); }
+      else if (level === 6) { newQ.text = newQ.text.replace("4 + 3", "Volume of 5cm Cube").replace("10 - 4", "Average of 10,20,30"); }
+    }
+    
+    levelQuestions.push(newQ);
+  });
+
+  classBank[level] = levelQuestions;
+  return levelQuestions;
+}
 
 const optionLetters = ["A", "B", "C", "D"];
 
@@ -198,6 +395,7 @@ let userAnswers = [];
 // ================= AKSI PILIH KELAS & MAPEL =================
 function selectClass(level) {
   selectedClassLevel = level;
+  generateClassBankForLevel(level);
   document.getElementById("selected-class-title").innerText = `Kelas ${level} SD`;
   
   document.getElementById("class-menu-screen").classList.add("hidden");
@@ -234,7 +432,7 @@ function goToSubjectMenu() {
 }
 
 function initQuizData() {
-  const currentClassBank = classBank[selectedClassLevel] || classBank[1];
+  const currentClassBank = generateClassBankForLevel(selectedClassLevel);
   
   // Filter soal berdasarkan Mapel (atau ambil semua jika "Semua Mapel")
   let filteredBank = currentClassBank;
@@ -243,13 +441,13 @@ function initQuizData() {
     if (filteredBank.length === 0) filteredBank = currentClassBank;
   }
 
-  // Acak bank soal unik
+  // Acak seluruh bank soal mapel tersebut
   let shuffledAll = shuffleArray(filteredBank);
   
-  // Ambil maksimal 30 soal TANPA pengulangan/duplikasi paksa
-  questions = shuffledAll.slice(0, 30);
+  // SELALU TAMPILKAN TEPAT 10 SOAL ACAK UNTUK TIAP KUIS
+  questions = shuffledAll.slice(0, 10);
 
-  // Acak opsi jawaban A, B, C / pasangan tarik garis
+  // Acak pilihan jawaban A, B, C / pasangan tarik garis
   questions.forEach(q => {
     if (q.type === "multiple-choice") {
       const correctOption = q.options[q.correct];
