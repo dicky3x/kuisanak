@@ -438,11 +438,14 @@ function initQuizData() {
     if (filteredBank.length === 0) filteredBank = currentClassBank;
   }
 
-  // Acak seluruh bank soal mapel tersebut
-  let shuffledAll = shuffleArray(filteredBank);
-  
-  // SELALU TAMPILKAN TEPAT 10 SOAL ACAK UNTUK TIAP KUIS
-  questions = shuffledAll.slice(0, 10);
+  // KHUSUS PKN KELAS 1: Tampilkan berurutan sesuai bank soal (tanpa diacak)
+  if (selectedClassLevel === 1 && selectedSubjectName === "Kewarganegaraan") {
+    questions = JSON.parse(JSON.stringify(filteredBank));
+  } else {
+    // Untuk mapel/kelas lain: ambil 10 soal acak
+    let shuffledAll = shuffleArray(filteredBank);
+    questions = shuffledAll.slice(0, 10);
+  }
 
   // Acak pilihan jawaban A, B, C / pasangan tarik garis
   questions.forEach(q => {
