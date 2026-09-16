@@ -20,44 +20,44 @@ function toggleTheme() {
 // DATABASE BANK SOAL KELAS 1 GUANG MING (DARI ALL PDF GMEC)
 const guangMingClass1Bank = [
   // --- ENGLISH GMEC ---
-  { type: "multiple-choice", subject: "English", text: "[GMEC] Look at the picture! Which one is a rubber?", options: ["Option 3", "Option 1", "Option 2"], correct: 1 },
-  { type: "multiple-choice", subject: "English", text: "[GMEC] Listening: What is Ben's favourite toy?", options: ["A plane", "A go-kart", "A ball"], correct: 1 },
-  { type: "multiple-choice", subject: "English", text: "[GMEC] What colour is Ben's go-kart?", options: ["Red", "Green", "Blue"], correct: 2 },
-  { type: "multiple-choice", subject: "English", text: "[GMEC] What size is Ben's go-kart?", options: ["Big", "Small", "Long"], correct: 0 },
-  { type: "multiple-choice", subject: "English", text: "[GMEC] What is Ben's favourite colour?", options: ["Yellow", "Blue", "Green"], correct: 2 },
-  { type: "multiple-choice", subject: "English", text: "[GMEC] 'What is your name?' - Which answer is correct?", options: ["My name is Anna.", "It is a pencil.", "Open your book."], correct: 0 },
-  { type: "multiple-choice", subject: "English", text: "[GMEC] Which word has the same short /e/ sound as 'red'?", options: ["Cat", "Bed", "Bike"], correct: 1 },
-  { type: "multiple-choice", subject: "English", text: "[GMEC] Martin wants a toy that is NOT red and big. Which toy does Martin want?", options: ["Kite", "Ball", "Car"], correct: 0 },
+  { type: "multiple-choice", subject: "English", text: "Look at the picture! Which one is a rubber?", options: ["Option 3", "Option 1", "Option 2"], correct: 1 },
+  { type: "multiple-choice", subject: "English", text: "Listening: What is Ben's favourite toy?", options: ["A plane", "A go-kart", "A ball"], correct: 1 },
+  { type: "multiple-choice", subject: "English", text: "What colour is Ben's go-kart?", options: ["Red", "Green", "Blue"], correct: 2 },
+  { type: "multiple-choice", subject: "English", text: "What size is Ben's go-kart?", options: ["Big", "Small", "Long"], correct: 0 },
+  { type: "multiple-choice", subject: "English", text: "What is Ben's favourite colour?", options: ["Yellow", "Blue", "Green"], correct: 2 },
+  { type: "multiple-choice", subject: "English", text: "'What is your name?' - Which answer is correct?", options: ["My name is Anna.", "It is a pencil.", "Open your book."], correct: 0 },
+  { type: "multiple-choice", subject: "English", text: "Which word has the same short /e/ sound as 'red'?", options: ["Cat", "Bed", "Bike"], correct: 1 },
+  { type: "multiple-choice", subject: "English", text: "Martin wants a toy that is NOT red and big. Which toy does Martin want?", options: ["Kite", "Ball", "Car"], correct: 0 },
 
   // --- MATH GMEC ---
-  { type: "multiple-choice", subject: "Math", text: "[GMEC] Which number is greater, 4 or 7?", options: ["4", "5", "7"], correct: 2 },
-  { type: "multiple-choice", subject: "Math", text: "[GMEC] What number comes next in this pattern? 2, 4, 6, ...", options: ["7", "8", "10"], correct: 1 },
-  { type: "multiple-choice", subject: "Math", text: "[GMEC] Which number bond makes 10?", options: ["3 + 7", "6 + 5", "4 + 4"], correct: 0 },
-  { type: "multiple-choice", subject: "Math", text: "[GMEC] What is 5 + 3?", options: ["7", "8", "9"], correct: 1 },
-  { type: "multiple-choice", subject: "Math", text: "[GMEC] Ben has 4 rulers. He gets 3 more. How many rulers does he have now?", options: ["6", "7", "8"], correct: 1 },
+  { type: "multiple-choice", subject: "Math", text: "Which number is greater, 4 or 7?", options: ["4", "5", "7"], correct: 2 },
+  { type: "multiple-choice", subject: "Math", text: "What number comes next in this pattern? 2, 4, 6, ...", options: ["7", "8", "10"], correct: 1 },
+  { type: "multiple-choice", subject: "Math", text: "Which number bond makes 10?", options: ["3 + 7", "6 + 5", "4 + 4"], correct: 0 },
+  { type: "multiple-choice", subject: "Math", text: "What is 5 + 3?", options: ["7", "8", "9"], correct: 1 },
+  { type: "multiple-choice", subject: "Math", text: "Ben has 4 rulers. He gets 3 more. How many rulers does he have now?", options: ["6", "7", "8"], correct: 1 },
 
   // --- BUDAYA MELAYU RIAU GMEC ---
-  { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "[GMEC] Dongeng adalah cerita yang mengisahkan peristiwa pada masa...", options: ["depan", "sekarang", "lalu"], correct: 2 },
-  { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "[GMEC] Pada zaman dulu, dongeng dibawakan sebagai pengantar...", options: ["tidur", "pelajaran", "nyanyian"], correct: 0 },
-  { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "[GMEC] Gadang yang ada dalam dongeng Rawang Tengkuluk bernama...", options: ["Sarianun", "Putri", "Dara"], correct: 0 },
+  { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Dongeng adalah cerita yang mengisahkan peristiwa pada masa...", options: ["depan", "sekarang", "lalu"], correct: 2 },
+  { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Pada zaman dulu, dongeng dibawakan sebagai pengantar...", options: ["tidur", "pelajaran", "nyanyian"], correct: 0 },
+  { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "Gadang yang ada dalam dongeng Rawang Tengkuluk bernama...", options: ["Sarianun", "Putri", "Dara"], correct: 0 },
 
   // --- MANDARIN GMEC ---
-  { type: "multiple-choice", subject: "Mandarin", text: "[GMEC] “早安” (Zǎo ān) dalam bahasa Indonesia adalah...", options: ["Selamat pagi", "Selamat siang", "Selamat malam"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "[GMEC] “八” (Bā) dalam bahasa Indonesia artinya...", options: ["Delapan", "Satu", "Lima"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "“早安” (Zǎo ān) dalam bahasa Indonesia adalah...", options: ["Selamat pagi", "Selamat siang", "Selamat malam"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "“八” (Bā) dalam bahasa Indonesia artinya...", options: ["Delapan", "Satu", "Lima"], correct: 0 },
 
   // --- BAHASA INDONESIA GMEC ---
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[GMEC] Posisi tegak dan punggung lurus merupakan sikap duduk yang benar saat...", options: ["Membaca & Menulis", "Tidur", "Bermain"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[GMEC] Huruf vokal pada kata 'Cabe' adalah...", options: ["a dan e", "c dan b", "a dan b"], correct: 0 },
+  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Posisi tegak dan punggung lurus merupakan sikap duduk yang benar saat...", options: ["Membaca & Menulis", "Tidur", "Bermain"], correct: 0 },
+  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Huruf vokal pada kata 'Cabe' adalah...", options: ["a dan e", "c dan b", "a dan b"], correct: 0 },
 
   // --- MORAL GMEC ---
-  { type: "multiple-choice", subject: "Moral", text: "[GMEC] Ucapan 'Selamat pagi, Ayah, Ibu' menunjukkan sikap...", options: ["Mengucapkan salam & menyapa ramah", "Membantu pekerjaan rumah", "Mendengar nasihat"], correct: 0 },
+  { type: "multiple-choice", subject: "Moral", text: "Ucapan 'Selamat pagi, Ayah, Ibu' menunjukkan sikap...", options: ["Mengucapkan salam & menyapa ramah", "Membantu pekerjaan rumah", "Mendengar nasihat"], correct: 0 },
 
   // --- KEWARGANEGARAAN / PP GMEC ---
-  { type: "multiple-choice", subject: "Kewarganegaraan", text: "[GMEC] 1. Lambang negara Republik Indonesia adalah...", options: ["burung garuda", "bendera merah putih", "lagu Indonesia raya"], correct: 0 },
-  { type: "multiple-choice", subject: "Kewarganegaraan", text: "[GMEC] 2. Gambar Rantai Emas melambangkan Pancasila sila ke-...", options: ["3", "2", "1"], correct: 1 },
+  { type: "multiple-choice", subject: "Kewarganegaraan", text: "1. Lambang negara Republik Indonesia adalah...", options: ["burung garuda", "bendera merah putih", "lagu Indonesia raya"], correct: 0 },
+  { type: "multiple-choice", subject: "Kewarganegaraan", text: "2. Gambar Rantai Emas melambangkan Pancasila sila ke-...", options: ["3", "2", "1"], correct: 1 },
 
   // --- AGAMA ISLAM GMEC ---
-  { type: "multiple-choice", subject: "Agama Islam", text: "[GMEC] Iman kepada hari akhir merupakan rukun Iman ke-...", options: ["5", "6", "3"], correct: 0 }
+  { type: "multiple-choice", subject: "Agama Islam", text: "Iman kepada hari akhir merupakan rukun Iman ke-...", options: ["5", "6", "3"], correct: 0 }
 ];
 
 // DATABASE BANK SOAL UMUM (SEKOLAH LAIN)
