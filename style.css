@@ -1,50 +1,312 @@
-/* Variable Tema Terang (Default) */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
+
 :root {
-  --bg-color: #f4f6f9;
+  --bg-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
   --card-bg: #ffffff;
-  --text-color: #333333;
-  --border-color: #e0e0e0;
+  --text-main: #2c3e50;
+  --text-sub: #7f8c8d;
+  --primary-color: #4a90e2;
+  --secondary-color: #ff6b6b;
+  --border-color: #e2e8f0;
+  --shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* Variable Tema Gelap */
 body.dark-mode {
-  --bg-color: #121212;
-  --card-bg: #1e1e1e;
-  --text-color: #f1f1f1;
-  --border-color: #333333;
+  --bg-gradient: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
+  --card-bg: #1e1e2d;
+  --text-main: #f3f4f6;
+  --text-sub: #9ca3af;
+  --primary-color: #6366f1;
+  --secondary-color: #ff5252;
+  --border-color: #374151;
+  --shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* Terapkan variabel warna ke bodi & kartu */
+* {
+  box-sizing: border-box;
+  font-family: 'Fredoka', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
 
-.card-screen {
-  background-color: var(--card-bg);
-  border-color: var(--border-color);
-  color: var(--text-color);
-}
-
-/* Tombol Toggle Tema */
-.theme-toggle-container {
+.theme-bar {
+  width: 100%;
+  max-width: 500px;
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .theme-btn {
-  background: var(--bg-color);
-  color: var(--text-color);
+  background: var(--card-bg);
+  color: var(--text-main);
   border: 2px solid var(--border-color);
   padding: 8px 16px;
   border-radius: 20px;
-  font-weight: bold;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.theme-btn:active {
+  transform: scale(0.95);
+}
+
+.app-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.card-screen {
+  background: var(--card-bg);
+  color: var(--text-main);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.main-title {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--text-sub);
+  margin-bottom: 20px;
+}
+
+/* CARDS UNTUK SEKOLAH */
+.school-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.school-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 3px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-main);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.school-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-color);
+}
+
+.gmec-card { border-left: 8px solid #ff6b6b; }
+.general-card { border-left: 8px solid #4ecdc4; }
+
+.card-icon {
+  font-size: 2.2rem;
+}
+
+.card-info h3 {
+  font-size: 1.1rem;
+}
+
+.card-info p {
+  font-size: 0.85rem;
+  color: var(--text-sub);
+}
+
+/* GRID KELAS & MAPEL */
+.class-grid, .subject-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.class-btn, .subject-btn {
+  padding: 14px;
+  border-radius: 14px;
+  border: 2px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.theme-btn:hover {
-  transform: scale(1.05);
+.class-btn:hover, .subject-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+/* KUIS SCREEN */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.badge {
+  background: var(--border-color);
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.nav-back-btn {
+  background: transparent;
+  border: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.nav-back-btn.small { margin-bottom: 0; }
+
+.instruction {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  margin-top: 6px;
+  margin-bottom: 15px;
+}
+
+/* CANVAS WRAPPER */
+.canvas-wrapper, .matching-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  border: 2px dashed var(--border-color);
+  border-radius: 16px;
+  padding: 10px;
+  margin-bottom: 15px;
+  touch-action: none;
+}
+
+.options-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--card-bg);
+  pointer-events: none;
+}
+
+.option-letter {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+#draw-canvas, #match-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: crosshair;
+}
+
+/* MATCHING STYLING */
+.matching-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.match-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 42%;
+  z-index: 1;
+}
+
+.match-item {
+  padding: 10px;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--card-bg);
+  font-size: 0.9rem;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.matched-correct { border-color: #4caf50; background: #c8e6c9; }
+.matched-wrong { border-color: #f44336; background: #ffcdd2; }
+
+/* KONTROL KUIS & HASIL */
+.quiz-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.control-btn, .action-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.control-btn.warning { background: #ff9800; }
+.action-btn.secondary { background: var(--border-color); color: var(--text-main); }
+
+.score-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 15px auto;
 }

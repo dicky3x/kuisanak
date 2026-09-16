@@ -1,24 +1,128 @@
-<!-- LAYAR 0: PILIH JENIS SEKOLAH -->
-<div id="school-menu-screen" class="card-screen">
-  <!-- Tombol Toggle Tema -->
-  <div class="theme-toggle-container">
-    <button id="theme-toggle-btn" class="theme-btn" onclick="toggleTheme()">
-      🌙 Tema Gelap
-    </button>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuis Interaktif SD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOGGLE TEMA GLOBAL (Di Luar Card Layar agar Selalu Bisa Diklik) -->
+  <div class="theme-bar">
+    <button id="theme-toggle-btn" class="theme-btn" onclick="toggleTheme()">🌙 Tema Gelap</button>
   </div>
 
-  <h2>🏫 Pilih Sekolah</h2>
-  <p class="subtitle">Pilih kurikulum/sekolah untuk mulai latihan</p>
-  <div class="school-grid">
-    <button class="school-btn gmec-btn" onclick="selectSchool('guangming')">
-      <span class="school-icon">🌸</span>
-      <span class="school-name">Sekolah Guang Ming</span>
-      <span class="school-tag">Soal PDF GMEC (Lengkap)</span>
-    </button>
-    <button class="school-btn general-btn" onclick="selectSchool('general')">
-      <span class="school-icon">🏫</span>
-      <span class="school-name">Sekolah Lain</span>
-      <span class="school-tag">Kurikulum Umum</span>
-    </button>
+  <div class="app-container">
+
+    <!-- LAYAR 0: PILIH JENIS SEKOLAH -->
+    <div id="school-menu-screen" class="card-screen">
+      <h1 class="main-title">🎮 Kuis Pintar SD</h1>
+      <p class="subtitle">Pilih sekolahmu untuk memulai petualangan belajar!</p>
+      
+      <div class="school-grid">
+        <button class="school-card gmec-card" onclick="selectSchool('guangming')">
+          <div class="card-icon">🌸</div>
+          <div class="card-info">
+            <h3>Sekolah Guang Ming</h3>
+            <p>Soal PDF GMEC Lengkap</p>
+          </div>
+        </button>
+
+        <button class="school-card general-card" onclick="selectSchool('general')">
+          <div class="card-icon">🏫</div>
+          <div class="card-info">
+            <h3>Sekolah Lain</h3>
+            <p>Kurikulum Umum SD</p>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- LAYAR 1: PILIH KELAS -->
+    <div id="class-menu-screen" class="card-screen hidden">
+      <button class="nav-back-btn" onclick="goToSchoolMenu()">⬅️ Ganti Sekolah</button>
+      <h2>🎒 Pilih Tingkat Kelas</h2>
+      <div class="class-grid">
+        <button class="class-btn" onclick="selectClass(1)">Kelas 1</button>
+        <button class="class-btn" onclick="selectClass(2)">Kelas 2</button>
+        <button class="class-btn" onclick="selectClass(3)">Kelas 3</button>
+        <button class="class-btn" onclick="selectClass(4)">Kelas 4</button>
+        <button class="class-btn" onclick="selectClass(5)">Kelas 5</button>
+        <button class="class-btn" onclick="selectClass(6)">Kelas 6</button>
+      </div>
+    </div>
+
+    <!-- LAYAR 2: PILIH MAPEL -->
+    <div id="subject-menu-screen" class="card-screen hidden">
+      <button class="nav-back-btn" onclick="goToClassMenu()">⬅️ Ganti Kelas</button>
+      <h2 id="selected-class-title">Kelas 1 SD</h2>
+      <p class="subtitle">Pilih mata pelajaran yang ingin kamu mainkan:</p>
+      <div class="subject-grid">
+        <button class="subject-btn" onclick="selectSubject('Semua Mapel')">🌟 Semua Mapel</button>
+        <button class="subject-btn" onclick="selectSubject('Kewarganegaraan')">🇲🇨 Kewarganegaraan</button>
+        <button class="subject-btn" onclick="selectSubject('Bahasa Indonesia')">🇮🇩 Bahasa Indonesia</button>
+        <button class="subject-btn" onclick="selectSubject('Math')">🔢 Math</button>
+        <button class="subject-btn" onclick="selectSubject('Science')">🔬 Science</button>
+        <button class="subject-btn" onclick="selectSubject('English')">🔤 English</button>
+        <button class="subject-btn" onclick="selectSubject('Mandarin')">🇨🇳 Mandarin</button>
+        <button class="subject-btn" onclick="selectSubject('Moral')">🤝 Moral</button>
+        <button class="subject-btn" onclick="selectSubject('Agama Islam')">🌙 Agama Islam</button>
+        <button class="subject-btn" onclick="selectSubject('Budaya Melayu Riau')">🌴 Budaya Melayu Riau</button>
+      </div>
+    </div>
+
+    <!-- LAYAR 3: KUIS -->
+    <div id="quiz-screen" class="card-screen hidden">
+      <div class="quiz-header">
+        <button class="nav-back-btn small" onclick="goToSubjectMenu()">⬅️ Keluar</button>
+        <span id="subject-tag" class="badge">Mapel</span>
+        <span id="progress-tag" class="badge">1 / 10</span>
+      </div>
+
+      <h3 id="question-text">Soal akan tampil di sini...</h3>
+      <p id="instruction-text" class="instruction">💡 Lingkari jawaban yang benar!</p>
+
+      <!-- CANVAS OPSI PILIHAN GANDA -->
+      <div id="canvas-container" class="canvas-wrapper">
+        <div id="options-container" class="options-wrapper"></div>
+        <canvas id="draw-canvas"></canvas>
+      </div>
+
+      <!-- CANVAS MATCHING / MENARIK GARIS -->
+      <div id="matching-container" class="matching-wrapper hidden">
+        <div id="left-column" class="match-col"></div>
+        <div id="right-column" class="match-col"></div>
+        <canvas id="match-canvas"></canvas>
+      </div>
+
+      <div class="quiz-controls">
+        <button id="prev-btn" class="control-btn" onclick="prevQuestion()">◀ Kembali</button>
+        <button class="control-btn warning" onclick="resetCurrentQuestion()">🔄 Coba Lagi</button>
+      </div>
+    </div>
+
+    <!-- LAYAR 4: HASIL KUIS -->
+    <div id="result-screen" class="card-screen hidden">
+      <h2>🎉 Hasil Latihan Kamu</h2>
+      <div class="score-box">
+        <div class="score-circle">
+          <span id="final-score">0</span>
+        </div>
+        <p id="feedback-text">Tetap semangat belajar ya!</p>
+      </div>
+      <div class="result-details">
+        <p>✅ Jawaban Benar: <strong id="correct-count">0</strong></p>
+        <p>❌ Jawaban Salah: <strong id="wrong-count">0</strong></p>
+      </div>
+      <div class="result-actions">
+        <button class="action-btn" onclick="restartQuiz()">🔄 Ulangi Kuis</button>
+        <button class="action-btn secondary" onclick="goToSubjectMenu()">📑 Pilih Mapel Lain</button>
+      </div>
+    </div>
+
   </div>
-</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
