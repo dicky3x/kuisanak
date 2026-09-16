@@ -1,121 +1,24 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kuis Interaktif Anak SD</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="quiz-card">
-    
-    <!-- LAYAR 1: MENU PILIH KELAS -->
-    <div id="class-menu-screen">
-      <h1 class="app-title">🎮 Kuis Pintar SD</h1>
-      <p class="app-subtitle">Pilih Tingkat Kelas Kamu:</p>
-      
-      <div class="class-grid">
-        <button class="class-btn c1" onclick="selectClass(1)">Kelas 1 SD</button>
-        <button class="class-btn c2" onclick="selectClass(2)">Kelas 2 SD</button>
-        <button class="class-btn c3" onclick="selectClass(3)">Kelas 3 SD</button>
-        <button class="class-btn c4" onclick="selectClass(4)">Kelas 4 SD</button>
-        <button class="class-btn c5" onclick="selectClass(5)">Kelas 5 SD</button>
-        <button class="class-btn c6" onclick="selectClass(6)">Kelas 6 SD</button>
-      </div>
-
-      <p class="creator-tag">dibuat oleh ayah kyna</p>
-    </div>
-
-    <!-- LAYAR 2: MENU PILIH MATA PELAJARAN -->
-    <div id="subject-menu-screen" class="hidden">
-      <div class="menu-header">
-        <button class="back-icon-btn" onclick="goToClassMenu()" title="Kembali ke Menu Kelas">⬅️</button>
-        <h2 id="selected-class-title">Kelas 1 SD</h2>
-      </div>
-      <p class="app-subtitle">Pilih Mata Pelajaran:</p>
-      
-      <div class="subject-grid">
-        <button class="subject-btn s-all" onclick="selectSubject('Semua Mapel')">🎲 Semua Mapel (Campur)</button>
-        <button class="subject-btn s-indo" onclick="selectSubject('Bahasa Indonesia')">🇮🇩 Bahasa Indonesia</button>
-        <button class="subject-btn s-math" onclick="selectSubject('Math')">🔢 Math (Matematika)</button>
-
-        <button class="subject-btn s-sci" onclick="selectSubject('Science')">🔬 Science (IPA)</button>
-        <button class="subject-btn s-pkn" onclick="selectSubject('Kewarganegaraan')">🦅 PKn</button>
-        <button class="subject-btn s-eng" onclick="selectSubject('English')">🇬🇧 English</button>
-        <button class="subject-btn s-mand" onclick="selectSubject('Mandarin')">🇨🇳 Mandarin</button>
-        <button class="subject-btn s-moral" onclick="selectSubject('Moral')">🌟 Moral / Budi Pekerti</button>
-        <button class="subject-btn s-bmr" onclick="selectSubject('Budaya Melayu Riau')">🌴 Budaya Melayu Riau</button>
-      </div>
-    </div>
-
-    <!-- LAYAR 3: LAYAR SOAL KUIS -->
-    <div id="quiz-screen" class="hidden">
-      <div class="header-info">
-        <button id="back-home-btn" onclick="goToSubjectMenu()" title="Kembali ke Pilih Mapel">⬅️</button>
-        <div id="subject-tag" class="subject-tag">Mata Pelajaran</div>
-        <div id="progress-tag" class="progress-tag">1 / 30</div>
-      </div>
-
-      <!-- Teks Soal & Tombol Suara -->
-      <div class="question-container">
-        <h2 id="question-text">Teks Soal...</h2>
-        <button id="audio-btn" class="audio-btn" onclick="speakCurrentQuestion()" title="Dengarkan Soal">🔊</button>
-      </div>
-      
-      <!-- AREA 1: PILIHAN GANDA (MELINGKARI A, B, ATAU C) -->
-      <div class="canvas-container" id="canvas-container">
-        <div id="options-container" class="options-container"></div>
-        <canvas id="draw-canvas"></canvas>
-      </div>
-
-      <!-- AREA 2: MENCOCOKKAN GAMBAR (MENARIK GARIS) -->
-      <div class="matching-container hidden" id="matching-container">
-        <div class="matching-column" id="left-column"></div>
-        <div class="matching-column" id="right-column"></div>
-        <canvas id="match-canvas"></canvas>
-      </div>
-
-      <p class="instruction" id="instruction-text">💡 Lingkari huruf A, B, atau C dengan jarimu!</p>
-
-      <div class="nav-buttons">
-        <button id="prev-btn" onclick="prevQuestion()">⬅️ Sebelumnya</button>
-        <button id="reset-btn" onclick="resetCurrentQuestion()">🔄 Hapus Coretan</button>
-        <button id="next-btn" onclick="nextQuestion()">Lanjut ➡️</button>
-      </div>
-    </div>
-
-    <!-- LAYAR 4: HASIL / SKOR -->
-    <div id="result-screen" class="hidden">
-      <div class="result-badge">🎉 SELESAI!</div>
-      <h2>Hasil Kuis Kamu</h2>
-      
-      <div class="score-box">
-        <div class="score-title">Nilai Akhir</div>
-        <div id="final-score" class="score-number">100</div>
-      </div>
-
-      <div class="stats-container">
-        <div class="stat-item correct">
-          <span class="stat-label">Benar</span>
-          <span id="correct-count" class="stat-value">0</span>
-        </div>
-        <div class="stat-item wrong">
-          <span class="stat-label">Salah</span>
-          <span id="wrong-count" class="stat-value">0</span>
-        </div>
-      </div>
-
-      <p id="feedback-text" class="feedback-text">Bagus sekali!</p>
-
-      <div class="result-nav-buttons">
-        <button id="restart-btn" onclick="restartQuiz()">🔄 Ulangi Mapel Ini</button>
-        <button id="subject-nav-btn" onclick="goToSubjectMenu()">📚 Pilih Mapel Lain</button>
-        <button id="home-btn" onclick="goToClassMenu()">🏠 Pilih Kelas Lain</button>
-      </div>
-    </div>
-
+<!-- LAYAR 0: PILIH JENIS SEKOLAH -->
+<div id="school-menu-screen" class="card-screen">
+  <!-- Tombol Toggle Tema -->
+  <div class="theme-toggle-container">
+    <button id="theme-toggle-btn" class="theme-btn" onclick="toggleTheme()">
+      🌙 Tema Gelap
+    </button>
   </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <h2>🏫 Pilih Sekolah</h2>
+  <p class="subtitle">Pilih kurikulum/sekolah untuk mulai latihan</p>
+  <div class="school-grid">
+    <button class="school-btn gmec-btn" onclick="selectSchool('guangming')">
+      <span class="school-icon">🌸</span>
+      <span class="school-name">Sekolah Guang Ming</span>
+      <span class="school-tag">Soal PDF GMEC (Lengkap)</span>
+    </button>
+    <button class="school-btn general-btn" onclick="selectSchool('general')">
+      <span class="school-icon">🏫</span>
+      <span class="school-name">Sekolah Lain</span>
+      <span class="school-tag">Kurikulum Umum</span>
+    </button>
+  </div>
+</div>
