@@ -1,9 +1,110 @@
-<!-- LAYAR 2: PILIH MAPEL -->
-<div id="subject-menu-screen" class="card-screen hidden">
-  <button class="nav-back-btn" onclick="goToClassMenu()">⬅️ Ganti Kelas</button>
-  <h2 id="selected-class-title">Kelas 1 SD</h2>
-  <p class="subtitle">Pilih mata pelajaran latihanmu:</p>
-  <div id="subject-grid-container" class="subject-grid">
-    <!-- Dikonfigurasi secara dinamis oleh JavaScript -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuis Interaktif SD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOGGLE TEMA GLOBAL -->
+  <div class="theme-bar">
+    <button id="theme-toggle-btn" class="theme-btn" onclick="toggleTheme()">🌙 Tema Gelap</button>
   </div>
-</div>
+
+  <div class="app-container">
+
+    <!-- LAYAR 0: PILIH JENIS SEKOLAH -->
+    <div id="school-menu-screen" class="card-screen">
+      <h1 class="main-title">🎮 Kuis Pintar SD</h1>
+      <p class="subtitle">Pilih sekolahmu untuk memulai petualangan belajar!</p>
+      
+      <div class="school-grid">
+        <button class="school-card gmec-card" onclick="selectSchool('guangming')">
+          <div class="card-icon">🌸</div>
+          <div class="card-info">
+            <h3>Sekolah Guang Ming</h3>
+            <p>Soal PDF GMEC Lengkap</p>
+          </div>
+        </button>
+
+        <button class="school-card general-card" onclick="selectSchool('general')">
+          <div class="card-icon">🏫</div>
+          <div class="card-info">
+            <h3>Sekolah Lain</h3>
+            <p>Kurikulum Umum SD</p>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- LAYAR 1: PILIH KELAS -->
+    <div id="class-menu-screen" class="card-screen hidden">
+      <button class="nav-back-btn" onclick="goToSchoolMenu()">⬅️ Ganti Sekolah</button>
+      <h2>🎒 Pilih Tingkat Kelas</h2>
+      <div class="class-grid"></div>
+    </div>
+
+    <!-- LAYAR 2: PILIH MAPEL -->
+    <div id="subject-menu-screen" class="card-screen hidden">
+      <button class="nav-back-btn" onclick="goToClassMenu()">⬅️ Ganti Kelas</button>
+      <h2 id="selected-class-title">Kelas 1 SD</h2>
+      <p class="subtitle">Pilih mata pelajaran latihanmu:</p>
+      <div id="subject-grid-container" class="subject-grid"></div>
+    </div>
+
+    <!-- LAYAR 3: KUIS -->
+    <div id="quiz-screen" class="card-screen hidden">
+      <div class="quiz-header">
+        <button class="nav-back-btn small" onclick="goToSubjectMenu()">⬅️ Keluar</button>
+        <span id="subject-tag" class="badge">Mapel</span>
+        <span id="progress-tag" class="badge">1 / 10</span>
+      </div>
+
+      <h3 id="question-text">Soal akan tampil di sini...</h3>
+      <p id="instruction-text" class="instruction">💡 Lingkari jawaban yang benar!</p>
+
+      <!-- CANVAS OPSI PILIHAN GANDA -->
+      <div id="canvas-container" class="canvas-wrapper">
+        <div id="options-container" class="options-wrapper"></div>
+        <canvas id="draw-canvas"></canvas>
+      </div>
+
+      <!-- CANVAS MATCHING / MENARIK GARIS -->
+      <div id="matching-container" class="matching-wrapper hidden">
+        <div id="left-column" class="match-col"></div>
+        <div id="right-column" class="match-col"></div>
+        <canvas id="match-canvas"></canvas>
+      </div>
+
+      <div class="quiz-controls">
+        <button id="prev-btn" class="control-btn" onclick="prevQuestion()">◀ Kembali</button>
+        <button class="control-btn warning" onclick="resetCurrentQuestion()">🔄 Coba Lagi</button>
+      </div>
+    </div>
+
+    <!-- LAYAR 4: HASIL KUIS -->
+    <div id="result-screen" class="card-screen hidden">
+      <h2>🎉 Hasil Latihan Kamu</h2>
+      <div class="score-box">
+        <div class="score-circle">
+          <span id="final-score">0</span>
+        </div>
+        <p id="feedback-text">Tetap semangat belajar ya!</p>
+      </div>
+      <div class="result-details">
+        <p>✅ Jawaban Benar: <strong id="correct-count">0</strong></p>
+        <p>❌ Jawaban Salah: <strong id="wrong-count">0</strong></p>
+      </div>
+      <div class="result-actions">
+        <button class="action-btn" onclick="restartQuiz()">🔄 Ulangi Kuis</button>
+        <button class="action-btn secondary" onclick="goToSubjectMenu()">📑 Pilih Mapel Lain</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
