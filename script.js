@@ -17,125 +17,201 @@ function toggleTheme() {
   }
 }
 
-// DATABASE BANK SOAL KELAS 1 GUANG MING (LENGKAP DARI SEMUA PDF GMEC)
+// DATABASE SOAL LENGKAP KELAS 1 SEKOLAH GUANG MING (GMEC)
 const guangMingClass1Bank = [
-  // ================= BAHASA INDONESIA GMEC (SMALL TEST 1 & REVIEW MID TEST) =================
-  // --- Dari Small Test 1 Bahasa Indonesia ---
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 1. Sikap duduk yang benar saat membaca adalah...", options: ["Duduk tegak dan lurus", "Bungkuk ke depan", "Sambil berbaring"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 2. Huruf vokal pada kata 'buku' adalah...", options: ["u", "b", "k"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 3. Kata yang diawali suku kata ba- adalah...", options: ["batu", "bola", "bebek"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 4. Cara memegang pensil yang benar adalah dijepit di antara...", options: ["Ibu jari, telunjuk, & jari tengah", "Genggaman telapak tangan", "Jari kelingking"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 5. Huruf konsonan pada kata 'mata' adalah...", options: ["m dan t", "a", "a dan t"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 6. Kata yang diawali dengan suku kata bu- adalah...", options: ["buku", "balon", "baju"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 7. Tanda baca yang tepat untuk melengkapi kalimat 'Siapa namamu' adalah...", options: ["Tanda tanya (?)", "Tanda seru (!)", "Tanda titik (.)"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 8. Beni memiliki dua ekor kucing bernama Mimi dan Memo. Siapa nama kucing Beni?", options: ["Mimi dan Memo", "Beni dan Mimi", "Beni dan Memo"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 9. Benda/hewan yang diawali suku kata bo- adalah...", options: ["boneka dan bola", "baju", "bebek"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 10. Kata yang diawali suku kata ha- adalah...", options: ["harimau dan hati", "balon", "hidung"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 11. Huruf vokal pada kata 'sapi' adalah...", options: ["a dan i", "s dan p", "a dan p"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 12. Hewan yang tubuhnya panjang, lunak, tanpa kaki, hidup di tanah lembap, diawali huruf 'c' adalah...", options: ["cacing", "cicak", "capung"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 13. Manakah kata yang memiliki huruf vokal 'u'?", options: ["batu dan buku", "bata dan kata", "bola dan meja"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 14. Apa saja kegiatan Siti pada pagi hari berdasarkan cerita?", options: ["Mandi dan sarapan", "Bermain dan tidur", "Belajar dan membaca"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 15. Lani ingin berkenalan dengan teman baru di sekolah. Kalimat yang tepat diucapkan Lani adalah...", options: ["Hai, boleh berkenalan?", "Siapa namamu!", "Ayo lari bersama."], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[ST1] 16. Benda yang dipakai di bagian atas tubuh, memiliki lengan dan lubang kepala adalah...", options: ["baju", "sepatu", "topi"], correct: 0 },
-  
-  // --- Dari Review Mid Test Bahasa Indonesia ---
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 17. Sikap duduk yang benar saat membaca adalah posisi badan harus...", options: ["tegak", "bungkuk", "miring"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 18. Huruf vokal pada kata 'Cabe' adalah...", options: ["a dan e", "c dan b", "a dan b"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 19. Kata yang diawali suku kata be- adalah...", options: ["becak", "batu", "bola"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 20. Huruf konsonan pada kata 'botol' adalah...", options: ["b, t, l", "o, o", "b, o, t"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 21. Benda yang diawali suku kata 'bo-' adalah...", options: ["boneka", "baju", "bebek"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 22. Tanda baca yang tepat untuk 'ayo berolahraga' adalah...", options: ["Tanda seru (!)", "Tanda tanya (?)", "Tanda titik (.)"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 23. Dua benda yang diawali suku kata ba- adalah...", options: ["Baju dan balon", "Buku dan bulan", "Bebek dan becak"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 24. 'Hidung' dan 'Hiu' adalah kata yang diawali suku kata...", options: ["hi-", "ha-", "ho-"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 25. Huruf vokal pada kata 'lemari' adalah...", options: ["e, a, dan i", "l, m, dan r", "e, m, dan i"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 26. Buah berwarna merah, manis, diawali huruf C adalah...", options: ["Ceri", "Cokelat", "Cempedak"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 27. Tokoh yang membantu menyiapkan sarapan pada cerita Nisa adalah...", options: ["Nisa, Ibu, dan Kakak", "Nisa dan Ayah", "Beni dan Mimi"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 28. Bisma ingin menanyakan cara membuat teh kepada ibu. Kalimat tanya yang tepat adalah...", options: ["Bagaimana cara membuat teh, Bu?", "Ayo buat teh Bu!", "Ibu sedang buat teh."], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 29. Gambar anak memegang sapu di ruang tamu menunjukkan kegiatan...", options: ["Menyapu rumah", "Merapikan kasur", "Mencuci tangan"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 30. Cara membaca yang benar berdasarkan cerita Alya adalah...", options: ["Duduk tegak, pencahayaan cukup, & jaga jarak mata", "Berbaring di tempat gelap", "Membaca sangat dekat dengan wajah"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 31. Bisma ingin mengetahui alamat rumah temannya. Kalimat tanya yang tepat adalah...", options: ["Di mana alamat rumahmu?", "Siapa namamu?", "Bagaimana kabarmu?"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "[MID] 32. Urutan gambar berseri (1. Menyisir, 2. Berpakaian, 3. Mandi, 4. Bangun tidur) yang tepat adalah...", options: ["4 - 3 - 2 - 1", "1 - 2 - 3 - 4", "3 - 4 - 1 - 2"], correct: 0 },
+  // ================= 1. MANDARIN GMEC (DARI PDF MID TEST MANDARIN) =================
+  { type: "multiple-choice", subject: "Mandarin", text: "1. Huruf yang memiliki radikal '亻' adalah...", options: ["你 (nǐ)", "河 (hé)", "五 (wǔ)"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "2. Radikal dari huruf '河' adalah...", options: ["氵(三点水)", "可", "亻"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "3. Lengkapi kalimat: 我 (叫 / 几) 小美。", options: ["叫 (jiào)", "几 (jǐ)", "岁 (suì)"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "4. Lengkapi kalimat: 我家有 (五个星期 / 五个人)。", options: ["五个人 (lima orang)", "五个星期 (lima minggu)", "五日 (lima hari)"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "5. Lengkapi kalimat: 我今年 (八日 / 八岁)。", options: ["八岁 (8 tahun)", "八日 (8 hari)", "八月 (8 bulan)"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "6. Jumlah goresan dari huruf '禾' adalah...", options: ["五 (5)", "四 (4)", "六 (6)"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "7. '早安' dalam Bahasa Indonesia artinya...", options: ["Selamat pagi", "Selamat malam", "Terima kasih"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "8. 我叫爸爸的爸爸 (Ayah dari Ayah dipanggil)...", options: ["爷爷 (yéye)", "外公 (wàigōng)", "叔叔 (shūshu)"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "9. 'Sampai Jumpa' dalam Aksara Hanzi adalah...", options: ["再见 (zàijiàn)", "谢谢 (xièxie)", "你好 (nǐhǎo)"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "10. '晚安' dalam Bahasa Indonesia artinya...", options: ["Selamat malam", "Selamat pagi", "Selamat siang"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "11. Pinyin dari Hanzi '日' adalah...", options: ["rì", "yuè", "mù"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "12. Pinyin dari Hanzi '妹妹' (Adik Perempuan) adalah...", options: ["mèimei", "māma", "jiejie"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "13. Tuliskan Hanzi dari kata 'Bulan' (Moon)...", options: ["月", "日", "水"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "14. Terjemahkan '明天' ke dalam Bahasa Indonesia...", options: ["Besok", "Hari ini", "Kemarin"], correct: 0 },
+  { type: "multiple-choice", subject: "Mandarin", text: "15. Terjemahkan '星期一' ke dalam Bahasa Indonesia...", options: ["Senin", "Selasa", "Minggu"], correct: 0 },
+
+  // ================= 2. ENGLISH GMEC (DARI PDF MID TEST ENGLISH) =================
+  { type: "multiple-choice", subject: "English", text: "1. A-B-C-D- ... What letter comes next?", options: ["E", "F", "G"], correct: 0 },
+  { type: "multiple-choice", subject: "English", text: "2. You want to draw a straight line. What do you need?", options: ["Ruler", "Pencilcase", "Eraser"], correct: 0 },
+  { type: "multiple-choice", subject: "English", text: "3. Look at the dialogue: Teacher: 'What is your name?' - Boy: 'My name is Rian.' The boy's name is...", options: ["Rian", "Ben", "Dino"], correct: 0 },
+  { type: "multiple-choice", subject: "English", text: "4. This is Rafi. This is ______ bag.", options: ["his", "her", "my"], correct: 0 },
+  { type: "multiple-choice", subject: "English", text: "5. A child says: 'I want a small toy with a rectangle shape.' Based on the chart (Train = rectangle & small), which toy is it?", options: ["Train", "Car", "Kite"], correct: 0 },
+  { type: "multiple-choice", subject: "English", text: "6. A child says: 'I want the big toy that can fly.' Which toy is it?", options: ["Kite", "Ball", "Doll"], correct: 0 },
+  { type: "multiple-choice", subject: "English", text: "7. Which pair of words has the short /a/ sound?", options: ["Bag and Rat", "Red and Bed", "Big and Pig"], correct: 0 },
+  { type: "multiple-choice", subject: "English", text: "8. What shape is a kite toy?", options: ["Triangle / Diamond", "Circle", "Rectangle"], correct: 0 },
+  { type: "multiple-choice", subject: "English", text: "9. Complete the missing letter: Bl_ck c_t", options: ["a", "e", "i"], correct: 0 },
+  { type: "multiple-choice", subject: "English", text: "10. Read the dialogue: Lucy: 'My train is short.' Ben: 'My ball is round.' The round toy belongs to...", options: ["Ben", "Lucy", "Jake"], correct: 0 },
+
+  // ================= 3. SCIENCE GMEC (DARI PDF MID TEST SCIENCE) =================
+  { type: "multiple-choice", subject: "Science", text: "1. Which part of the body helps us smell?", options: ["Nose", "Tongue", "Cheek"], correct: 0 },
+  { type: "multiple-choice", subject: "Science", text: "2. What covers the top of your fingers?", options: ["Nail", "Toe", "Ears"], correct: 0 },
+  { type: "multiple-choice", subject: "Science", text: "3. Potato chips and salted peanuts are examples of...", options: ["salty food", "sweet food", "bitter food"], correct: 0 },
+  { type: "multiple-choice", subject: "Science", text: "4. To keep our body clean, we should...", options: ["Bathing / Take a bath", "Eat sweets", "Stay dirty"], correct: 0 },
+  { type: "multiple-choice", subject: "Science", text: "5. Eggs give us protein to help us grow, while Doughnuts are...", options: ["sweet food rich in sugar", "rich in vitamins", "salty food"], correct: 0 },
+  { type: "multiple-choice", subject: "Science", text: "6. What does 'staying safe' mean?", options: ["Protecting ourselves from harm or danger", "Eating only fruits", "Brushing teeth"], correct: 0 },
+  { type: "multiple-choice", subject: "Science", text: "7. You see a hot stove in the kitchen. What is the safest action?", options: ["Don't play with or touch it", "Touch it quickly", "Put an object into it"], correct: 0 },
+  { type: "multiple-choice", subject: "Science", text: "8. What happens if you talk while eating food?", options: ["You might choke on your food", "Your teeth grow faster", "You gain energy"], correct: 0 },
+  { type: "multiple-choice", subject: "Science", text: "9. Which of these is a living thing?", options: ["Cat", "Rock", "Toy car"], correct: 0 },
+  { type: "multiple-choice", subject: "Science", text: "10. Which of these do living things need to stay alive?", options: ["Food, air, and water", "Toys and clothes", "Colors and shapes"], correct: 0 },
+
+  // ================= 4. MATH GMEC (DARI PDF MID TEST MATH) =================
+  { type: "multiple-choice", subject: "Math", text: "1. What number comes next in this pattern? 2, 4, 6, ...", options: ["8", "7", "10"], correct: 0 },
+  { type: "multiple-choice", subject: "Math", text: "2. Which number bond is correct?", options: ["5 + 3 = 8", "2 + 6 = 7", "7 - 1 = 5"], correct: 0 },
+  { type: "multiple-choice", subject: "Math", text: "3. Complete the equation: ___ + 4 = 7", options: ["3", "4", "5"], correct: 0 },
+  { type: "multiple-choice", subject: "Math", text: "4. Mom bought 3 lamps. She bought 4 more. How many lamps does she have now?", options: ["7", "6", "5"], correct: 0 },
+  { type: "multiple-choice", subject: "Math", text: "5. What is 8 - 2?", options: ["6", "7", "5"], correct: 0 },
+  { type: "multiple-choice", subject: "Math", text: "6. There are 7 birds on a tree. 2 birds fly away. How many birds are left?", options: ["5", "6", "7"], correct: 0 },
+  { type: "multiple-choice", subject: "Math", text: "7. Which subtraction equation is correct?", options: ["7 - 6 = 1", "9 - 4 = 4", "5 - 3 = 1"], correct: 0 },
+  { type: "multiple-choice", subject: "Math", text: "8. What is 1 more than 5?", options: ["6", "5", "7"], correct: 0 },
+  { type: "multiple-choice", subject: "Math", text: "9. What is 2 less than 9?", options: ["7", "8", "6"], correct: 0 },
+  { type: "multiple-choice", subject: "Math", text: "10. Mary has 10 coins. She hides some under a cup. If 4 are visible, how many are under the cup?", options: ["6", "5", "4"], correct: 0 },
+
+  // ================= 5. PENDIDIKAN PANCASILA GMEC (DARI PDF MID TEST PP) =================
+  { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "1. Bunyi sila Pancasila yang dilambangkan oleh Bintang Emas adalah...", options: ["Ketuhanan Yang Maha Esa", "Persatuan Indonesia", "Kemanusiaan yang Adil dan Beradab"], correct: 0 },
+  { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "2. Nama burung yang menjadi lambang negara Indonesia adalah...", options: ["burung garuda", "burung elang", "burung merpati"], correct: 0 },
+  { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "3. Rina selesai bermain lalu menyimpan sepatunya di rak. Kegiatan Rina merupakan contoh...", options: ["aturan di rumah", "aturan di sekolah", "aturan di jalan"], correct: 0 },
+  { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "4. Manakah contoh mematuhi aturan di sekolah?", options: ["Mendengarkan penjelasan guru", "Datang terlambat", "Membuang sampah di lantai"], correct: 0 },
+  { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "5. Andi berambut lurus, sedangkan Beni berambut keriting. Perbedaan tersebut merupakan keragaman...", options: ["bentuk rambut / ciri fisik", "makanan kesukaan", "hobi"], correct: 0 },
+  { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "6. Dita suka menggambar, sedangkan Rani suka bermain bola. Sikap yang tepat adalah...", options: ["menghargai hobi Rani", "mengejek hobi Rani", "memaksa Rani menggambar"], correct: 0 },
+  { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "7. Pasangan simbol dan sila Pancasila yang tepat adalah...", options: ["Bintang (Sila 1), Rantai (Sila 2), Pohon Beringin (Sila 3)", "Kepala Banteng (Sila 1)", "Pohon Beringin (Sila 5)"], correct: 0 },
+  { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "8. Mengapa kita harus menaati aturan di sekolah?", options: ["Agar suasana belajar tertib, aman, dan nyaman", "Agar diuji guru", "Agar cepat pulang"], correct: 0 },
+  { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "9. Apa manfaat menghargai perbedaan antar teman?", options: ["Cipta kerukunan dan punya banyak teman", "Bisa bertengkar", "Mendapat hadiah"], correct: 0 },
+  { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "10. (HOTS) Dodi membuang sampah di lantai kelas. Apa akibatnya?", options: ["Kelas menjadi kotor, bau, dan bisa menyebabkan kuman/terpeleset", "Kelas jadi wangi", "Guru merasa senang"], correct: 0 },
+
+  // ================= 6. BUMI MELAYU RIAU / BMR GMEC (DARI PDF MID TEST BMR) =================
+  { type: "multiple-choice", subject: "Bumi Melayu Riau (BMR)", text: "1. Sapaan untuk saudara yang bertubuh pendek dalam Melayu adalah...", options: ["Uneng", "Utih", "Andak"], correct: 0 },
+  { type: "multiple-choice", subject: "Bumi Melayu Riau (BMR)", text: "2. 'Emak' adalah sapaan Melayu untuk...", options: ["orang tua perempuan", "anak pertama", "orang tua laki-laki"], correct: 0 },
+  { type: "multiple-choice", subject: "Bumi Melayu Riau (BMR)", text: "3. Sarianun adalah nama tokoh anak gadis yang terdapat dalam dongeng Melayu...", options: ["Rawang Tengkuluk", "Malin Kundang", "Kancil dan Harimau"], correct: 0 },
+  { type: "multiple-choice", subject: "Bumi Melayu Riau (BMR)", text: "4. Sapaan kepada orang tua laki-laki dalam budaya Melayu adalah...", options: ["Ayah atau Abah", "Angah", "Ucu"], correct: 0 },
+  { type: "multiple-choice", subject: "Bumi Melayu Riau (BMR)", text: "5. Pada zaman dahulu, dongeng dibawakan sebagai pengantar...", options: ["tidur", "nyanyian", "puisi"], correct: 0 },
+  { type: "multiple-choice", subject: "Bumi Melayu Riau (BMR)", text: "6. 'Ulong' atau 'Ulung' adalah sapaan untuk anak yang lahir ke-...", options: ["satu (pertama)", "dua", "tiga"], correct: 0 },
+  { type: "multiple-choice", subject: "Bumi Melayu Riau (BMR)", text: "7. Sapaan untuk saudara yang berkulit kuning langsat adalah...", options: ["Kuning / Akuning", "Utih", "Udo"], correct: 0 },
   { 
-    type: "matching", subject: "Bahasa Indonesia", text: "[MID] Pasangkan gambar benda dengan suku kata awal yang tepat!",
-    left: [{ id: "b1", content: "🎈 Balon" }, { id: "b2", content: "🏫 Gedung" }, { id: "b3", content: "🦈 Hiu" }],
-    right: [{ id: "r1", content: "ho" }, { id: "r2", content: "ba" }, { id: "r3", content: "hi" }],
-    pairs: { b1: "r2", b2: "r1", b3: "r3" }
+    type: "matching", subject: "Bumi Melayu Riau (BMR)", text: "8. (HOTS) Pasangkan sapaan Melayu berikut dengan artinya yang tepat!",
+    left: [{ id: "bmr1", content: "Udo" }, { id: "bmr2", content: "Utih" }, { id: "bmr3", content: "Anjang" }],
+    right: [{ id: "r1", content: "Anak berkulit putih" }, { id: "r2", content: "Anak lahir ke-4" }, { id: "r3", content: "Anak bertubuh panjang/tinggi" }],
+    pairs: { bmr1: "r2", bmr2: "r1", bmr3: "r3" }
   },
 
-  // ================= AGAMA ISLAM GMEC (LENGKAP DARI REVIEW MID TEST) =================
-  { type: "multiple-choice", subject: "Agama Islam", text: "1. Iman kepada hari akhir merupakan rukun Iman ke-...", options: ["5", "6", "3"], correct: 0 },
-  { type: "multiple-choice", subject: "Agama Islam", text: "2. Sebelum makan kita membaca...", options: ["Bismillah / Basmalah", "Hamdalah", "Dongeng"], correct: 0 },
-  { type: "multiple-choice", subject: "Agama Islam", text: "3. Yang BUKAN merupakan rukun iman adalah beriman kepada...", options: ["Hewan dan tumbuhan", "Rasul", "Hari akhir"], correct: 0 },
-  { type: "multiple-choice", subject: "Agama Islam", text: "4. Al-Qur'an merupakan kitab suci umat...", options: ["Islam", "Kristen", "Buddha"], correct: 0 },
-  { type: "multiple-choice", subject: "Agama Islam", text: "5. Kita membaca Bismillah saat...", options: ["Sebelum makan & memulai kegiatan", "Saat marah", "Saat tidur siang"], correct: 0 },
-  { type: "multiple-choice", subject: "Agama Islam", text: "6. Rukun Iman pertama ialah beriman kepada...", options: ["Allah SWT", "Malaikat", "Rasul"], correct: 0 },
-  { type: "multiple-choice", subject: "Agama Islam", text: "7. Bacaan Hamdalah (Alhamdulillah) diucapkan ketika...", options: ["Mendapat hadiah / bersyukur nikmat Allah", "Keluar dari toilet", "Saat hendak tidur"], correct: 0 },
-  { type: "multiple-choice", subject: "Agama Islam", text: "8. Ketika akan melaksanakan suatu kegiatan kita mengawali dengan...", options: ["Basmalah", "Hamdalah", "Istighfar"], correct: 0 },
-  { type: "multiple-choice", subject: "Agama Islam", text: "9. Sikap yang SALAH terhadap Al-Qur'an adalah...", options: ["Meletakkan sembarangan", "Membacanya dengan baik", "Menjaganya dengan baik"], correct: 0 },
-  { type: "multiple-choice", subject: "Agama Islam", text: "10. Nikmat yang kita terima sehari-hari adalah pemberian dari...", options: ["Allah SWT", "Manusia", "Malaikat"], correct: 0 },
-  { type: "multiple-choice", subject: "Agama Islam", text: "11. Rukun Iman keempat ialah beriman kepada...", options: ["Rasul-rasul Allah", "Kitab Suci", "Hari Kiamat"], correct: 0 },
-  { type: "multiple-choice", subject: "Agama Islam", text: "12. Arti dari 'Alhamdulillahi Rabbil 'Alamin' adalah...", options: ["Segala puji bagi Allah Tuhan semesta alam", "Dengan menyebut nama Allah", "Allah Maha Besar"], correct: 0 },
-  { type: "multiple-choice", subject: "Agama Islam", text: "13. Ali selesai makan bersama keluarganya. Ucapan bersyukur setelah makan adalah...", options: ["Alhamdulillah", "Bismillah", "Subhanallah"], correct: 0 },
-  { type: "multiple-choice", subject: "Agama Islam", text: "14. Mengapa kita harus beriman kepada malaikat-malaikat Allah?", options: ["Karena beriman kepada malaikat ada di dalam rukun Iman", "Karena malaikat terlihat", "Karena malaikat menciptakan bumi"], correct: 0 },
+  // ================= 7. MORALE GMEC (DARI PDF SMALL TEST MORALE) =================
+  { type: "multiple-choice", subject: "Morale", text: "1. Ucapan 'Selamat pagi, Ayah, Ibu' menunjukkan sikap hormat berupa...", options: ["Mengucapkan salam & menyapa ramah", "Membantu pekerjaan rumah", "Memberi sesuatu"], correct: 0 },
+  { type: "multiple-choice", subject: "Morale", text: "2. Ucapan 'Ayah, bolehkah saya...' merupakan contoh sikap...", options: ["Berbicara sopan kepada orang tua", "Mendengar nasihat", "Membantu pekerjaan rumah"], correct: 0 },
+  { type: "multiple-choice", subject: "Morale", text: "3. Mendengarkan arahan orang tua saat dinasihati merupakan ciri anak yang...", options: ["Hormat dan berbakti", "Sombong", "Nakal"], correct: 0 },
   { 
-    type: "matching", subject: "Agama Islam", text: "15. Pasangkan Rukun Iman berikut dengan urutannya yang tepat!",
-    left: [{ id: "ai1", content: "Iman kepada Allah SWT" }, { id: "ai2", content: "Iman kepada Rasul" }, { id: "ai3", content: "Iman kepada Takdir Baik & Buruk" }],
+    type: "matching", subject: "Morale", text: "4. Pasangkan ucapan/tindakan dengan sikap hormat yang sesuai!",
+    left: [{ id: "m1", content: "🗣️ 'Ayah, bolehkah saya...'" }, { id: "m2", content: "☀️ 'Selamat pagi, Ayah, Ibu'" }],
+    right: [{ id: "r1", content: "Mengucapkan salam ramah" }, { id: "r2", content: "Berbicara dengan sopan" }],
+    pairs: { m1: "r2", m2: "r1" }
+  },
+
+  // ================= 8. BAHASA INDONESIA GMEC (DARI PDF SMALL & MID TEST B.INDO) =================
+  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "1. Sikap duduk yang benar saat membaca adalah posisi badan harus...", options: ["Tegak dan lurus", "Bungkuk", "Berbaring"], correct: 0 },
+  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "2. Huruf vokal pada kata 'buku' adalah...", options: ["u", "b", "k"], correct: 0 },
+  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "3. Cara memegang pensil yang benar adalah dijepit menggunakan...", options: ["Ibu jari, telunjuk, dan jari tengah", "Genggaman telapak tangan", "Jari kelingking"], correct: 0 },
+  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "4. Tanda baca yang tepat untuk melengkapi kalimat 'Siapa namamu' adalah...", options: ["Tanda tanya (?)", "Tanda seru (!)", "Tanda titik (.)"], correct: 0 },
+  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "5. Hewan yang tubuhnya panjang, lunak, tanpa kaki, hidup di tanah lembap, diawali huruf 'c' adalah...", options: ["cacing", "cicak", "capung"], correct: 0 },
+  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "6. Tanda baca yang tepat untuk kalimat 'Ayo berolahraga' adalah...", options: ["Tanda seru (!)", "Tanda tanya (?)", "Tanda titik (.)"], correct: 0 },
+  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "7. Tokoh yang membantu menyiapkan sarapan pada cerita Nisa adalah...", options: ["Nisa, Ibu, dan Kakak", "Nisa dan Ayah", "Beni dan Mimi"], correct: 0 },
+  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "8. Cara membaca yang benar berdasarkan cerita Alya adalah...", options: ["Duduk tegak, pencahayaan cukup, & jaga jarak mata", "Berbaring di tempat gelap", "Membaca dekat dengan wajah"], correct: 0 },
+
+  // ================= 9. AGAMA ISLAM GMEC (DARI PDF MID TEST AGAMA ISLAM) =================
+  { type: "multiple-choice", subject: "Agama Islam", text: "1. Iman kepada hari akhir merupakan rukun Iman ke-...", options: ["5", "6", "3"], correct: 0 },
+  { type: "multiple-choice", subject: "Agama Islam", text: "2. Sebelum makan dan mengawali kegiatan kita membaca...", options: ["Bismillah / Basmalah", "Hamdalah", "Istighfar"], correct: 0 },
+  { type: "multiple-choice", subject: "Agama Islam", text: "3. Al-Qur'an merupakan kitab suci umat...", options: ["Islam", "Kristen", "Buddha"], correct: 0 },
+  { type: "multiple-choice", subject: "Agama Islam", text: "4. Rukun Iman pertama ialah beriman kepada...", options: ["Allah SWT", "Malaikat", "Rasul"], correct: 0 },
+  { type: "multiple-choice", subject: "Agama Islam", text: "5. Bacaan Hamdalah (Alhamdulillah) diucapkan ketika...", options: ["Mendapat hadiah / bersyukur atas nikmat Allah", "Keluar toilet", "Saat hendak tidur"], correct: 0 },
+  { type: "multiple-choice", subject: "Agama Islam", text: "6. Sikap yang SALAH terhadap Al-Qur'an adalah...", options: ["Meletakkan sembarangan", "Membacanya dengan baik", "Menjaganya dengan baik"], correct: 0 },
+  { 
+    type: "matching", subject: "Agama Islam", text: "7. Pasangkan Rukun Iman berikut dengan urutannya yang tepat!",
+    left: [{ id: "ai1", content: "Iman kepada Allah SWT" }, { id: "ai2", content: "Iman kepada Rasul" }, { id: "ai3", content: "Iman kepada Takdir" }],
     right: [{ id: "r1", content: "Urutan Ke-4" }, { id: "r2", content: "Urutan Ke-1" }, { id: "r3", content: "Urutan Ke-6" }],
     pairs: { ai1: "r2", ai2: "r1", ai3: "r3" }
-  },
-
-  // ================= KEWARGANEGARAAN / PP GMEC =================
-  { type: "multiple-choice", subject: "Kewarganegaraan", text: "1. Lambang negara Republik Indonesia adalah...", options: ["burung garuda", "bendera merah putih", "lagu Indonesia raya"], correct: 0 },
-  { type: "multiple-choice", subject: "Kewarganegaraan", text: "2. Gambar Rantai Emas melambangkan Pancasila sila ke-...", options: ["3", "2", "1"], correct: 1 },
-  { type: "multiple-choice", subject: "Kewarganegaraan", text: "3. Aturan adalah petunjuk yang dibuat agar hidup kita menjadi...", options: ["susah", "tertib", "sedih"], correct: 1 },
-  { type: "multiple-choice", subject: "Kewarganegaraan", text: "4. Bunyi sila kedua Pancasila yang benar adalah...", options: ["kemanusiaan yang adil dan beradab", "kemanusiaan yang beradab dan adil", "adil dan beradab yang kemanusiaan"], correct: 0 },
-  { type: "multiple-choice", subject: "Kewarganegaraan", text: "5. Sebelum pergi ke sekolah, tindakan santun yang harus kamu lakukan adalah...", options: ["langsung lari keluar rumah", "berpamitan dan mencium tangan orang tua", "berteriak pamit dari jauh"], correct: 1 },
-
-  // ================= ENGLISH GMEC =================
-  { type: "multiple-choice", subject: "English", text: "[GMEC] Look at the picture! Which one is a rubber?", options: ["Option 3", "Option 1", "Option 2"], correct: 1 },
-  { type: "multiple-choice", subject: "English", text: "[GMEC] Listening: What is Ben's favourite toy?", options: ["A plane", "A go-kart", "A ball"], correct: 1 },
-  { type: "multiple-choice", subject: "English", text: "[GMEC] What colour is Ben's go-kart?", options: ["Red", "Green", "Blue"], correct: 2 },
-
-  // ================= MATH GMEC =================
-  { type: "multiple-choice", subject: "Math", text: "[GMEC] Which number is greater, 4 or 7?", options: ["4", "5", "7"], correct: 2 },
-  { type: "multiple-choice", subject: "Math", text: "[GMEC] What number comes next in this pattern? 2, 4, 6, ...", options: ["7", "8", "10"], correct: 1 },
-  { type: "multiple-choice", subject: "Math", text: "[GMEC] Which number bond makes 10?", options: ["3 + 7", "6 + 5", "4 + 4"], correct: 0 },
-
-  // ================= BUDAYA MELAYU RIAU GMEC =================
-  { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "[GMEC] Dongeng adalah cerita yang mengisahkan peristiwa pada masa...", options: ["depan", "sekarang", "lalu"], correct: 2 },
-  { type: "multiple-choice", subject: "Budaya Melayu Riau", text: "[GMEC] Pada zaman dulu, dongeng dibawakan sebagai pengantar...", options: ["tidur", "pelajaran", "nyanyian"], correct: 0 },
-
-  // ================= MANDARIN GMEC =================
-  { type: "multiple-choice", subject: "Mandarin", text: "[GMEC] “早安” (Zǎo ān) dalam bahasa Indonesia adalah...", options: ["Selamat pagi", "Selamat siang", "Selamat malam"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "[GMEC] “八” (Bā) dalam bahasa Indonesia artinya...", options: ["Delapan", "Satu", "Lima"], correct: 0 },
-
-  // ================= MORAL GMEC =================
-  { type: "multiple-choice", subject: "Moral", text: "[GMEC] Ucapan 'Selamat pagi, Ayah, Ibu' menunjukkan sikap...", options: ["Mengucapkan salam & menyapa ramah", "Membantu pekerjaan rumah", "Mendengar nasihat"], correct: 0 }
+  }
 ];
 
-// DATABASE BANK SOAL UMUM (SEKOLAH LAIN)
-const classBank = {
-  1: [
-    { type: "multiple-choice", subject: "Kewarganegaraan", text: "1. Lambang negara Republik Indonesia adalah...", options: ["burung garuda", "bendera merah putih", "lagu Indonesia raya"], correct: 0 },
-    { type: "multiple-choice", subject: "Bahasa Indonesia", text: "Huruf kapital dari huruf 'b' adalah...", options: ["B", "D", "P"], correct: 0 },
-    { type: "multiple-choice", subject: "Math", text: "What is 4 + 3?", options: ["6", "7", "8"], correct: 1 },
-    { type: "multiple-choice", subject: "Science", text: "Which body part do we use to hear sounds?", options: ["Eyes", "Ears", "Nose"], correct: 1 }
-  ]
-};
+// MAPEL SPESIFIK KELAS 1 SEKOLAH GUANG MING (GMEC)
+const guangMingSubjects = [
+  "Semua Mapel",
+  "Mandarin",
+  "Math",
+  "Bahasa Indonesia",
+  "English",
+  "Science",
+  "Pendidikan Pancasila",
+  "Agama Islam",
+  "Morale",
+  "Bumi Melayu Riau (BMR)"
+];
 
+// MAPEL SEKOLAH LAIN / UMUM
+const generalSubjects = [
+  "Semua Mapel",
+  "Kewarganegaraan",
+  "Bahasa Indonesia",
+  "Math",
+  "Science",
+  "English",
+  "Mandarin",
+  "Moral",
+  "Agama Islam",
+  "Budaya Melayu Riau"
+];
+
+// Logika Pemilihan Sekolah & Rendering Tombol
 function selectSchool(schoolType) {
   selectedSchoolType = schoolType;
   document.getElementById("school-menu-screen").classList.add("hidden");
+  
+  const classGrid = document.querySelector("#class-menu-screen .class-grid");
+  
+  if (selectedSchoolType === "guangming") {
+    // Jika Sekolah Guang Ming: Hanya tampilkan Kelas 1
+    classGrid.innerHTML = `
+      <button class="class-btn highlight" onclick="selectClass(1)" style="grid-column: span 2; padding: 20px; font-size: 1.2rem;">
+        🌸 Kelas 1 SD (GMEC)
+      </button>
+    `;
+  } else {
+    // Sekolah Lain: Tampilkan Kelas 1 - 6
+    classGrid.innerHTML = `
+      <button class="class-btn" onclick="selectClass(1)">Kelas 1</button>
+      <button class="class-btn" onclick="selectClass(2)">Kelas 2</button>
+      <button class="class-btn" onclick="selectClass(3)">Kelas 3</button>
+      <button class="class-btn" onclick="selectClass(4)">Kelas 4</button>
+      <button class="class-btn" onclick="selectClass(5)">Kelas 5</button>
+      <button class="class-btn" onclick="selectClass(6)">Kelas 6</button>
+    `;
+  }
+
   document.getElementById("class-menu-screen").classList.remove("hidden");
+}
+
+function renderSubjectButtons() {
+  const container = document.getElementById("subject-grid-container");
+  container.innerHTML = "";
+
+  const subjectList = (selectedSchoolType === "guangming") ? guangMingSubjects : generalSubjects;
+
+  subjectList.forEach(subj => {
+    const btn = document.createElement("button");
+    btn.className = "subject-btn";
+    btn.onclick = () => selectSubject(subj);
+    btn.innerText = subj;
+    container.appendChild(btn);
+  });
 }
 
 function generateClassBankForLevel(level) {
   if (selectedSchoolType === "guangming" && level === 1) {
     return guangMingClass1Bank;
   }
-  if (classBank[level]) return classBank[level];
-  classBank[level] = JSON.parse(JSON.stringify(classBank[1]));
-  return classBank[level];
+  return guangMingClass1Bank;
 }
 
 const optionLetters = ["A", "B", "C", "D"];
@@ -159,7 +235,9 @@ let userAnswers = [];
 function selectClass(level) {
   selectedClassLevel = level;
   generateClassBankForLevel(level);
-  document.getElementById("selected-class-title").innerText = `Kelas ${level} SD`;
+  renderSubjectButtons();
+
+  document.getElementById("selected-class-title").innerText = (selectedSchoolType === "guangming") ? `Sekolah Guang Ming - Kelas 1` : `Kelas ${level} SD`;
   document.getElementById("class-menu-screen").classList.add("hidden");
   document.getElementById("subject-menu-screen").classList.remove("hidden");
 }
@@ -205,8 +283,8 @@ function initQuizData() {
     if (filteredBank.length === 0) filteredBank = currentClassBank;
   }
 
-  // KHUSUS GUANG MING KELAS 1: Tampilkan SELURUH SOAL secara berurutan persis tanpa dipotong/diacak
-  if (selectedSchoolType === "guangming" && selectedClassLevel === 1) {
+  // Tampilkan seluruh soal mapel dari PDF
+  if (selectedSchoolType === "guangming") {
     questions = JSON.parse(JSON.stringify(filteredBank));
   } else {
     let shuffledAll = shuffleArray(filteredBank);
@@ -281,7 +359,7 @@ function loadQuestion() {
   if (q.type === "multiple-choice") {
     canvasContainer.classList.remove("hidden");
     matchingContainer.classList.add("hidden");
-    instructionText.innerText = ["Math", "Science", "English"].includes(q.subject) ? "💡 Circle A, B, or C with your finger!" : "💡 Lingkari huruf A, B, atau C dengan jarimu!";
+    instructionText.innerText = ["Math", "Science", "English", "Mandarin"].includes(q.subject) ? "💡 Circle A, B, or C with your finger!" : "💡 Lingkari huruf A, B, atau C dengan jarimu!";
 
     const container = document.getElementById("options-container");
     container.innerHTML = "";
