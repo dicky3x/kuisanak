@@ -6,6 +6,7 @@ let questions = [];
 let currentIdx = 0;
 let isAnswered = false;
 let userAnswers = [];
+let isMuted = false;
 
 // Canvas Variables
 let drawnPoints = [];
@@ -59,21 +60,6 @@ const guangMingClass1Bank = [
   { type: "multiple-choice", subject: "Mandarin", text: "8. '早安' dalam Bahasa Indonesia artinya...", options: ["Selamat pagi", "Selamat malam", "Selamat siang"], correct: 0 },
   { type: "multiple-choice", subject: "Mandarin", text: "9. 我叫爸爸的爸爸 (Ayah dari Ayah dipanggil)...", options: ["爷爷 (yéye)", "外公 (wàigōng)", "叔叔 (shūshu)"], correct: 0 },
   { type: "multiple-choice", subject: "Mandarin", text: "10. 'Sampai Jumpa' dalam Aksara Hanzi adalah...", options: ["再见 (zàijiàn)", "谢谢 (xièxie)", "你好 (nǐhǎo)"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "11. '你好' dalam Bahasa Indonesia artinya...", options: ["Halo / Apa kabar", "Terima kasih", "Selamat tidur"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "12. '晚安' dalam Bahasa Indonesia artinya...", options: ["Selamat malam", "Selamat pagi", "Selamat siang"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "13. Terjemahan angka 'Tiga' dalam Bahasa Mandarin adalah...", options: ["三 (sān)", "五 (wǔ)", "八 (bā)"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "14. Pinyin dari Hanzi '日' adalah...", options: ["rì", "yuè", "mù"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "15. Pinyin dari Hanzi '妹妹' (Adik Perempuan) adalah...", options: ["mèimei", "māma", "jiějie"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "16. Aksara Hanzi dari kata 'Bulan' (Moon) adalah...", options: ["月 (yuè)", "日 (rì)", "水 (shuǐ)"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "17. Aksara Hanzi dari angka 'Lima' (Five) adalah...", options: ["五 (wǔ)", "三 (sān)", "七 (qī)"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "18. Aksara Hanzi dari kata 'Tidak' (No / Not) adalah...", options: ["不 (bù)", "去 (qù)", "有 (yǒu)"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "19. Aksara Hanzi dari angka 'Tujuh' (Seven) adalah...", options: ["七 (qī)", "九 (jiǔ)", "六 (liù)"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "20. Aksara Hanzi dari kata 'Pergi' (Go) adalah...", options: ["去 (qù)", "来 (lái)", "看 (kàn)"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "21. Arti dari kata Bahasa Mandarin '昨天' adalah...", options: ["Kemarin", "Hari ini", "Besok"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "22. Arti dari kata Bahasa Mandarin '今天' adalah...", options: ["Hari ini", "Kemarin", "Besok"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "23. Arti dari kata Bahasa Mandarin '明天' adalah...", options: ["Besok", "Hari ini", "Lusa"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "24. Arti dari kata '星期一' (Xīngqī yī) adalah...", options: ["Hari Senin", "Hari Selasa", "Hari Minggu"], correct: 0 },
-  { type: "multiple-choice", subject: "Mandarin", text: "25. Arti dari kata '谢谢' (Xièxie) adalah...", options: ["Terima kasih", "Sama-sama", "Maaf"], correct: 0 },
 
   // ================= 2. ENGLISH GMEC =================
   { type: "multiple-choice", subject: "English", text: "1. Look at the letters: A - B - C - D - ... What letter comes next?", options: ["E", "F", "G"], correct: 0 },
@@ -81,89 +67,83 @@ const guangMingClass1Bank = [
   { type: "multiple-choice", subject: "English", text: "3. Complete the sentence: 'This is Sofia. The doll is ______.'", options: ["small and pretty", "big and long", "red and big"], correct: 0 },
   { type: "multiple-choice", subject: "English", text: "4. Read the dialogue: Teacher: 'What is your name?' - Boy: 'My name is Rian.' The boy's name is...", options: ["Rian", "Ben", "Dino"], correct: 0 },
   { type: "multiple-choice", subject: "English", text: "5. Look at the picture of a beach ball and a car. Which toy is small?", options: ["The car", "The beach ball", "Both toys"], correct: 0 },
-  { type: "multiple-choice", subject: "English", text: "6. Look at the letters: M - N - O - P - ... Write the next letters.", options: ["Q and R", "R and S", "S and T"], correct: 0 },
-  { type: "multiple-choice", subject: "English", text: "7. Complete the sentence: 'This is Rafi. This is ______ bag.'", options: ["his", "her", "my"], correct: 0 },
-  { type: "multiple-choice", subject: "English", text: "8. A child says: 'I want a small toy with a rectangle shape.' Which toy is it?", options: ["Train", "Car", "Kite"], correct: 0 },
-  { type: "multiple-choice", subject: "English", text: "9. Write the missing word: The teacher says 'Please ______ your book.'", options: ["open / close", "fly", "write"], correct: 0 },
-  { type: "multiple-choice", subject: "English", text: "10. A child says: 'I want the big toy that can fly.' Which toy does the child want?", options: ["Kite", "Ball", "Doll"], correct: 0 },
-  { type: "multiple-choice", subject: "English", text: "11. Name three classroom objects in your class:", options: ["Pencil, Rubber, Desk", "Dog, Cat, Bird", "Apple, Banana, Mango"], correct: 0 },
-  { type: "multiple-choice", subject: "English", text: "12. Which pair of words has the short /a/ sound?", options: ["Bag and Rat", "Bed and Red", "Pin and Bin"], correct: 0 },
-  { type: "multiple-choice", subject: "English", text: "13. Anna says to Lily: 'This is Ben.' Anna's friend is...", options: ["Ben", "Rafi", "Dino"], correct: 0 },
-  { type: "multiple-choice", subject: "English", text: "14. Complete the sentence: 'This is Dino. This is ______ car.'", options: ["his", "her", "your"], correct: 0 },
-  { type: "multiple-choice", subject: "English", text: "15. What shape is a kite toy?", options: ["Triangle / Diamond", "Circle", "Square"], correct: 0 },
 
   // ================= 3. SCIENCE GMEC =================
   { type: "multiple-choice", subject: "Science", text: "1. What can you do with your eyes?", options: ["See", "Hear", "Taste"], correct: 0 },
   { type: "multiple-choice", subject: "Science", text: "2. Which part of the body helps us smell?", options: ["Nose", "Tongue", "Cheek"], correct: 0 },
   { type: "multiple-choice", subject: "Science", text: "3. We taste food with our...", options: ["Tongue", "Ears", "Nose"], correct: 0 },
-  { type: "multiple-choice", subject: "Science", text: "4. Which body parts do we use to hold things?", options: ["Hands and fingers", "Legs", "Eyes"], correct: 0 },
-  { type: "multiple-choice", subject: "Science", text: "5. What covers the top of your fingers?", options: ["Nail", "Toe", "Ears"], correct: 0 },
-  { type: "multiple-choice", subject: "Science", text: "6. What can you do with your legs?", options: ["Walk / Run", "Smell", "Hear"], correct: 0 },
-  { type: "multiple-choice", subject: "Science", text: "7. Siti wants to listen to music. Which sense does she use?", options: ["Hearing", "Tasting", "Smelling"], correct: 0 },
-  { type: "multiple-choice", subject: "Science", text: "8. Which foods should we eat LESS of to stay healthy?", options: ["Lollipop and sweets", "Milk", "Vegetables"], correct: 0 },
-  { type: "multiple-choice", subject: "Science", text: "9. What should we do to keep our body clean?", options: ["Bathing / Take a bath", "Exercise only", "Eating sweet food"], correct: 0 },
-  { type: "multiple-choice", subject: "Science", text: "10. Potato chips and salted peanuts are examples of...", options: ["salty food", "sweet food", "strong food"], correct: 0 },
 
   // ================= 4. MATH GMEC =================
   { type: "multiple-choice", subject: "Math", text: "1. How many books are there? (Count 5 books)", options: ["5", "4", "6"], correct: 0 },
   { type: "multiple-choice", subject: "Math", text: "2. Look at 5 trees and 6 flowers. There are ______ trees than flowers.", options: ["fewer", "more", "same"], correct: 0 },
   { type: "multiple-choice", subject: "Math", text: "3. What number comes next in this pattern? 2, 4, 6, ...", options: ["8", "7", "10"], correct: 0 },
-  { type: "multiple-choice", subject: "Math", text: "4. Which number bond equals 8?", options: ["5 + 3 = 8", "2 + 6 = 7", "7 - 1 = 5"], correct: 0 },
-  { type: "multiple-choice", subject: "Math", text: "5. Fill in the blank: ___ + 4 = 7", options: ["3", "4", "5"], correct: 0 },
-  { type: "multiple-choice", subject: "Math", text: "6. Mom bought 3 lamps. She bought 4 more. How many lamps does she have now?", options: ["7", "6", "5"], correct: 0 },
-  { type: "multiple-choice", subject: "Math", text: "7. What is 8 - 2?", options: ["6", "7", "5"], correct: 0 },
 
   // ================= 5. PENDIDIKAN PANCASILA GMEC =================
   { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "1. Bunyi sila yang dilambangkan oleh Bintang Emas adalah...", options: ["Ketuhanan Yang Maha Esa", "Persatuan Indonesia", "Kemanusiaan yang Adil dan Beradab"], correct: 0 },
   { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "2. Nama burung yang menjadi lambang negara Indonesia adalah...", options: ["burung garuda", "burung elang", "burung merpati"], correct: 0 },
-  { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "3. Rina selesai bermain lalu menyimpan sepatunya di rak. Kegiatan Rina contoh...", options: ["aturan di rumah", "aturan di sekolah", "aturan bermain"], correct: 0 },
-  { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "4. Contoh mematuhi aturan di sekolah adalah...", options: ["Mendengarkan penjelasan guru", "Datang terlambat", "Membuang sampah di lantai"], correct: 0 },
-  { type: "multiple-choice", subject: "Pendidikan Pancasila", text: "5. Yang termasuk identitas diri Siti (rambut panjang, hobi membaca) adalah...", options: ["Nama, ciri fisik, dan hobi", "Nama sekolah & kendaraan", "Nama makanan"], correct: 0 },
 
   // ================= 6. BUMI MELAYU RIAU GMEC =================
   { type: "multiple-choice", subject: "Bumi Melayu Riau (BMR)", text: "1. Sapaan untuk saudara yang bertubuh pendek dalam Melayu adalah...", options: ["Uneng", "Utih", "Andak"], correct: 0 },
   { type: "multiple-choice", subject: "Bumi Melayu Riau (BMR)", text: "2. 'Emak' adalah sapaan Melayu untuk...", options: ["orang tua perempuan", "anak pertama", "orang tua laki-laki"], correct: 0 },
-  { type: "multiple-choice", subject: "Bumi Melayu Riau (BMR)", text: "3. Sarianun adalah nama anak gadis dalam cerita dongeng Melayu...", options: ["Rawang Tengkuluk", "Malin Kundang", "Kancil dan Harimau"], correct: 0 },
-  { type: "multiple-choice", subject: "Bumi Melayu Riau (BMR)", text: "4. Sapaan dilakukan sebagai rasa...", options: ["sayang dan hormat", "tidak suka", "benci"], correct: 0 },
-  { type: "multiple-choice", subject: "Bumi Melayu Riau (BMR)", text: "5. Sapaan kepada orang tua laki-laki dalam budaya Melayu adalah...", options: ["Ayah atau Abah", "Angah", "Ucu"], correct: 0 },
 
   // ================= 7. MORALE GMEC =================
   { type: "multiple-choice", subject: "Morale", text: "1. Ucapan 'Selamat pagi, Ayah, Ibu' menunjukkan sikap hormat berupa...", options: ["Mengucapkan salam & menyapa ramah", "Membantu pekerjaan rumah", "Memberi sesuatu"], correct: 0 },
-  { type: "multiple-choice", subject: "Morale", text: "2. Ucapan 'Ayah, bolehkah saya...' merupakan contoh sikap...", options: ["Berbicara sopan kepada orang tua", "Mendengar nasihat", "Membantu pekerjaan rumah"], correct: 0 },
 
   // ================= 8. BAHASA INDONESIA GMEC =================
   { type: "multiple-choice", subject: "Bahasa Indonesia", text: "1. Sikap duduk yang benar saat membaca adalah posisi badan harus...", options: ["Tegak dan lurus", "Bungkuk", "Berbaring"], correct: 0 },
   { type: "multiple-choice", subject: "Bahasa Indonesia", text: "2. Huruf vokal pada kata 'buku' adalah...", options: ["u", "b", "k"], correct: 0 },
-  { type: "multiple-choice", subject: "Bahasa Indonesia", text: "3. Kata yang diawali suku kata ba- adalah...", options: ["batu", "bola", "bebek"], correct: 0 },
 
   // ================= 9. AGAMA ISLAM GMEC =================
   { type: "multiple-choice", subject: "Agama Islam", text: "1. Iman kepada hari akhir merupakan rukun Iman ke-...", options: ["5", "6", "3"], correct: 0 },
   { type: "multiple-choice", subject: "Agama Islam", text: "2. Sebelum makan kita membaca...", options: ["Bismillah / Basmalah", "Hamdalah", "Dongeng"], correct: 0 }
 ];
 
-// FUNGSI SUARA SOAL (TEXT TO SPEECH)
+// FUNGSI SUARA WANITA (TEXT TO SPEECH)
 function speakCurrentQuestion() {
   if (!('speechSynthesis' in window)) return;
-  
-  // Hentikan suara yang sedang berjalan jika ada
-  window.speechSynthesis.cancel();
 
-  if (!questions[currentIdx]) return;
+  window.speechSynthesis.cancel(); // Hentikan audio yang sedang berjalan
+
+  if (isMuted || !questions[currentIdx]) return;
 
   const q = questions[currentIdx];
   const utterance = new SpeechSynthesisUtterance(q.text);
 
   // Penentuan Bahasa Pengucapan Suara
+  let targetLang = "id-ID";
   if (q.subject === "Mandarin") {
-    utterance.lang = "zh-CN";
+    targetLang = "zh-CN";
   } else if (["Math", "Science", "English"].includes(q.subject)) {
-    utterance.lang = "en-US";
-  } else {
-    utterance.lang = "id-ID";
+    targetLang = "en-US";
+  }
+  utterance.lang = targetLang;
+
+  // MENGUBAH NADA/PITCH MENJADI SUARA WANITA
+  utterance.pitch = 1.3; // Pitch > 1.0 menghasilkan nada suara lebih tinggi/wanita
+  utterance.rate = 0.85;  // Kecepatan membaca agak ramah untuk anak-anak
+
+  // Pilih Voice Wanita dari daftar suara sistem jika tersedia
+  const voices = window.speechSynthesis.getVoices();
+  const femaleVoice = voices.find(v => v.lang.startsWith(targetLang.split('-')[0]) && (v.name.includes("Female") || v.name.includes("Zira") || v.name.includes("Google") || v.name.includes("Natural") || v.name.includes("Xiaoxiao") || v.name.includes("Mei-Jia")));
+  if (femaleVoice) {
+    utterance.voice = femaleVoice;
   }
 
-  utterance.rate = 0.85; // Kecepatan suara sedikit dipelankan agar ramah untuk anak-anak
   window.speechSynthesis.speak(utterance);
+}
+
+// TOGGLE MUTE / UNMUTE SUARA
+function toggleAudio() {
+  isMuted = !isMuted;
+  const audioBtn = document.getElementById("audio-btn");
+
+  if (isMuted) {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    if (audioBtn) audioBtn.innerText = "🔇 Suara Off";
+  } else {
+    if (audioBtn) audioBtn.innerText = "🔊 Suara On";
+    speakCurrentQuestion();
+  }
 }
 
 // NAVIGASI APLIKASI
@@ -366,7 +346,7 @@ function loadQuestion() {
 
   document.getElementById("prev-btn").disabled = (currentIdx === 0);
 
-  // Bacakan teks soal secara otomatis
+  // Bacakan soal dengan suara wanita
   setTimeout(speakCurrentQuestion, 300);
 }
 
@@ -616,6 +596,13 @@ function restartQuiz() {
 document.addEventListener("DOMContentLoaded", () => {
   setupCanvasElements();
   
+  // Load Voice List Sistem
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.onvoiceschanged = () => {
+      window.speechSynthesis.getVoices();
+    };
+  }
+
   document.getElementById("school-menu-screen").classList.remove("hidden");
   document.getElementById("class-menu-screen").classList.add("hidden");
   document.getElementById("subject-menu-screen").classList.add("hidden");
