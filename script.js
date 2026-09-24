@@ -47,7 +47,7 @@ const generalSubjects = [
   "Budaya Melayu Riau"
 ];
 
-// BANK SOAL LENGKAP SEKOLAH GUANG MING KELAS 1 (GMEC) - DARI SELURUH BERKAS PDF
+// BANK SOAL LENGKAP SEKOLAH GUANG MING KELAS 1 (GMEC)
 const guangMingClass1Bank = [
   // ================= 1. MANDARIN GMEC =================
   { type: "multiple-choice", subject: "Mandarin", text: "1. Huruf yang memiliki radikal '亻' adalah...", options: ["你 (nǐ)", "河 (hé)", "五 (wǔ)"], correct: 0 },
@@ -205,22 +205,22 @@ function saveAiConfig() {
 async function fetchQuestionsFromAI(classLevel, subject) {
   const provider = localStorage.getItem("ai_provider") || "groq";
   
-  // PASTE API KEY GROQ MILIKMU DI BAWAH INI JIKA INGIN DIBAKARKAN KE KODE DEFAULT:
+  // PASTE API KEY GROQ MILIKMU DI BAWAH INI:
   const apiKey = localStorage.getItem("ai_api_key") || "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";
 
   if (!apiKey || apiKey.includes("PASTE_API_KEY")) {
     return generateFallbackAiQuestions(classLevel, subject);
   }
 
-  const prompt = `Buatkan 5 soal kuis interaktif untuk anak SD Kelas ${classLevel} mata pelajaran ${subject}. 
-Kembalikan HANYA format JSON murni berbentuk Array Object tanpa markdown/teks tambahan. 
-Format JSON yang wajib diikuti:
+  const prompt = `You are a primary school teacher in Indonesia. Generate 5 multiple-choice quiz questions for SD Grade ${classLevel} on subject:${subject}.
+CRITICAL INSTRUCTION: Return ONLY a raw JSON Array. Do NOT include markdown code blocks like \`\`\`json, do NOT include explanations.
+JSON Format:
 [
   {
     "type": "multiple-choice",
     "subject": "${subject}",
-    "text": "Pertanyaan di sini?",
-    "options": ["Pilihan A", "Pilihan B", "Pilihan C"],
+    "text": "Question text here?",
+    "options": ["Option A", "Option B", "Option C"],
     "correct": 0
   }
 ]`;
@@ -234,37 +234,68 @@ Format JSON yang wajib diikuti:
         body: JSON.stringify({
           model: "llama-3.3-70b-versatile",
           messages: [{ role: "user", content: prompt }],
-          temperature: 0.7
+          temperature: 0.8
         })
       });
       const data = await response.json();
+      if (!data.choices || !data.choices[0]) throw new Error("API Groq response invalid");
       jsonResultText = data.choices[0].message.content;
     } else {
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }] }]
-        })
+        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
       });
       const data = await response.json();
       jsonResultText = data.candidates[0].content.parts[0].text;
     }
 
-    const cleanJson = jsonResultText.replace(/```json/g, "").replace(/```/g, "").trim();
-    return JSON.parse(cleanJson);
+    // Pembersihan String JSON
+    let cleanJson = jsonResultText.replace(/```json/gi, "").replace(/```/g, "").trim();
+    const firstBracket = cleanJson.indexOf('[');
+    const lastBracket = cleanJson.lastIndexOf(']');
+    if (firstBracket !== -1 && lastBracket !== -1) {
+      cleanJson = cleanJson.substring(firstBracket, lastBracket + 1);
+    }
+
+    const parsedQuestions = JSON.parse(cleanJson);
+    if (Array.isArray(parsedQuestions) && parsedQuestions.length > 0) {
+      return parsedQuestions;
+    } else {
+      throw new Error("Parsed JSON is empty");
+    }
   } catch (err) {
     console.error("Gagal memanggil API AI:", err);
     return generateFallbackAiQuestions(classLevel, subject);
   }
 }
 
+// FALLBACK DINAMIS VARIASI SOAL JIKA API BUSY
 function generateFallbackAiQuestions(classLevel, subject) {
-  return [
-    { type: "multiple-choice", subject: subject, text: `[Soal AI SD Kelas ${classLevel}] Berapakah hasil dari 10 + 15?`, options: ["25", "20", "30"], correct: 0 },
-    { type: "multiple-choice", subject: subject, text: `[Soal AI SD Kelas ${classLevel}] Ibu kota Negara Indonesia adalah...`, options: ["Jakarta / Nusantara", "Bandung", "Surabaya"], correct: 0 },
-    { type: "multiple-choice", subject: subject, text: `[Soal AI SD Kelas ${classLevel}] Tumbuhan menyerap air menggunakan...`, options: ["Akar", "Daun", "Bunga"], correct: 0 }
-  ];
+  const seed = Math.floor(Math.random() * 100);
+  
+  if (subject.includes("Math")) {
+    const num1 = Math.floor(Math.random() * (classLevel * 10)) + 2;
+    const num2 = Math.floor(Math.random() * (classLevel * 5)) + 1;
+    const ans = num1 + num2;
+    return [
+      { type: "multiple-choice", subject: subject, text: `[Soal AI SD Kelas ${classLevel}] Berapakah hasil penambahan ${num1} + ${num2}?`, options: [`${ans}`, `${ans + 2}`, `${ans - 1}`], correct: 0 },
+      { type: "multiple-choice", subject: subject, text: `[Soal AI SD Kelas ${classLevel}] Angka manakah yang lebih besar dari ${num1}?`, options: [`${num1 + 5}`, `${num1 - 2}`, `${num1 - 4}`], correct: 0 },
+      { type: "multiple-choice", subject: subject, text: `[Soal AI SD Kelas ${classLevel}] Bangun datar yang memiliki 3 buah sisi adalah...`, options: ["Segitiga", "Persegi", "Lingkaran"], correct: 0 }
+    ];
+  } else if (subject.includes("Bahasa")) {
+    return [
+      { type: "multiple-choice", subject: subject, text: `[Soal AI Kelas ${classLevel}] Kalimat manakah yang menggunakan tanda baca yang tepat?`, options: ["Ibu pergi ke pasar.", "ibu pergi ke pasar?", "Ibu pergi ke pasar!"], correct: 0 },
+      { type: "multiple-choice", subject: subject, text: `[Soal AI Kelas ${classLevel}] Lawan kata dari kata 'Rajin' adalah...`, options: ["Malas", "Pintar", "Tekun"], correct: 0 },
+      { type: "multiple-choice", subject: subject, text: `[Soal AI Kelas ${classLevel}] Kata yang diawali dengan huruf vokal adalah...`, options: ["Apel", "Buku", "Cacing"], correct: 0 }
+    ];
+  } else {
+    return [
+      { type: "multiple-choice", subject: subject, text: `[Soal AI SD Kelas ${classLevel} - ${subject}] Soal Variasi Kuis #${seed}: Bagian tubuh yang digunakan untuk melihat adalah...`, options: ["Mata", "Telinga", "Hidung"], correct: 0 },
+      { type: "multiple-choice", subject: subject, text: `[Soal AI SD Kelas ${classLevel} - ${subject}] Lambang negara Indonesia adalah...`, options: ["Garuda Pancasila", "Bendera Merah Putih", "Pohon Beringin"], correct: 0 },
+      { type: "multiple-choice", subject: subject, text: `[Soal AI SD Kelas ${classLevel} - ${subject}] Kita harus membuang sampah di...`, options: ["Tempat Sampah", "Sungai", "Halaman Rumah"], correct: 0 }
+    ];
+  }
 }
 
 // SUARA WANITA (TEXT TO SPEECH)
