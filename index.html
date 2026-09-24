@@ -3,14 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kuis Interaktif SD</title>
+  <title>Kuis Interaktif SD - Guang Ming & Umum</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- TOGGLE TEMA GLOBAL -->
-  <div class="theme-bar">
+  <!-- TOGGLE TEMA GLOBAL & AI API KEY SETTING -->
+  <div class="theme-bar" style="display: flex; gap: 10px; justify-content: flex-end; padding: 10px;">
+    <button id="ai-config-btn" class="theme-btn" onclick="openAiModal()">🤖 Pengaturan AI API</button>
     <button id="theme-toggle-btn" class="theme-btn" onclick="toggleTheme()">🌙 Tema Gelap</button>
+  </div>
+
+  <!-- MODAL INPUT API KEY AI -->
+  <div id="ai-modal" class="modal hidden" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 1000;">
+    <div style="background: var(--card-bg, #fff); padding: 25px; border-radius: 15px; max-width: 450px; width: 90%; color: var(--text-color, #333);">
+      <h3>🤖 Pengaturan API AI (Sekolah Umum)</h3>
+      <p style="font-size: 0.9rem; color: #666;">Masukkan API Key kustom dari <strong>Groq</strong> atau <strong>Gemini</strong> jika ingin menggunakan kunci pribadi.</p>
+      
+      <label style="display: block; margin-top: 10px; font-weight: bold;">Pilih Provider:</label>
+      <select id="ai-provider" style="width: 100%; padding: 8px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;">
+        <option value="groq">Groq API (Sangat Cepat - gsk_...)</option>
+        <option value="gemini">Google Gemini API</option>
+      </select>
+
+      <label style="display: block; margin-top: 10px; font-weight: bold;">API Key:</label>
+      <input type="password" id="ai-api-key" placeholder="Tempel API Key di sini..." style="width: 100%; padding: 8px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;">
+
+      <div style="display: flex; gap: 10px; margin-top: 20px; justify-content: flex-end;">
+        <button onclick="closeAiModal()" style="padding: 8px 15px; border-radius: 8px; border: none; background: #ccc; cursor: pointer;">Batal</button>
+        <button onclick="saveAiConfig()" style="padding: 8px 15px; border-radius: 8px; border: none; background: #4caf50; color: white; cursor: pointer;">Simpan</button>
+      </div>
+    </div>
   </div>
 
   <div class="app-container">
@@ -25,7 +48,7 @@
           <div class="card-icon">🌸</div>
           <div class="card-info">
             <h3>Sekolah Guang Ming</h3>
-            <p>Soal PDF GMEC Lengkap</p>
+            <p>Soal PDF GMEC Lengkap (Kelas 1)</p>
           </div>
         </button>
 
@@ -33,7 +56,7 @@
           <div class="card-icon">🏫</div>
           <div class="card-info">
             <h3>Sekolah Lain</h3>
-            <p>Kurikulum Umum SD</p>
+            <p>Soal AI Generatif Variatif (Kelas 1 - 6)</p>
           </div>
         </button>
       </div>
@@ -62,20 +85,34 @@
         <span id="progress-tag" class="badge">1 / 10</span>
       </div>
 
-      <h3 id="question-text">Soal akan tampil di sini...</h3>
-      <p id="instruction-text" class="instruction">💡 Lingkari jawaban yang benar!</p>
-
-      <!-- CANVAS OPSI PILIHAN GANDA -->
-      <div id="canvas-container" class="canvas-wrapper">
-        <div id="options-container" class="options-wrapper"></div>
-        <canvas id="draw-canvas"></canvas>
+      <!-- LOADING INDICATOR AI -->
+      <div id="ai-loading" class="hidden" style="text-align: center; padding: 20px;">
+        <p>🤖 AI sedang membuat soal latihan variatif untukmu...</p>
       </div>
 
-      <!-- CANVAS MATCHING / MENARIK GARIS -->
-      <div id="matching-container" class="matching-wrapper hidden">
-        <div id="left-column" class="match-col"></div>
-        <div id="right-column" class="match-col"></div>
-        <canvas id="match-canvas"></canvas>
+      <div id="quiz-content-area">
+        <h3 id="question-text">Soal akan tampil di sini...</h3>
+        <p id="instruction-text" class="instruction">💡 Lingkari jawaban yang benar!</p>
+
+        <!-- CANVAS OPSI PILIHAN GANDA -->
+        <div id="canvas-container" class="canvas-wrapper">
+          <div id="options-container" class="options-wrapper"></div>
+          <canvas id="draw-canvas"></canvas>
+        </div>
+
+        <!-- AREA ISIAN SINGKAT / ESAI -->
+        <div id="text-answer-container" class="hidden" style="margin: 20px 0; text-align: center;">
+          <input type="text" id="short-answer-input" placeholder="Tulis jawabanmu di sini..." style="padding: 12px; font-size: 1.1rem; width: 80%; border-radius: 10px; border: 2px solid #2196f3;">
+          <button onclick="submitTextAnswer()" style="padding: 12px 20px; font-size: 1rem; border-radius: 10px; border: none; background: #4caf50; color: white; margin-top: 10px; cursor: pointer;">Kirim Jawaban</button>
+          <div id="text-feedback" style="margin-top: 10px; font-weight: bold;"></div>
+        </div>
+
+        <!-- CANVAS MATCHING / MENARIK GARIS -->
+        <div id="matching-container" class="matching-wrapper hidden">
+          <div id="left-column" class="match-col"></div>
+          <div id="right-column" class="match-col"></div>
+          <canvas id="match-canvas"></canvas>
+        </div>
       </div>
 
       <div class="quiz-controls">
